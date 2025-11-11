@@ -1,0 +1,14 @@
+
+<script>
+const supported = ["en","it","de"];
+const saved = localStorage.getItem("bnb_lang");
+if(!saved){
+  const nav = (navigator.languages || [navigator.language || ""]).map(l=>l.slice(0,2));
+  const found = nav.find(n=>supported.includes(n));
+  if(found){
+    localStorage.setItem("bnb_lang", found);
+    const path = window.location.pathname.replace(/^\/(en|it|de)\//,'');
+    window.location.pathname = `/${found}/${path}`;
+  }
+}
+</script>

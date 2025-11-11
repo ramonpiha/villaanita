@@ -1,0 +1,18 @@
+
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "it" } },
+    { params: { lang: "de" } },
+  ];
+}
+
+import Layout from "../../components/Layout.astro";
+const lang = Astro.params.lang;
+const title = "Apartments";
+---
+<Layout lang={lang} title={title}>
+  <h1 class="p-4 text-2xl">Apartments</h1>
+  <p class="p-4">Placeholder content for apartments page.</p>
+</Layout>

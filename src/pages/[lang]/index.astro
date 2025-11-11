@@ -1,0 +1,34 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "it" } },
+    { params: { lang: "de" } },
+  ];
+}
+
+import Layout from "../../components/Layout.astro";
+import MapClient from "../../components/MapClient.jsx";
+import AutoDetect from "../../components/AutoDetectLang.astro";
+import yaml from "js-yaml";
+import { readFileSync } from "fs";
+const lang = Astro.params.lang;
+const file = readFileSync(`src/content/${lang}/properties/properties.yml`, "utf8");
+const properties = yaml.load(file);
+const title = "Home";
+---
+<Layout lang={lang} title={title}>
+  <AutoDetect />
+  
+  <h1 class="text-4xl md:text-5xl font-serif font-bold text-charcoal mb-4">
+    Welcome to our Mountain Home
+  </h1>
+  <p class="text-lg text-charcoal/90 mb-8 max-w-2xl">
+    Experience traditional comfort and modern hospitality deep in the 
+    heart of the mountains.
+  </p>
+
+  <div class="rounded-lg overflow-hidden shadow-lg my-8">
+    <MapClient client:only="react" locations={properties} />
+  </div>
+</Layout>

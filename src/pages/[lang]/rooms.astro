@@ -1,0 +1,43 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "it" } },
+    { params: { lang: "de" } },
+  ];
+}
+
+import Layout from "../../components/Layout.astro";
+// Import the YAML parser and Gallery component
+import yaml from "js-yaml";
+import { readFileSync } from "fs";
+import GalleryClient from "../../components/GalleryClient.jsx";
+
+const lang = Astro.params.lang;
+const title = "Rooms";
+
+// --- Load and process data ---
+const file = readFileSync(`src/content/${lang}/properties/properties.yml`, "utf8");
+const properties = yaml.load(file);
+
+// Filter for rooms and get all their images
+const roomImages = properties
+  .filter(prop => prop.type === 'room')    // Find only 'room' items
+  .flatMap(room => room.images);          // Get all images from all rooms
+
+---
+<Layout lang={lang} title={title}>
+  <h1 class="text-4xl md:text-5xl font-serif font-bold text-brand mb-6">
+    Our Rooms
+  </h1>
+  <p class="text-lg text-brand/90 max-w-2xl mb-8">
+    Browse our collection of traditional and cozy mountain rooms. 
+    Each one offers a unique and comfortable stay.
+  </p>
+
+  {roomImages.length > 0 ? (
+    <GalleryClient client:only="react" images={roomImages} />
+  ) : (
+    <p class="text-brand/70">No room images are available at this time.</p>
+  )}
+</Layout>

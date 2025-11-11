@@ -1,0 +1,14 @@
+---
+const supported = ["en","it","de"];
+---
+<div class="flex gap-3">
+  {supported.map(l => (
+    <a 
+      href={`/${l}/`} 
+      onclick={`localStorage.setItem('bnb_lang', '${l}')`}
+      class="text-sm uppercase tracking-wide text-charcoal/70 hover:text-charcoal transition-colors font-bold"
+    >
+      {l}
+    </a>
+  ))}
+</div>

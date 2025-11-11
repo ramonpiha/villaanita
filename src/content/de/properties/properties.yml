@@ -1,0 +1,17 @@
+
+- id: apt1
+  type: apartment
+  title: "Mountain Apartment"
+  summary: "Cozy apartment with kitchen."
+  coordinates: [46.495, 11.343]
+  images:
+    - /images/apt1/1.jpg
+    - /images/apt1/2.jpg
+
+- id: room1
+  type: room
+  title: "Traditional Room"
+  summary: "Comfortable room for 2 guests."
+  coordinates: [46.497, 11.347]
+  images:
+    - /images/room1/1.jpg

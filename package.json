@@ -1,0 +1,23 @@
+{
+  "name": "bnb-full-starter",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+    "dependencies": {
+    "astro": "^4.0.0",
+    "@astrojs/react": "^3.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-leaflet": "^4.0.0",
+    "leaflet": "^1.9.4",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0"
+  }
+}
