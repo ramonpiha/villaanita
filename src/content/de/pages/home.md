@@ -1,4 +1,7 @@
 ---
-title: "Welcome (de)"
+title: Startseite
+heading: Willkommen in unserem Bergheim
+subheading: Genießen Sie traditionellen Komfort und moderne Gastfreundschaft tief im Herzen der Berge.
 ---
-# Welcome (de)
+
+Das ist ein platzhalter
