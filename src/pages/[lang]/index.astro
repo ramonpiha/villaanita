@@ -17,10 +17,10 @@ export async function getStaticPaths() {
 const { lang } = Astro.params as { lang: Lang };
 
 // Get the home page content
-const homeEntry = await getEntry(`${lang}/pages`, 'home');
+const homeEntry = await getEntry(`${lang}-pages`, 'home');
 
 // Get properties data
-const propertiesEntry = await getEntry(`${lang}/properties`, 'properties');
+const propertiesEntry = await getEntry(`${lang}-properties`, 'properties');
 
 const title = homeEntry.data.title;
 const heading = homeEntry.data.heading;

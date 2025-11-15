@@ -10,8 +10,8 @@
 
 - id: room1
   type: room
-  title: "Traditional Room"
-  summary: "Comfortable room for 2 guests."
+  title: "Stanza tradizionale"
+  summary: "stanza per due persone"
   coordinates: [46.497, 11.347]
   images:
     - /images/room1/1.jpg

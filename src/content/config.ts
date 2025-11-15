@@ -1,7 +1,5 @@
-// src/content/config.ts
 import { defineCollection, z } from 'astro:content';
 
-// Define schemas once
 const propertiesSchema = z.array(z.object({
   id: z.string(),
   type: z.string(),
@@ -18,24 +16,22 @@ const pagesSchema = z.object({
   subheading: z.string().optional(),
 });
 
-// Helper function to create collections dynamically
 const createCollections = (langs: string[]) => {
   const collections: Record<string, ReturnType<typeof defineCollection>> = {};
-  
+
   langs.forEach(lang => {
-    // Collection for pages (Markdown files)
-    collections[`${lang}/pages`] = defineCollection({
-      type: 'content', 
+    // Flat naming: 'de-pages' instead of 'de/pages'
+    collections[`${lang}-pages`] = defineCollection({
+      type: 'content',
       schema: pagesSchema,
     });
-    
-    // Collection for properties (YAML files)
-    collections[`${lang}/properties`] = defineCollection({
-      type: 'data', 
+
+    collections[`${lang}-properties`] = defineCollection({
+      type: 'data',
       schema: propertiesSchema,
     });
   });
-  
+
   return collections;
 };
 

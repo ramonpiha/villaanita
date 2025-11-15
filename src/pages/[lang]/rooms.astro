@@ -1,4 +1,18 @@
 ---
+import { getEntry } from 'astro:content';
+import Layout from "../../components/Layout.astro";
+import GalleryClient from "../../components/GalleryClient.js";
+
+type Lang = "en" | "it" | "de";
+type Property = {
+  id: string;
+  type: string;
+  title: string;
+  summary: string;
+  coordinates: [number, number];
+  images: string[];
+};
+
 export function getStaticPaths() {
   return [
     { params: { lang: "en" } },
@@ -7,25 +21,19 @@ export function getStaticPaths() {
   ];
 }
 
-import Layout from "../../components/Layout.astro";
-// Import the YAML parser and Gallery component
-import yaml from "js-yaml";
-import { readFileSync } from "fs";
-import GalleryClient from "../../components/GalleryClient.js";
 
-const lang = Astro.params.lang;
+const { lang } = Astro.params as { lang: Lang };
 const title = "Rooms";
 
-// --- Load and process data ---
-const file = readFileSync(`src/content/${lang}/properties/properties.yml`, "utf8");
-const properties = yaml.load(file);
+const propertiesEntry = await getEntry(`${lang}-properties`, 'properties');
+const properties = propertiesEntry?.data || [];
 
 // Filter for rooms and get all their images
 const roomImages = properties
-  .filter(prop => prop.type === 'room')    // Find only 'room' items
-  .flatMap(room => room.images);          // Get all images from all rooms
-
+  .filter((prop: Property) => prop.type === 'room')    // Find only 'room' items
+  .flatMap((room: Property) => room.images);          // Get all images from all rooms
 ---
+
 <Layout lang={lang} title={title}>
   <h1 class="text-4xl md:text-5xl font-serif font-bold text-brand mb-6">
     Our Rooms
@@ -34,7 +42,6 @@ const roomImages = properties
     Browse our collection of traditional and cozy mountain rooms. 
     Each one offers a unique and comfortable stay.
   </p>
-
   {roomImages.length > 0 ? (
     <GalleryClient client:only="react" images={roomImages} />
   ) : (
