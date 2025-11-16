@@ -17,19 +17,21 @@ export default function MapClient({ locations }: MapClientProps) {
   const center: LatLngExpression = locations.length ? locations[0].coordinates : [46.5, 11.34];
   
   return (
-    <MapContainer center={center} zoom={13} className="h-80 w-full">
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {locations.map(loc => (
-        <Marker key={loc.id} position={loc.coordinates}>
-          <Popup>
-            <strong>{loc.title}</strong><br />
-            {loc.summary}
-          </Popup>
-        </Marker>
-      ))}
-    </MapContainer>
+    <div className="relative z-0">
+      <MapContainer center={center} zoom={13} className="h-80 w-full rounded-lg shadow-md">
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {locations.map(loc => (
+          <Marker key={loc.id} position={loc.coordinates}>
+            <Popup>
+              <strong>{loc.title}</strong><br />
+              {loc.summary}
+            </Popup>
+          </Marker>
+        ))}
+      </MapContainer>
+    </div>
   );
 }

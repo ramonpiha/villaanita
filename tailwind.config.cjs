@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{astro,js,jsx,ts,tsx,md,mdx}"],
@@ -6,14 +6,14 @@ module.exports = {
     extend: {
       colors: {
         brand: "#444444",
-        bg: "#fbfbfb"
+        bg: "#fbfbfb",
       },
       // Add this section for the fonts
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        serif: ['Lora', ...defaultTheme.fontFamily.serif],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        serif: ["Lora", ...defaultTheme.fontFamily.serif],
       },
-    }
+    },
   },
-  plugins: []
+  plugins: [require("@tailwindcss/typography")],
 };
