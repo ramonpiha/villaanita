@@ -1,0 +1,62 @@
+---
+const { lang } = Astro.props;
+
+const buttonText = {
+  de: "Buchen Sie jetzt",
+  it: "Prenota ora",
+  en: "Book now"
+};
+
+const bookingUrl = `/${lang}/booking`; // Adjust this to your actual booking page URL
+---
+
+<a
+  href={bookingUrl}
+  class="floating-book-button"
+  aria-label={buttonText[lang as keyof typeof buttonText]}
+>
+  {buttonText[lang as keyof typeof buttonText]}
+</a>
+
+<style>
+  .floating-book-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: rgb(27, 36, 48);
+    color: #e6ae48;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    z-index: 40;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .floating-book-button:hover {
+    background-color: #e6ae48;
+    color: rgb(27, 36, 48);
+    box-shadow: 0 6px 20px rgba(230, 174, 72, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .floating-book-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .floating-book-button {
+      bottom: 1.5rem;
+      right: 1.5rem;
+      padding: 0.875rem 1.25rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>

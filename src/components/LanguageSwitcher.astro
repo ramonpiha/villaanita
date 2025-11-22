@@ -18,12 +18,13 @@ const supported = ["en","it","de"];
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: rgba(var(--charcoal-rgb, 60, 60, 60), 0.7);
+    color: #e6ae48;
     font-weight: 700;
-    transition: color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     position: relative;
     padding: 0.25rem 0.5rem;
     padding-bottom: 0.375rem;
+    border-radius: 0.5rem;
   }
 
   .lang-switcher-item::after {
@@ -39,7 +40,8 @@ const supported = ["en","it","de"];
   }
 
   .lang-switcher-item:hover {
-    color: var(--charcoal, #3c3c3c);
+    color: #f0c066;
+    background-color: rgba(230, 174, 72, 0.1);
   }
 
   .lang-switcher-item:hover::after {
