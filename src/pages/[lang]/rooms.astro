@@ -35,13 +35,15 @@ const roomImages = properties
 ---
 
 <Layout lang={lang} title={title}>
-  <h1 class="text-4xl md:text-5xl font-serif font-bold text-brand mb-6">
-    Our Rooms
-  </h1>
-  <p class="text-lg text-brand/90 max-w-2xl mb-8">
-    Browse our collection of traditional and cozy mountain rooms. 
+  <div class="pt-10 pb-6 px-4 max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+      Our Rooms
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+      Browse our collection of traditional and cozy mountain rooms. 
     Each one offers a unique and comfortable stay.
-  </p>
+    </p>
+  </div>
   {roomImages.length > 0 ? (
     <GalleryClient client:only="react" images={roomImages} />
   ) : (

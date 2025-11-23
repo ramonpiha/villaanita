@@ -1,8 +1,9 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection, getEntry } from "astro:content";
 import Layout from "../../components/Layout.astro";
 import MapClient from "../../components/MapClient.js";
 import AutoDetect from "../../components/AutoDetectLang.astro";
+import Slider from "../../components/Slider.tsx";
 
 type Lang = "en" | "it" | "de";
 
@@ -17,31 +18,38 @@ export async function getStaticPaths() {
 const { lang } = Astro.params as { lang: Lang };
 
 // Get the home page content
-const homeEntry = await getEntry(`${lang}-pages`, 'home');
+const homeEntry = await getEntry(`${lang}-pages`, "home");
 
 // Get properties data
-const propertiesEntry = await getEntry(`${lang}-properties`, 'properties');
+const propertiesEntry = await getEntry(`${lang}-properties`, "properties");
 
-const title = homeEntry.data.title;
-const heading = homeEntry.data.heading;
-const subheading = homeEntry.data.subheading;
+// 1. Destructure title, heading, and subheading from the markdown frontmatter
+const { title, heading, subheading } = homeEntry.data;
 const { Content } = await homeEntry.render();
 const properties = propertiesEntry.data;
 ---
 
 <Layout lang={lang} title={title}>
   <AutoDetect />
-  
-  <h1 class="text-4xl md:text-5xl font-serif font-bold text-charcoal mb-4">
-    {heading}
-  </h1>
-  <p class="text-lg text-charcoal/90 mb-8 max-w-2xl">
-    {subheading}
-  </p>
-  <div class="rounded-lg overflow-hidden shadow-lg my-8">
-    <MapClient client:only="react" locations={properties} />
+
+  <div class="pt-10 pb-6 px-4 max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+      {heading}
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+      {subheading}
+    </p>
   </div>
+
+  <div class="my-8">
+    <Slider client:load />
+  </div>
+
   <div class="prose prose-lg max-w-none">
     <Content />
+  </div>
+  
+  <div class="rounded-lg overflow-hidden shadow-lg my-8">
+    <MapClient client:only="react" locations={properties} />
   </div>
 </Layout>

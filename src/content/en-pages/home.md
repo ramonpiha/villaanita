@@ -1,40 +1,16 @@
 ---
 title: Home
-heading: Welcome to our Mountain Home
+heading: '🏡 Rooms & Apartments Bolzano: Comfortable Stays in the City Center'
 subheading: Experience traditional comfort and modern hospitality deep in the heart of the mountains.
 ---
 
-# 🌿 Cozy Haven BnB
+Rooms & Apartments Bz offers **Temporary Apartments, Rooms, and Suites** ideal for short or extended visits. We provide accommodation solutions that combine the autonomy of home with the convenience of a central location in Bolzano.
 
-Welcome to **Cozy Haven BnB**, your peaceful escape tucked away in the heart of nature.  
-Whether you're seeking a quiet weekend getaway or a comfortable base for your adventures, our BnB offers the perfect blend of warmth, charm, and convenience.
+## Central Location and Accessibility
 
-## 🛏️ Rooms
-- **Sunrise Suite** – Spacious room with a private balcony and forest views.  
-- **Garden Room** – Bright, airy, and decorated with natural materials.  
-- **Attic Loft** – A snug space ideal for solo travelers or couples.
+All our properties are situated in the **historic center**, offering privileged access to services and transportation:
 
-## 🍽️ Breakfast
-Every morning, enjoy a **homemade breakfast** featuring:
-- Freshly baked bread  
-- Seasonal fruits  
-- Locally sourced cheeses  
-- Coffee and herbal teas
+* **Connections:** Direct proximity to the Train/Bus Station and Cable Cars.
+* **Accessibility:** Within easy walking distance of major cultural attractions, local dining, and shopping areas.
 
-## 🌲 Amenities
-- Free Wi-Fi  
-- Outdoor terrace  
-- Fireplace lounge  
-- Complimentary bike rental  
-- Free parking
-
-## 📍 Location
-Nestled near scenic hiking trails and only 10 minutes from the town center, Cozy Haven BnB is the ideal starting point for exploring the region.
-
-## ❤️ Why Guests Love Us
-> “It truly feels like home away from home.”  
-> “The hosts are incredibly welcoming, and the breakfast is divine!”  
-
----
-
-Ready for your stay? **Book your visit today** and experience comfort, calm, and a touch of rustic charm.
+> We offer a variety of accommodation to meet different needs. Some properties are located in the pedestrian zone, while others ensure easy access by car.
