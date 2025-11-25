@@ -12,6 +12,6 @@
   type: room
   title: "Traditional Room"
   summary: "Comfortable room for 2 guests."
-  coordinates: [46.497, 11.347]
+  coordinates: [500, 500]
   images:
     - /images/room1/1.jpg

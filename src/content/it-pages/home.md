@@ -1,14 +1,16 @@
 ---
 title: Home
-heading: Benvenuti nella nostra Casa di Montagna
-subheading: Vivete un comfort tradizionale e un'ospitalità moderna nel cuore delle montagne.
+heading: 🏡 Rooms & Apartments Bz
+subheading: Vivi Bolzano, dal centro storico alle zone più tranquille.
 ---
 
-## Centralità e Convenienza
+## Posizione Strategica
+Le nostre strutture sono dislocate in punti chiave della città per ogni preferenza:
+* **Centro Storico:** Alcune proprietà si trovano direttamente nel cuore pulsante di Bolzano, in zona pedonale a due passi da Piazza Walther.
+* **Adiacenze:** Altre soluzioni sono situate a soli **5 minuti dal centro**, perfette per chi cerca la vicinanza ai servizi ma con maggiore accessibilità in auto.
+* **Trasporti:** Indipendentemente dalla scelta, la stazione dei treni, dei bus e la funivia del Renon rimangono facilmente raggiungibili.
 
-Tutte le nostre proprietà si trovano nel **centro storico**, offrendo un accesso privilegiato ai servizi e ai trasporti:
-
-* **Connessioni:** Prossimità diretta alla Stazione dei treni/bus e alle Funivie.
-* **Accessibilità:** A pochi passi dalle principali attrazioni culturali, dalla ristorazione locale e dalle aree commerciali.
-
-> Offriamo una gamma di alloggi per soddisfare diverse esigenze. Alcune strutture sono situate in zona pedonale, altre garantiscono la facile raggiungibilità in auto.
+## Le Nostre Soluzioni
+Offriamo diverse tipologie di alloggio per soddisfare ogni esigenza di budget e comfort:
+* **Temporary Apartments:** Alloggi completi con cucina, ideali per famiglie, professionisti e soggiorni prolungati.
+* **Camere Economy:** Stanze pratiche ed essenziali con **bagno in comune**, perfette per viaggiatori che cercano la convenienza.

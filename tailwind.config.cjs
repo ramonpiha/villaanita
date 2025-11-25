@@ -12,6 +12,8 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         serif: ["Lora", ...defaultTheme.fontFamily.serif],
+        'map-dark': 'rgb(27, 36, 48)', // The dark blue background
+        'map-gold': '#e6ae48',         // The gold button/title color
       },
     },
   },
