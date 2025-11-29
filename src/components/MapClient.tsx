@@ -7,14 +7,17 @@ import ApartmentCardPopup from "./ApartmentCardPopup";
 import React from "react";
 
 // --- 1. CONFIGURATION ---
-const MAP_WIDTH = 1920;
-const MAP_HEIGHT = 1080;
+const MAP_WIDTH = 8192;
+const MAP_HEIGHT = 3994;
 
 const customIcon = new L.Icon({
   iconUrl: "/images/map/pointer.png",
   iconSize: [40, 40],
-  iconAnchor: [20, 56],
-  popupAnchor: [0, -50],
+  iconAnchor: [20, 40], // Position relative to icon where it "points"
+  popupAnchor: [0, -40], // Where popup appears relative to iconAnchor
+  shadowUrl: "https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png",
+  shadowSize: [41, 41],
+  shadowAnchor: [12, 41] // Where shadow aligns relative to icon
 });
 
 const pixelBounds: LatLngBoundsExpression = [
@@ -34,11 +37,12 @@ interface Location {
 
 interface MapClientProps {
   locations: Location[];
+  lang: 'de' | 'it' | 'en';
 }
 
 // --- 3. COMPONENT ---
-export default function MapClient({ locations }: MapClientProps) {
-  const center: LatLngExpression = [MAP_HEIGHT / 2, MAP_WIDTH / 2];
+export default function MapClient({ locations, lang }: MapClientProps) {
+  const center: LatLngExpression = [MAP_HEIGHT * 0.45, MAP_WIDTH * 0.60];
 
   if (!locations.length) {
     return <p>No properties found to display on the map.</p>;
@@ -70,22 +74,20 @@ export default function MapClient({ locations }: MapClientProps) {
     }
   };
 
-  // Remove the className from the outer div since we don't need map-wrapper anymore
   return (
     <div className="relative z-0">
       <MapContainer
         center={center}
-        zoom={-1}
-        minZoom={-2}
-        maxZoom={4}
+        zoom={-2}
+        minZoom={-3}
+        maxZoom={0}
         crs={CRS.Simple}
         maxBounds={pixelBounds}
         maxBoundsViscosity={1.0}
         className="h-[600px] w-full shadow-2xl"
-        style={{ background: "#fafafa" }}
         attributionControl={false}
       >
-        <ImageOverlay url="/images/map/bolzano-map.png" bounds={pixelBounds} />
+        <ImageOverlay url="/images/map/Rooms-Apartments-Bolzano-map.png" bounds={pixelBounds} interactive={false} />
 
         {locations.map((loc) => (
           <Marker
@@ -106,7 +108,7 @@ export default function MapClient({ locations }: MapClientProps) {
               className="custom-dark-popup"
               closeButton={false}
               minWidth={300}
-              autoPan={true} // ← The key change
+              autoPan={true}
               keepInView={true}
               autoPanPaddingTopLeft={[10, 10]}
               autoPanPaddingBottomRight={[10, 10]}
@@ -123,6 +125,7 @@ export default function MapClient({ locations }: MapClientProps) {
                   address={loc.summary}
                   thumbnailUrl={loc.images[0] || ""}
                   bookingUrl={`/${loc.id}`}
+                  lang={lang}
                 />
               </div>
             </Popup>

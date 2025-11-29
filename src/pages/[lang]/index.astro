@@ -52,6 +52,10 @@ const properties = propertiesEntry.data;
   </div>
   
   <div class="rounded-lg overflow-hidden shadow-lg my-8">
-    <MapClient client:only="react" locations={properties} />
+    <MapClient 
+      client:only="react" 
+      locations={properties} 
+      lang={lang} 
+    />
   </div>
 </Layout>

@@ -53,12 +53,6 @@ const Slider: React.FC<SliderProps> = ({ slides = SLIDE_DATA }) => {
             src={slide.src}
             className="h-full w-full object-cover"
           />
-          {/* Optional: Caption/Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end p-4">
-            <p className="text-white text-lg font-semibold">
-              {slide.alt}
-            </p>
-          </div>
         </div>
       ))}
 

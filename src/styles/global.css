@@ -9,7 +9,7 @@
 
 /* Custom Dark Popup Styling */
 .custom-dark-popup .leaflet-popup-content-wrapper {
-  background: #1a1a1a;
+  background: rgb(27, 36, 48);
   color: white;
   border-radius: 8px;
   padding: 0;
@@ -23,7 +23,7 @@
 }
 
 .custom-dark-popup .leaflet-popup-tip {
-  background: #1a1a1a;
+  background: rgb(27, 36, 48);
 }
 
 .custom-dark-popup .leaflet-popup-close-button {

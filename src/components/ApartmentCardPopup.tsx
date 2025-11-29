@@ -6,9 +6,16 @@ interface PopupProps {
   address: string;
   thumbnailUrl: string;
   bookingUrl: string;
+  lang: 'de' | 'it' | 'en'; // Add the language prop
 }
 
-export default function ApartmentCardPopup({ title, address, thumbnailUrl, bookingUrl }: PopupProps) {
+const buttonText = {
+  de: "Ansehen", // German: "View" or "Watch"
+  it: "Guarda",   // Italian: "View" or "Watch"
+  en: "View"     // English: "View" or "Watch"
+};
+
+export default function ApartmentCardPopup({ title, address, thumbnailUrl, bookingUrl, lang }: PopupProps) {
   return (
     <div className="flex flex-col font-sans overflow-hidden">
       {/* Room Image */}
@@ -25,7 +32,7 @@ export default function ApartmentCardPopup({ title, address, thumbnailUrl, booki
       </div>
 
       {/* Content */}
-      <div className="p-5 flex flex-col gap-3 bg-[#1a1a1a]">
+      <div className="p-5 flex flex-col gap-3 bg-[rgb(27, 36, 48)]">
         <h3 className="text-base font-medium uppercase m-0 tracking-wider text-[#e6ae48] leading-tight">
           {title}
         </h3>
@@ -38,13 +45,13 @@ export default function ApartmentCardPopup({ title, address, thumbnailUrl, booki
           href={bookingUrl}
           target="_blank"
           rel="noreferrer"
-          className="block w-full py-3 text-center text-sm font-bold tracking-widest transition-all duration-300 hover:opacity-90 hover:shadow-lg uppercase"
+          className="block w-full py-3 text-center text-sm font-bold tracking-widest transition-all duration-300 hover:opacity-90 hover:shadow-lg uppercase rounded-md mt-2"
           style={{ 
             backgroundColor: '#e6ae48',
-            color: '#1a1a1a'
+            color: 'rgb(27, 36, 48)',
           }}
         >
-          Guarda
+          {buttonText[lang]}
         </a>
       </div>
     </div>
