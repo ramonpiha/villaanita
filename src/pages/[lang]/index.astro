@@ -4,6 +4,7 @@ import Layout from "../../components/Layout.astro";
 import MapClient from "../../components/MapClient.js";
 import AutoDetect from "../../components/AutoDetectLang.astro";
 import Slider from "../../components/Slider.tsx";
+import PropertyList from "../../components/PropertyList.astro";
 
 type Lang = "en" | "it" | "de";
 
@@ -58,4 +59,6 @@ const properties = propertiesEntry.data;
       lang={lang} 
     />
   </div>
+
+  <PropertyList properties={properties} lang={lang} />
 </Layout>

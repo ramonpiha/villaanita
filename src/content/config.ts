@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 
 const propertiesSchema = z.array(z.object({
   id: z.string(),
-  type: z.string(),
+  type: z.array(z.string()),
   title: z.string(),
   summary: z.string(),
   coordinates: z.tuple([z.number(), z.number()]),
