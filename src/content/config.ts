@@ -16,11 +16,17 @@ const pagesSchema = z.object({
   subheading: z.string().optional(),
 });
 
+const propertyContentSchema = z.object({
+  title: z.string(),
+  generalInfo: z.string(),
+  ambient: z.string(),
+  highlights: z.array(z.string()),
+});
+
 const createCollections = (langs: string[]) => {
   const collections: Record<string, ReturnType<typeof defineCollection>> = {};
 
   langs.forEach(lang => {
-    // Flat naming: 'de-pages' instead of 'de/pages'
     collections[`${lang}-pages`] = defineCollection({
       type: 'content',
       schema: pagesSchema,
@@ -29,6 +35,11 @@ const createCollections = (langs: string[]) => {
     collections[`${lang}-properties`] = defineCollection({
       type: 'data',
       schema: propertiesSchema,
+    });
+
+    collections[`${lang}-property-content`] = defineCollection({
+      type: 'content',
+      schema: propertyContentSchema,
     });
   });
 

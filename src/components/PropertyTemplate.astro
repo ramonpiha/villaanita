@@ -1,0 +1,193 @@
+---
+import { getEntry } from "astro:content";
+
+// Define the available languages
+type Lang = "en" | "it" | "de";
+interface Props {
+  propertyId: string;
+  lang: Lang;
+  images: {
+    hero: string;
+    gallery: string[];
+  };
+}
+
+const { propertyId, lang, images } = Astro.props;
+
+const texts = {
+  generalInfo: {
+    en: "General Information",
+    it: "Informazioni Generali",
+    de: "Allgemeine Informationen",
+  },
+  ambient: {
+    en: "Ambient & Atmosphere",
+    it: "Ambiente e Atmosfera",
+    de: "Ambiente & Atmosphäre",
+  },
+  highlights: {
+    en: "Highlights & Amenities",
+    it: "Punti Salienti e Servizi",
+    de: "Highlights & Ausstattung",
+  },
+};
+// Fetch the property content
+const propertyEntry = await getEntry(`${lang}-property-content`, propertyId);
+if (!propertyEntry) {
+  return new Response("404 Not Found", { status: 404 });
+}
+
+const { title, generalInfo, ambient, highlights } = propertyEntry.data;
+---
+
+<section class="relative w-full h-screen overflow-hidden">
+  <div
+    id="parallax-hero"
+    class="absolute inset-0 w-full h-[120vh] will-change-transform"
+  >
+    <img src={images.hero} alt={title} class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+
+  <div class="relative h-full flex flex-col items-center justify-center z-10">
+    <div class="text-center px-4">
+      <h1
+        class="text-5xl md:text-7xl font-bold text-white tracking-wide drop-shadow-2xl"
+      >
+        {title}
+      </h1>
+    </div>
+  </div>
+</section>
+
+<div class="relative z-20">
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img
+            src={images.gallery[0]}
+            alt="Property view"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            {texts.generalInfo[lang]}
+          </h2>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+            {generalInfo}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            {texts.ambient[lang]}
+          </h2>
+          <p class="text-lg text-gray-700 leading-relaxed">{ambient}</p>
+        </div>
+        <div class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-xl">
+          <img
+            src={images.gallery[1]}
+            alt="Ambient"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="rounded-2xl overflow-hidden shadow-xl">
+          <img
+            src={images.gallery[2]}
+            alt="Highlights"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            {texts.highlights[lang]}
+          </h2>
+
+          <ul class="space-y-3">
+            {
+              highlights &&
+                highlights.map((highlight: string) => (
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="text-base md:text-lg text-gray-700">
+                      {highlight}
+                    </span>
+                  </li>
+                ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  // Parallax scrolling effect
+  function initParallax() {
+    const parallaxElement = document.getElementById("parallax-hero");
+    if (!parallaxElement) return;
+    function updateParallax() {
+      const scrolled = window.scrollY;
+      const heroHeight = window.innerHeight;
+      // Only apply parallax while hero is visible
+      if (scrolled < heroHeight) {
+        // Move the image slower than scroll (0.5 = half speed)
+        const yPos = scrolled * 0.5;
+        parallaxElement.style.transform = `translate3d(0, ${yPos}px, 0)`;
+      }
+    }
+
+    // Use requestAnimationFrame for smooth performance
+    let ticking = false;
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateParallax();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+    // Initial call
+    updateParallax();
+  }
+
+  // Initialize on page load
+  initParallax();
+  // Re-initialize on view transitions (if using Astro's view transitions)
+  document.addEventListener("astro:page-load", initParallax);
+</script>
+
+<style>
+  /* Ensure smooth scrolling performance */
+  #parallax-hero {
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+</style>

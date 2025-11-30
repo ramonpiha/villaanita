@@ -1,4 +1,4 @@
-- id: villa-anita-map
+- id: villa-anita
   type: 
     - house
     - map
@@ -8,7 +8,7 @@
   images:
     - /images/map/villa-anita-front.avif
 
-- id: bolzano-apartments-map
+- id: bolzano-apartments
   type: 
     - apartment
     - map
@@ -18,7 +18,7 @@
   images:
     - /images/map/bolzano-apartments.avif
 
-- id: bolzano-rooms-map
+- id: bolzano-rooms
   type: 
     - room
     - map
@@ -28,7 +28,7 @@
   images:
     - /images/map/bolzanorooms.avif
 
-- id: piani-apartment-map
+- id: piani-apartment
   type: 
    - apartment
    - map
@@ -38,7 +38,7 @@
   images:
     - /images/map/piani-apartment.avif
 
-- id: lisa-apartment-map
+- id: lisa-apartment
   type: 
     - apartment
     - map

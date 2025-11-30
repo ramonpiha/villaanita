@@ -1,19 +1,69 @@
 ---
-const supported = ["en","it","de"];
+// Define your supported locales
+const supported = ["en", "it", "de"];
+
+// 1. Get the current page path, e.g., '/en/villa-anita/'
+const currentPath = Astro.url.pathname;
+
+// 2. Split the path into segments and remove empty strings from the array.
+// e.g., '/en/villa-anita/' becomes ['en', 'villa-anita']
+const pathSegments = currentPath.split('/').filter(segment => segment.length > 0);
+
+// 3. Determine the current language (which is the first segment)
+// and get the rest of the route (e.g., ['villa-anita'])
+let currentLang = '';
+let routeSegments: string[] = [];
+
+if (supported.includes(pathSegments[0])) {
+    currentLang = pathSegments[0];
+    // This gives us the rest of the path, e.g., ['villa-anita']
+    routeSegments = pathSegments.slice(1); 
+} else {
+    // If no language prefix is found, the current path is the base route
+    routeSegments = pathSegments;
+}
+
+// 4. Join the route segments back into a single string (e.g., 'villa-anita')
+const baseRoute = routeSegments.join('/');
+
+// Helper function to correctly construct the new link
+function getNewHref(lang: string, route: string): string {
+    // If the route is empty (meaning we're on the root page), link to the language's root.
+    if (route === '') {
+        return `/${lang}/`;
+    }
+    // Otherwise, link to the new language + the base route.
+    return `/${lang}/${route}`;
+}
 ---
+
 <div class="flex gap-3">
-  {supported.map(l => (
-    <a 
-      href={`/${l}/`} 
-      onclick={`localStorage.setItem('bnb_lang', '${l}')`}
-      class="lang-switcher-item"
-    >
-      {l}
-    </a>
-  ))}
+  {supported.map(l => {
+    // Construct the new link path using the helper function
+    const newHref = getNewHref(l, baseRoute);
+    
+    // Add a class for visual indication of the active language
+    const isActive = l === currentLang ? 'active-lang' : '';
+
+    return (
+      <a 
+        href={newHref} 
+        onclick={`localStorage.setItem('bnb_lang', '${l}')`}
+        class={`lang-switcher-item ${isActive}`}
+      >
+        {l}
+      </a>
+    );
+  })}
 </div>
 
 <style>
+  /* Your existing styles (lang-switcher-item, etc.) follow here */
+  .active-lang {
+    color: #f0c066 !important;
+    font-weight: 900 !important;
+  }
+
   .lang-switcher-item {
     font-size: 0.875rem;
     text-transform: uppercase;
@@ -42,9 +92,5 @@ const supported = ["en","it","de"];
   .lang-switcher-item:hover {
     color: #f0c066;
     background-color: rgba(230, 174, 72, 0.1);
-  }
-
-  .lang-switcher-item:hover::after {
-    transform: scaleX(1);
   }
 </style>

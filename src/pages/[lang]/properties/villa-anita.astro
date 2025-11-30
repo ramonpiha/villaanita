@@ -1,0 +1,65 @@
+---
+import PropertyTemplate from "../../../components/PropertyTemplate.astro";
+import Navigation from "../../../components/Navigation.astro";
+import FloatingBookButton from "../../../components/FloatingBookButton.astro";
+
+// Define the available languages
+type Lang = "en" | "it" | "de";
+
+// Define all possible paths
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "it" } },
+    { params: { lang: "de" } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+
+// Images configuration for Villa Anita
+const images = {
+  hero: "/images/villa-anita-page/LQ-villa-anita-bolzano-_Y0A4993-HDR-Modifica.avif",
+  gallery: [
+    "/images/villa-anita-page/1420px-villa-Anita-1905.avif",
+    "/images/villa-anita-page/villa-anita-bolzano-rooms-apartments-0005-1.avif",
+    "/images/villa-anita-page/LR-villa-anita-bolzano-_Y0A5000.avif",
+  ],
+};
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Villa Anita | Mountain B&B</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body class="bg-bg text-brand font-sans antialiased">
+    <Navigation lang={lang} />
+
+    <!-- Full-width content (no constraints) -->
+    <div class="mt-0">
+      <PropertyTemplate propertyId="villa-anita" lang={lang} images={images} />
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-16 py-8 border-t border-brand/10">
+      <div class="max-w-5xl mx-auto px-4 text-center text-brand/60">
+        <p>&copy; {new Date().getFullYear()} Mountain B&B. All rights reserved.</p>
+        <p class="text-sm">A traditional home in the mountains.</p>
+      </div>
+    </footer>
+
+    <FloatingBookButton lang={lang} />
+  </body>
+</html>
