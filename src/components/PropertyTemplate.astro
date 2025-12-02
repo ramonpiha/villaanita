@@ -3,16 +3,23 @@ import { getEntry } from "astro:content";
 
 // Define the available languages
 type Lang = "en" | "it" | "de";
+
+// Define property item type matching the schema
+type PropertyItem = {
+  id: string;
+  type: string[];
+  title: string;
+  summary: string;
+  coordinates?: [number, number];
+  image: string; // Corrected from 'images' to 'image' based on config.ts
+};
+
 interface Props {
   propertyId: string;
   lang: Lang;
-  images: {
-    hero: string;
-    gallery: string[];
-  };
 }
 
-const { propertyId, lang, images } = Astro.props;
+const { propertyId, lang } = Astro.props;
 
 const texts = {
   generalInfo: {
@@ -30,14 +37,51 @@ const texts = {
     it: "Punti Salienti e Servizi",
     de: "Highlights & Ausstattung",
   },
+  scrollDown: {
+    en: "Scroll to explore",
+    it: "Scorri per esplorare",
+    de: "Scrollen Sie nach unten",
+  },
 };
-// Fetch the property content
+
+// 1. Fetch the TEXT content (Title, descriptions, etc.)
 const propertyEntry = await getEntry(`${lang}-property-content`, propertyId);
 if (!propertyEntry) {
-  return new Response("404 Not Found", { status: 404 });
+  throw new Error("Property content not found");
 }
 
-const { title, generalInfo, ambient, highlights } = propertyEntry.data;
+// 2. Fetch the DATA content (The list of images/items from the YAML file)
+// We use getEntry here because we ONLY want the data for this specific property file.
+const propertyDataEntry = await getEntry(`${lang}-properties`, propertyId);
+if (!propertyDataEntry) {
+  throw new Error("Property data not found");
+}
+
+const { title, subtitle, generalInfo, ambient, highlights } = propertyEntry.data;
+
+// Get the array of items from the data entry
+const allItems: PropertyItem[] = propertyDataEntry.data;
+
+// 3. Filter for HERO images
+// Logic: Find all items in this file where the type includes "full-screen-[propertyId]"
+const heroItems = allItems.filter((item: PropertyItem) => 
+  item.type.includes(`full-screen-${propertyId}`)
+);
+
+// 4. Filter for CONTENT images
+// Logic: Find all items in this file where the type includes "[propertyId]-page"
+const contentItems = allItems.filter((item: PropertyItem) => 
+  item.type.includes(`${propertyId}-page`)
+);
+
+// 5. Extract just the image strings
+const contentImages = contentItems.map((item: PropertyItem) => item.image);
+const contentSummaries = contentItems.map((item: PropertyItem) => item.summary);
+
+// Fallback check
+if (!heroItems.length || contentImages.length < 3) {
+  throw new Error(`Required images not found. Found ${heroItems.length} hero images and ${contentImages.length} content images.`);
+}
 ---
 
 <section class="relative w-full h-screen overflow-hidden">
@@ -45,17 +89,54 @@ const { title, generalInfo, ambient, highlights } = propertyEntry.data;
     id="parallax-hero"
     class="absolute inset-0 w-full h-[120vh] will-change-transform"
   >
-    <img src={images.hero} alt={title} class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-black/40"></div>
-  </div>
-
-  <div class="relative h-full flex flex-col items-center justify-center z-10">
-    <div class="text-center px-4">
-      <h1
-        class="text-5xl md:text-7xl font-bold text-white tracking-wide drop-shadow-2xl"
+    {heroItems.map((item: PropertyItem, index: number) => (
+      <div
+        class={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+          index === 0 ? 'opacity-100' : 'opacity-0'
+        }`}
+        data-slide-index={index}
       >
-        {title}
-      </h1>
+        <img 
+          src={item.image} 
+          alt={`${item.title} - Hero Image ${index + 1}`}
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
+          {item.title && (
+            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide drop-shadow-2xl mb-4">
+              {item.title}
+            </h1>
+          )}
+          {item.summary && (
+            <p class="text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg max-w-2xl mx-auto">
+              {item.summary}
+            </p>
+          )}
+        </div>
+      </div>
+    ))}
+
+    <div 
+      id="scroll-indicator" 
+      class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-300 z-20"
+    >
+      <span class="text-white/80 text-sm font-light tracking-wider uppercase">
+        {texts.scrollDown[lang]}
+      </span>
+      <svg 
+        class="w-6 h-6 text-white/80 animate-bounce" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24"
+      >
+        <path 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="2" 
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+        />
+      </svg>
     </div>
   </div>
 </section>
@@ -66,8 +147,8 @@ const { title, generalInfo, ambient, highlights } = propertyEntry.data;
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div class="rounded-2xl overflow-hidden shadow-2xl">
           <img
-            src={images.gallery[0]}
-            alt="Property view"
+            src={contentImages[0]}
+            alt={contentSummaries[0]}
             class="w-full h-full object-cover"
           />
         </div>
@@ -94,8 +175,8 @@ const { title, generalInfo, ambient, highlights } = propertyEntry.data;
         </div>
         <div class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-xl">
           <img
-            src={images.gallery[1]}
-            alt="Ambient"
+            src={contentImages[1]}
+            alt={contentSummaries[1]}
             class="w-full h-full object-cover"
           />
         </div>
@@ -108,8 +189,8 @@ const { title, generalInfo, ambient, highlights } = propertyEntry.data;
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div class="rounded-2xl overflow-hidden shadow-xl">
           <img
-            src={images.gallery[2]}
-            alt="Highlights"
+            src={contentImages[2]}
+            alt={contentSummaries[2]}
             class="w-full h-full object-cover"
           />
         </div>
@@ -148,18 +229,63 @@ const { title, generalInfo, ambient, highlights } = propertyEntry.data;
 </div>
 
 <script>
-  // Parallax scrolling effect
+  // Parallax scrolling effect and fade animations
   function initParallax() {
     const parallaxElement = document.getElementById("parallax-hero");
-    if (!parallaxElement) return;
+    
+    // NOTE: heroContent and scrollIndicator are now INSIDE the parallax-hero div
+    // We need to query the general hero content outside the slides for parallax effect
+    // We'll query for the content elements inside the hero section, outside the iterating divs.
+
+    // Slideshow functionality
+    // 💡 FIX: Target the parent DIVs that hold the opacity class and data-slide-index
+    // We use [data-slide-index] to select all the individual slide containers
+    const slides = parallaxElement.querySelectorAll<HTMLElement>('div[data-slide-index]'); 
+
+    // Find the shared scroll indicator inside the hero section (it's outside the mapped slides)
+    const scrollIndicator = document.getElementById("scroll-indicator"); 
+
+    let currentSlide = 0;
+    
+    if (!parallaxElement || slides.length === 0) return;
+
+    function changeSlide() {
+      // Hide current slide (the parent div)
+      if (slides[currentSlide]) {
+        slides[currentSlide].style.opacity = '0';
+      }
+      
+      // Move to next slide
+      currentSlide = (currentSlide + 1) % slides.length;
+      
+      // Show next slide (the parent div)
+      if (slides[currentSlide]) {
+        slides[currentSlide].style.opacity = '1';
+      }
+    }
+    
+    // Auto-advance slides every 3 seconds
+    const slideInterval = setInterval(changeSlide, 5000);
+    
     function updateParallax() {
       const scrolled = window.scrollY;
       const heroHeight = window.innerHeight;
+      
       // Only apply parallax while hero is visible
       if (scrolled < heroHeight) {
-        // Move the image slower than scroll (0.5 = half speed)
+        // Move the whole parallax container slower than scroll
         const yPos = scrolled * 0.5;
         parallaxElement.style.transform = `translate3d(0, ${yPos}px, 0)`;
+        
+        // Fade out text and scroll indicator based on scroll position
+        const fadePoint = heroHeight * 0.4;
+        const opacity = Math.max(0, 1 - (scrolled / fadePoint));
+
+        // Since your text content is now inside the slides, 
+        // we only fade out the scroll indicator using this logic.
+        if (scrollIndicator) {
+          scrollIndicator.style.opacity = opacity.toString();
+        }
       }
     }
 
@@ -174,8 +300,14 @@ const { title, generalInfo, ambient, highlights } = propertyEntry.data;
         ticking = true;
       }
     });
+    
     // Initial call
     updateParallax();
+    
+    // Cleanup interval on page navigation
+    document.addEventListener("astro:before-preparation", () => {
+      clearInterval(slideInterval);
+    });
   }
 
   // Initialize on page load
@@ -183,11 +315,3 @@ const { title, generalInfo, ambient, highlights } = propertyEntry.data;
   // Re-initialize on view transitions (if using Astro's view transitions)
   document.addEventListener("astro:page-load", initParallax);
 </script>
-
-<style>
-  /* Ensure smooth scrolling performance */
-  #parallax-hero {
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-</style>

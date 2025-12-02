@@ -1,0 +1,38 @@
+- id: villa-anita-slider-1
+  type:
+    - full-screen-villa-anita
+    - house
+  title: "Villa Anita"
+  summary: "Rooms & Apartments"
+  image: /images/villa-anita-page/LQ-villa-anita-bolzano-_Y0A4993-HDR-Modifica.avif
+
+- id: villa-anita-slider-2
+  type:
+    - full-screen-villa-anita
+    - house
+  title: "Enchanting view over the vineyards"
+  summary: "Villa Anita surrounded by greenery"
+  image: /images/villa-anita-page/villa-anita-bolzano-rooms-apartments-0604.avif
+
+- id: villa-anita-page-1
+  type:
+    - villa-anita-page
+  title: "Villa Anita house plan"
+  summary: "The old house plan of Villa Anita"
+  image: /images/villa-anita-page/1420px-villa-Anita-1905.avif
+
+- id: villa-anita-page-2
+  type:
+    - villa-anita-page
+    - apartment
+  title: "Villa Anita Room B1"
+  summary: "Room B1 of Villa Anita"
+  image: /images/villa-anita-page/villa-anita-bolzano-rooms-apartments-0005-1.avif
+
+- id: villa-anita-page-3
+  type:
+    - villa-anita-page
+    - garden
+  title: "Villa Anita Garden"
+  summary: "The garden of Villa Anita"
+  image: /images/villa-anita-page/LR-villa-anita-bolzano-_Y0A5000.avif

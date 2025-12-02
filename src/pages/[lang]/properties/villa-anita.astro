@@ -16,16 +16,6 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params as { lang: Lang };
-
-// Images configuration for Villa Anita
-const images = {
-  hero: "/images/villa-anita-page/LQ-villa-anita-bolzano-_Y0A4993-HDR-Modifica.avif",
-  gallery: [
-    "/images/villa-anita-page/1420px-villa-Anita-1905.avif",
-    "/images/villa-anita-page/villa-anita-bolzano-rooms-apartments-0005-1.avif",
-    "/images/villa-anita-page/LR-villa-anita-bolzano-_Y0A5000.avif",
-  ],
-};
 ---
 
 <!DOCTYPE html>
@@ -49,7 +39,7 @@ const images = {
 
     <!-- Full-width content (no constraints) -->
     <div class="mt-0">
-      <PropertyTemplate propertyId="villa-anita" lang={lang} images={images} />
+      <PropertyTemplate propertyId="villa-anita" lang={lang} />
     </div>
 
     <!-- Footer -->

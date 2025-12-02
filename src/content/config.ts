@@ -5,8 +5,8 @@ const propertiesSchema = z.array(z.object({
   type: z.array(z.string()),
   title: z.string(),
   summary: z.string(),
-  coordinates: z.tuple([z.number(), z.number()]),
-  images: z.array(z.string()),
+  coordinates: z.tuple([z.number(), z.number()]).optional(),
+  image: z.string(),
 }));
 
 const pagesSchema = z.object({
@@ -18,6 +18,7 @@ const pagesSchema = z.object({
 
 const propertyContentSchema = z.object({
   title: z.string(),
+  subtitle: z.string(),
   generalInfo: z.string(),
   ambient: z.string(),
   highlights: z.array(z.string()),

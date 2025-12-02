@@ -1,0 +1,38 @@
+- id: villa-anita-slider-1
+  type:
+    - full-screen-villa-anita
+    - house
+  title: "Villa Anita"
+  summary: "Rooms & Apartments"
+  image: /images/villa-anita-page/LQ-villa-anita-bolzano-_Y0A4993-HDR-Modifica.avif
+
+- id: villa-anita-slider-2
+  type:
+    - full-screen-villa-anita
+    - house
+  title: "VISTA INCANTEVOLE SULLE VIGNE"
+  summary: "VILLA ANITA IMMERSA NEL VERDE"
+  image: /images/villa-anita-page/villa-anita-bolzano-rooms-apartments-0604.avif
+
+- id: villa-anita-page-1
+  type:
+    - villa-anita-page
+  title: "Pianta della casa di Villa Anita"
+  summary: "La vecchia pianta della casa di Villa Anita"
+  image: /images/villa-anita-page/1420px-villa-Anita-1905.avif
+
+- id: villa-anita-page-2
+  type:
+    - villa-anita-page
+    - apartment
+  title: "Camera B1 di Villa Anita"
+  summary: "Camera B1 di Villa Anita"
+  image: /images/villa-anita-page/villa-anita-bolzano-rooms-apartments-0005-1.avif
+
+- id: villa-anita-page-3
+  type:
+    - villa-anita-page
+    - garden
+  title: "Giardino di Villa Anita"
+  summary: "Il giardino di Villa Anita"
+  image: /images/villa-anita-page/LR-villa-anita-bolzano-_Y0A5000.avif
