@@ -91,7 +91,7 @@ if (!heroItems.length || contentImages.length < 3) {
   >
     {heroItems.map((item: PropertyItem, index: number) => (
       <div
-        class={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+        class={`absolute inset-0 w-full h-full transition-opacity duration-1000 z-0 ${
           index === 0 ? 'opacity-100' : 'opacity-0'
         }`}
         data-slide-index={index}
@@ -101,43 +101,45 @@ if (!heroItems.length || contentImages.length < 3) {
           alt={`${item.title} - Hero Image ${index + 1}`}
           class="w-full h-full object-cover"
         />
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
-          {item.title && (
-            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide drop-shadow-2xl mb-4">
-              {item.title}
-            </h1>
-          )}
-          {item.summary && (
-            <p class="text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg max-w-2xl mx-auto">
-              {item.summary}
-            </p>
-          )}
-        </div>
+        <div class="absolute inset-0 bg-black/40 z-1"></div>
       </div>
     ))}
-
-    <div 
-      id="scroll-indicator" 
-      class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-300 z-20"
-    >
-      <span class="text-white/80 text-sm font-light tracking-wider uppercase">
-        {texts.scrollDown[lang]}
-      </span>
-      <svg 
-        class="w-6 h-6 text-white/80 animate-bounce" 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24"
+  </div>
+  
+  <div 
+    id="hero-text-container"
+    class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20 pointer-events-none -mt-32"
+  >
+    {heroItems.map((item: PropertyItem, index: number) => (
+      <div
+        class={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-1000 ${
+          index === 0 ? 'opacity-100' : 'opacity-0'
+        }`}
+        data-text-slide={index}
       >
-        <path 
-          stroke-linecap="round" 
-          stroke-linejoin="round" 
-          stroke-width="2" 
-          d="M19 14l-7 7m0 0l-7-7m7 7V3"
-        />
-      </svg>
-    </div>
+        {item.title && (
+          <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide drop-shadow-2xl mb-4">
+            {item.title}
+          </h1>
+        )}
+        {item.summary && (
+          <p class="text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg max-w-2xl mx-auto">
+            {item.summary}
+          </p>
+        )}
+      </div>
+    ))}
+  </div>
+  
+  <div 
+    id="scroll-indicator" 
+    class="absolute bottom-32 left-1/2 -translate-x-1/2 z-30 pointer-events-none opacity-100"
+  >
+    <img 
+      src="/images/scroll-down-18.png" 
+      alt="Scroll down"
+      class="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-2xl"
+    />
   </div>
 </section>
 
@@ -232,39 +234,42 @@ if (!heroItems.length || contentImages.length < 3) {
   // Parallax scrolling effect and fade animations
   function initParallax() {
     const parallaxElement = document.getElementById("parallax-hero");
+    const heroTextContainer = document.getElementById("hero-text-container");
+    const scrollIndicator = document.getElementById("scroll-indicator");
     
-    // NOTE: heroContent and scrollIndicator are now INSIDE the parallax-hero div
-    // We need to query the general hero content outside the slides for parallax effect
-    // We'll query for the content elements inside the hero section, outside the iterating divs.
-
-    // Slideshow functionality
-    // 💡 FIX: Target the parent DIVs that hold the opacity class and data-slide-index
-    // We use [data-slide-index] to select all the individual slide containers
-    const slides = parallaxElement.querySelectorAll<HTMLElement>('div[data-slide-index]'); 
-
-    // Find the shared scroll indicator inside the hero section (it's outside the mapped slides)
-    const scrollIndicator = document.getElementById("scroll-indicator"); 
+    // Slideshow functionality for images
+    const slides = parallaxElement?.querySelectorAll<HTMLElement>('div[data-slide-index]');
+    // Slideshow functionality for text
+    const textSlides = heroTextContainer?.querySelectorAll<HTMLElement>('div[data-text-slide]');
 
     let currentSlide = 0;
     
-    if (!parallaxElement || slides.length === 0) return;
+    if (!parallaxElement || !slides || slides.length === 0) return;
 
     function changeSlide() {
-      // Hide current slide (the parent div)
+      // Hide current image slide
       if (slides[currentSlide]) {
         slides[currentSlide].style.opacity = '0';
+      }
+      // Hide current text slide
+      if (textSlides && textSlides[currentSlide]) {
+        textSlides[currentSlide].style.opacity = '0';
       }
       
       // Move to next slide
       currentSlide = (currentSlide + 1) % slides.length;
       
-      // Show next slide (the parent div)
+      // Show next image slide
       if (slides[currentSlide]) {
         slides[currentSlide].style.opacity = '1';
       }
+      // Show next text slide
+      if (textSlides && textSlides[currentSlide]) {
+        textSlides[currentSlide].style.opacity = '1';
+      }
     }
     
-    // Auto-advance slides every 3 seconds
+    // Auto-advance slides every 5 seconds
     const slideInterval = setInterval(changeSlide, 5000);
     
     function updateParallax() {
@@ -281,10 +286,14 @@ if (!heroItems.length || contentImages.length < 3) {
         const fadePoint = heroHeight * 0.4;
         const opacity = Math.max(0, 1 - (scrolled / fadePoint));
 
-        // Since your text content is now inside the slides, 
-        // we only fade out the scroll indicator using this logic.
+        // Fade out the scroll indicator
         if (scrollIndicator) {
           scrollIndicator.style.opacity = opacity.toString();
+        }
+
+        // Fade out the hero text container
+        if (heroTextContainer) {
+          heroTextContainer.style.opacity = opacity.toString();
         }
       }
     }
