@@ -6,7 +6,7 @@ interface Property {
   title: string;
   summary: string;
   coordinates: [number, number];
-  images: string[];
+  image: string;
 }
 
 interface Props {
@@ -45,7 +45,7 @@ const getPropertyLink = (id: string) => {
         class="block group relative h-96 md:h-[500px] w-full rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 ease-in-out"
       >
         <img
-          src={featuredProperty.images[0]}
+          src={featuredProperty.image}
           alt={featuredProperty.title}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
@@ -68,7 +68,7 @@ const getPropertyLink = (id: string) => {
         class="block group relative h-72 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
       >
         <img
-          src={property.images[0]}
+          src={property.image}
           alt={property.title}
           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"

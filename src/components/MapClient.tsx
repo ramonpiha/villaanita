@@ -32,7 +32,7 @@ interface Location {
   title: string;
   summary: string;
   coordinates: LatLngExpression;
-  images: string[];
+  image: string;
 }
 
 interface MapClientProps {
@@ -123,8 +123,8 @@ export default function MapClient({ locations, lang }: MapClientProps) {
                 <ApartmentCardPopup
                   title={loc.title}
                   address={loc.summary}
-                  thumbnailUrl={loc.images[0] || ""}
-                  bookingUrl={`/${loc.id}`}
+                  thumbnailUrl={loc.image || ""}
+                  bookingUrl={`properties/${loc.id}`}
                   lang={lang}
                 />
               </div>

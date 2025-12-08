@@ -1,5 +1,6 @@
 ---
 import { getEntry } from "astro:content";
+import { marked } from "marked";
 
 // Define the available languages
 type Lang = "en" | "it" | "de";
@@ -30,7 +31,7 @@ const texts = {
   ambient: {
     en: "Ambient & Atmosphere",
     it: "Ambiente e Atmosfera",
-    de: "Ambiente & Atmosphäre",
+    de: "Umgebung & Atmosphäre",
   },
   highlights: {
     en: "Highlights & Amenities",
@@ -57,20 +58,27 @@ if (!propertyDataEntry) {
   throw new Error("Property data not found");
 }
 
-const { title, subtitle, generalInfo, ambient, highlights } = propertyEntry.data;
+const { title, subtitle, generalInfo, ambient, highlights } =
+  propertyEntry.data;
+const generalInfoHtml = propertyEntry.data.generalInfo
+  ? marked.parse(propertyEntry.data.generalInfo)
+  : "";
+const ambientHtml = propertyEntry.data.ambient
+  ? marked.parse(propertyEntry.data.ambient)
+  : "";
 
 // Get the array of items from the data entry
 const allItems: PropertyItem[] = propertyDataEntry.data;
 
 // 3. Filter for HERO images
 // Logic: Find all items in this file where the type includes "full-screen-[propertyId]"
-const heroItems = allItems.filter((item: PropertyItem) => 
+const heroItems = allItems.filter((item: PropertyItem) =>
   item.type.includes(`full-screen-${propertyId}`)
 );
 
 // 4. Filter for CONTENT images
 // Logic: Find all items in this file where the type includes "[propertyId]-page"
-const contentItems = allItems.filter((item: PropertyItem) => 
+const contentItems = allItems.filter((item: PropertyItem) =>
   item.type.includes(`${propertyId}-page`)
 );
 
@@ -80,7 +88,9 @@ const contentSummaries = contentItems.map((item: PropertyItem) => item.summary);
 
 // Fallback check
 if (!heroItems.length || contentImages.length < 3) {
-  throw new Error(`Required images not found. Found ${heroItems.length} hero images and ${contentImages.length} content images.`);
+  throw new Error(
+    `Required images not found. Found ${heroItems.length} hero images and ${contentImages.length} content images.`
+  );
 }
 ---
 
@@ -89,54 +99,58 @@ if (!heroItems.length || contentImages.length < 3) {
     id="parallax-hero"
     class="absolute inset-0 w-full h-[120vh] will-change-transform"
   >
-    {heroItems.map((item: PropertyItem, index: number) => (
-      <div
-        class={`absolute inset-0 w-full h-full transition-opacity duration-1000 z-0 ${
-          index === 0 ? 'opacity-100' : 'opacity-0'
-        }`}
-        data-slide-index={index}
-      >
-        <img 
-          src={item.image} 
-          alt={`${item.title} - Hero Image ${index + 1}`}
-          class="w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-black/40 z-1"></div>
-      </div>
-    ))}
+    {
+      heroItems.map((item: PropertyItem, index: number) => (
+        <div
+          class={`absolute inset-0 w-full h-full transition-opacity duration-1000 z-0 ${
+            index === 0 ? "opacity-100" : "opacity-0"
+          }`}
+          data-slide-index={index}
+        >
+          <img
+            src={item.image}
+            alt={`${item.title} - Hero Image ${index + 1}`}
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-black/40 z-1" />
+        </div>
+      ))
+    }
   </div>
-  
-  <div 
+
+  <div
     id="hero-text-container"
     class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20 pointer-events-none -mt-32"
   >
-    {heroItems.map((item: PropertyItem, index: number) => (
-      <div
-        class={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-1000 ${
-          index === 0 ? 'opacity-100' : 'opacity-0'
-        }`}
-        data-text-slide={index}
-      >
-        {item.title && (
-          <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide drop-shadow-2xl mb-4">
-            {item.title}
-          </h1>
-        )}
-        {item.summary && (
-          <p class="text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg max-w-2xl mx-auto">
-            {item.summary}
-          </p>
-        )}
-      </div>
-    ))}
+    {
+      heroItems.map((item: PropertyItem, index: number) => (
+        <div
+          class={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-1000 ${
+            index === 0 ? "opacity-100" : "opacity-0"
+          }`}
+          data-text-slide={index}
+        >
+          {item.title && (
+            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide drop-shadow-2xl mb-4">
+              {item.title}
+            </h1>
+          )}
+          {item.summary && (
+            <p class="text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg max-w-2xl mx-auto">
+              {item.summary}
+            </p>
+          )}
+        </div>
+      ))
+    }
   </div>
-  
-  <div 
-    id="scroll-indicator" 
+
+  <div
+    id="scroll-indicator"
     class="absolute bottom-32 left-1/2 -translate-x-1/2 z-30 pointer-events-none opacity-100"
   >
-    <img 
-      src="/images/scroll-down-18.png" 
+    <img
+      src="/images/scroll-down-18.png"
       alt="Scroll down"
       class="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-2xl"
     />
@@ -158,9 +172,14 @@ if (!heroItems.length || contentImages.length < 3) {
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             {texts.generalInfo[lang]}
           </h2>
-          <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-            {generalInfo}
-          </p>
+          {
+            generalInfoHtml && (
+              <div
+                class="prose prose-lg prose-gray max-w-none"
+                set:html={generalInfoHtml}
+              />
+            )
+          }
         </div>
       </div>
     </div>
@@ -173,7 +192,14 @@ if (!heroItems.length || contentImages.length < 3) {
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             {texts.ambient[lang]}
           </h2>
-          <p class="text-lg text-gray-700 leading-relaxed">{ambient}</p>
+          {
+            ambientHtml && (
+              <div
+                class="prose prose-lg prose-gray max-w-none"
+                set:html={ambientHtml}
+              />
+            )
+          }
         </div>
         <div class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-xl">
           <img
@@ -236,55 +262,59 @@ if (!heroItems.length || contentImages.length < 3) {
     const parallaxElement = document.getElementById("parallax-hero");
     const heroTextContainer = document.getElementById("hero-text-container");
     const scrollIndicator = document.getElementById("scroll-indicator");
-    
+
     // Slideshow functionality for images
-    const slides = parallaxElement?.querySelectorAll<HTMLElement>('div[data-slide-index]');
+    const slides = parallaxElement?.querySelectorAll<HTMLElement>(
+      "div[data-slide-index]"
+    );
     // Slideshow functionality for text
-    const textSlides = heroTextContainer?.querySelectorAll<HTMLElement>('div[data-text-slide]');
+    const textSlides = heroTextContainer?.querySelectorAll<HTMLElement>(
+      "div[data-text-slide]"
+    );
 
     let currentSlide = 0;
-    
+
     if (!parallaxElement || !slides || slides.length === 0) return;
 
     function changeSlide() {
       // Hide current image slide
       if (slides[currentSlide]) {
-        slides[currentSlide].style.opacity = '0';
+        slides[currentSlide].style.opacity = "0";
       }
       // Hide current text slide
       if (textSlides && textSlides[currentSlide]) {
-        textSlides[currentSlide].style.opacity = '0';
+        textSlides[currentSlide].style.opacity = "0";
       }
-      
+
       // Move to next slide
       currentSlide = (currentSlide + 1) % slides.length;
-      
+
       // Show next image slide
       if (slides[currentSlide]) {
-        slides[currentSlide].style.opacity = '1';
+        slides[currentSlide].style.opacity = "1";
       }
       // Show next text slide
       if (textSlides && textSlides[currentSlide]) {
-        textSlides[currentSlide].style.opacity = '1';
+        textSlides[currentSlide].style.opacity = "1";
       }
     }
-    
+
     // Auto-advance slides every 5 seconds
     const slideInterval = setInterval(changeSlide, 5000);
-    
+
     function updateParallax() {
       const scrolled = window.scrollY;
       const heroHeight = window.innerHeight;
-      
+
       // Only apply parallax while hero is visible
       if (scrolled < heroHeight) {
         // Move the whole parallax container slower than scroll
         const yPos = scrolled * 0.5;
         parallaxElement.style.transform = `translate3d(0, ${yPos}px, 0)`;
-        
+
         // Fade out text and scroll indicator based on scroll position
         const fadePoint = heroHeight * 0.4;
-        const opacity = Math.max(0, 1 - (scrolled / fadePoint));
+        const opacity = Math.max(0, 1 - scrolled / fadePoint);
 
         // Fade out the scroll indicator
         if (scrollIndicator) {
@@ -309,10 +339,10 @@ if (!heroItems.length || contentImages.length < 3) {
         ticking = true;
       }
     });
-    
+
     // Initial call
     updateParallax();
-    
+
     // Cleanup interval on page navigation
     document.addEventListener("astro:before-preparation", () => {
       clearInterval(slideInterval);

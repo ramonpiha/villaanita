@@ -24,15 +24,15 @@
 - id: villa-anita-page-2
   type:
     - villa-anita-page
-    - apartment
-  title: "Villa Anita Zimmer B1"
-  summary: "Zimmer B1 von Villa Anita"
-  image: /images/villa-anita-page/villa-anita-bolzano-rooms-apartments-0005-1.avif
-
-- id: villa-anita-page-3
-  type:
-    - villa-anita-page
     - garden
   title: "Villa Anita Garten"
   summary: "Der Garten von Villa Anita"
   image: /images/villa-anita-page/LR-villa-anita-bolzano-_Y0A5000.avif
+
+- id: villa-anita-page-3
+  type:
+    - villa-anita-page
+    - apartment
+  title: "Villa Anita Zimmer B1"
+  summary: "Zimmer B1 von Villa Anita"
+  image: /images/villa-anita-page/villa-anita-bolzano-rooms-apartments-0005-1.avif
