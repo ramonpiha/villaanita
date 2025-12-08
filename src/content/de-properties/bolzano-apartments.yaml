@@ -1,0 +1,38 @@
+- id: bolzano-apartments-slider-1
+  type:
+    - full-screen-bolzano-apartments
+    - apartment
+  title: "Bolzano Apartments"
+  summary: "Zimmer mit Küche in maximaler Freiheit"
+  image: /images/bolzano-apartments-page/LQ-rooms-apartments-bolzano-_Y0A1860.avif
+
+- id: bolzano-apartments-slider-2
+  type:
+    - full-screen-bolzano-apartments
+    - apartment
+  title: "Apartments im Stadtzentrum"
+  summary: "Zimmer & Apartments"
+  image: /images/bolzano-apartments-page/LQ-rooms-apartments-bolzano-_Y0A1827.avif
+
+- id: bolzano-apartments-page-1
+  type:
+    - bolzano-apartments-page
+  title: "Apartment mit Doppelbett"
+  summary: "Apartment mit Doppelbett"
+  image: /images/bolzano-apartments-page/LQ-rooms-apartments-bolzano-_Y0A1878.avif
+
+- id: bolzano-apartments-page-2
+  type:
+    - bolzano-apartments-page
+    - city
+  title: "Stadtzentrum"
+  summary: "Das Stadtzentrum nur wenige Schritte entfernt"
+  image: /images/bolzano-apartments-page/LR-panda-bike-rooms-apartments-bz-_MG_2938-1280px.avif
+
+- id: bolzano-apartments-page-3
+  type:
+    - bolzano-apartments-page
+    - apartment
+  title: "Apartment mit zwei Einzelbetten"
+  summary: "Apartment mit zwei Einzelbetten"
+  image: /images/bolzano-apartments-page/LQ-rooms-apartments-bolzano-_Y0A1893.avif

@@ -1,6 +1,6 @@
 ---
 title: Home
-heading: 🏡 Rooms & Apartments Bz
+heading: Rooms & Apartments Bz
 subheading: Erleben Sie Bozen – mitten im Zentrum oder in ruhiger Nähe.
 ---
 

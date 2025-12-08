@@ -1,6 +1,6 @@
 ---
 title: Home
-heading: 🏡 Rooms & Apartments Bz
+heading: Rooms & Apartments Bz
 subheading: Vivi Bolzano, dal centro storico alle zone più tranquille.
 ---
 

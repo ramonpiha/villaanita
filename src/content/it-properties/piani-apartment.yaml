@@ -1,0 +1,38 @@
+- id: piani-apartment-slider-1
+  type:
+    - full-screen-piani-apartment
+    - apartment
+  title: "Piani Apartment"
+  summary: "Appartamento per soggiorni lunghi e brevi"
+  image: /images/piani-apartment-page/LQ-rooms-apartments-bolzano-_Y0A6119-Modifica.avif
+
+- id: piani-apartment-slider-2
+  type:
+    - full-screen-piani-apartment
+    - apartment
+  title: "Interno spazioso e confortevole"
+  summary: "A due passi dalla funivia del Renon"
+  image: /images/piani-apartment-page/bolzano-apartment-interior.avif
+
+- id: piani-apartment-page-1
+  type:
+    - piani-apartment-page
+  title: "Appartamento con letto doppio"
+  summary: "Appartamento con letto doppio"
+  image: /images/piani-apartment-page/rooms-apartments-bolzano-C0F6A70A-A6C9-4B16-955E-39A64DA454B1.avif
+
+- id: piani-apartment-page-2
+  type:
+    - piani-apartment-page
+    - city
+  title: "Vista delle vigne"
+  summary: "Vista da un ristorante a pochi minuti in macchina"
+  image: /images/piani-apartment-page/LQ-rooms-apartments-bolzano-_B6A8068.avif
+
+- id: piani-apartment-page-3
+  type:
+    - piani-apartment-page
+    - apartment
+  title: "Appartamento con due letti singoli"
+  summary: "Appartamento con due letti singoli"
+  image: /images/piani-apartment-page/villa-anita-bolzano-rooms-apartments-0582.avif

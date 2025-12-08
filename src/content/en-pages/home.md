@@ -1,6 +1,6 @@
 ---
 title: Home
-heading: 🏡 Rooms & Apartments Bz
+heading: Rooms & Apartments Bz
 subheading: Experience Bolzano, from the historic heart to quiet nearby zones.
 ---
 
