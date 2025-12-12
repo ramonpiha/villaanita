@@ -34,11 +34,11 @@
   coordinates: [1770, 6650]
   image: /images/map/piani-apartment.avif
 
-- id: lisa-apartment
+- id: lisa-apartments
   type:
     - apartment
     - map
-  title: "LISA apartment"
+  title: "LISA apartments"
   summary: "Via dei Portici, 71 Laubengasse"
   coordinates: [1530, 3920]
   image: /images/map/lisa-apartment.avif

@@ -1,0 +1,38 @@
+- id: lisa-apartments-slider-1
+  type:
+    - full-screen-lisa-apartments
+    - apartment
+  title: "Lisa Apartments"
+  summary: "In the middle of the picturesque Piazza Erbe and the Portici shopping street"
+  image: /images/lisa-apartments-page/piazza-erbe-bz-4321-scaled.avif
+
+- id: lisa-apartments-slider-2
+  type:
+    - full-screen-lisa-apartments
+    - apartment
+  title: "Arcades"
+  summary: "Shops under the charming Portici of Bolzano"
+  image: /images/lisa-apartments-page/HR-natale-_Y0A8271-scaled.avif
+
+- id: lisa-apartments-page-1
+  type:
+    - lisa-apartments-page
+  title: "Staircase"
+  summary: "Staircase to reach the apartments"
+  image: /images/lisa-apartments-page/LQ-rooms-apartments-bolzano-WhatsApp-Image-2022-06-02-at-16.24.14.avif
+
+- id: lisa-apartments-page-2
+  type:
+    - lisa-apartments-page
+    - city
+  title: "Arcades"
+  summary: "The Portici of Bolzano during the Christmas season"
+  image: /images/lisa-apartments-page/HR-natale-_Y0A7790-scaled.avif
+
+- id: lisa-apartments-page-3
+  type:
+    - lisa-apartments-page
+    - room
+  title: "Piazza Erbe"
+  summary: "Intersection at Piazza Erbe"
+  image: /images/lisa-apartments-page/LQ-rooms-apartments-bolzano-_MG_4244.avif

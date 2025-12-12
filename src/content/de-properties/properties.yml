@@ -34,7 +34,7 @@
   coordinates: [1770, 6650]
   image: /images/map/piani-apartment.avif
 
-- id: lisa-apartment
+- id: lisa-apartments
   type:
     - apartment
     - map

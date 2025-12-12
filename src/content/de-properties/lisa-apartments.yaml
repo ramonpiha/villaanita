@@ -1,0 +1,38 @@
+- id: lisa-apartments-slider-1
+  type:
+    - full-screen-lisa-apartments
+    - apartment
+  title: "Lisa Apartments"
+  summary: "Mitten auf dem malerischen Obstplatz und den Lauben, der Einkaufsstraße"
+  image: /images/lisa-apartments-page/piazza-erbe-bz-4321-scaled.avif
+
+- id: lisa-apartments-slider-2
+  type:
+    - full-screen-lisa-apartments
+    - apartment
+  title: "Lauben"
+  summary: "Geschäfte unter den bezaubernden Lauben von Bozen"
+  image: /images/lisa-apartments-page/HR-natale-_Y0A8271-scaled.avif
+
+- id: lisa-apartments-page-1
+  type:
+    - lisa-apartments-page
+  title: "Treppenhaus"
+  summary: "Treppenhaus um zu den Apartments zu gelangen"
+  image: /images/lisa-apartments-page/LQ-rooms-apartments-bolzano-WhatsApp-Image-2022-06-02-at-16.24.14.avif
+
+- id: lisa-apartments-page-2
+  type:
+    - lisa-apartments-page
+    - city
+  title: "Lauben"
+  summary: "Die Lauben von Bozen während der Weihnachtszeit"
+  image: /images/lisa-apartments-page/HR-natale-_Y0A7790-scaled.avif
+
+- id: lisa-apartments-page-3
+  type:
+    - lisa-apartments-page
+    - room
+  title: "Obstplatz"
+  summary: "Kreuzung am Obstplatz"
+  image: /images/lisa-apartments-page/LQ-rooms-apartments-bolzano-_MG_4244.avif

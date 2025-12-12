@@ -1,0 +1,38 @@
+- id: bolzano-rooms-slider-1
+  type:
+    - full-screen-bolzano-rooms
+    - apartment
+  title: "Bolzano Rooms"
+  summary: "Perfect rooms for those who prefer self check-in"
+  image: /images/bolzano-rooms-page/bolzano-rooms-5372-e1638561274584.avif
+
+- id: bolzano-rooms-slider-2
+  type:
+    - full-screen-bolzano-rooms
+    - apartment
+  title: "Rooms in a historic building"
+  summary: "Stay in one of Bolzano's historic buildings"
+  image: /images/bolzano-rooms-page/16102015-_MG_0059.avif
+
+- id: bolzano-rooms-page-1
+  type:
+    - bolzano-rooms-page
+  title: "Apartment floor plan"
+  summary: "Apartment floor plan"
+  image: /images/bolzano-rooms-page/planimetria_bolzano_rooms_1920x1200-e1660117593175.avif
+
+- id: bolzano-rooms-page-2
+  type:
+    - bolzano-rooms-page
+    - city
+  title: "Bar"
+  summary: "The bar across from the property"
+  image: /images/bolzano-rooms-page/20082015-_mg_5364.avif
+
+- id: bolzano-rooms-page-3
+  type:
+    - bolzano-rooms-page
+    - room
+  title: "Room 106"
+  summary: "Door of room 106"
+  image: /images/bolzano-rooms-page/bolzanorooms-6.avif

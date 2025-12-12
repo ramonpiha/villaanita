@@ -1,7 +1,5 @@
 ---
 import PropertyTemplate from "../../../components/PropertyTemplate.astro";
-import Navigation from "../../../components/Navigation.astro";
-import FloatingBookButton from "../../../components/FloatingBookButton.astro";
 
 // Define the available languages
 type Lang = "en" | "it" | "de";
@@ -35,21 +33,6 @@ const { lang } = Astro.params as { lang: Lang };
     <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body class="bg-bg text-brand font-sans antialiased">
-    <Navigation lang={lang} />
-
-    <!-- Full-width content (no constraints) -->
-    <div class="mt-0">
-      <PropertyTemplate propertyId="villa-anita" lang={lang} />
-    </div>
-
-    <!-- Footer -->
-    <footer class="mt-16 py-8 border-t border-brand/10">
-      <div class="max-w-5xl mx-auto px-4 text-center text-brand/60">
-        <p>&copy; {new Date().getFullYear()} Mountain B&B. All rights reserved.</p>
-        <p class="text-sm">A traditional home in the mountains.</p>
-      </div>
-    </footer>
-
-    <FloatingBookButton lang={lang} />
+    <PropertyTemplate propertyId="villa-anita" lang={lang} />
   </body>
 </html>

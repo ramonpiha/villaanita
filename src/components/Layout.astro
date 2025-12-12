@@ -1,6 +1,7 @@
 ---
 import Navigation from "./Navigation.astro";
 import FloatingBookButton from "./FloatingBookButton.astro";
+import Footer from "./Footer.astro";
 const { lang, title } = Astro.props;
 ---
 
@@ -26,12 +27,7 @@ const { lang, title } = Astro.props;
       <slot />
     </main>
 
-    <footer class="mt-16 py-8 border-t border-brand/10">
-      <div class="max-w-5xl mx-auto px-4 text-center text-brand/60">
-        <p>&copy; {new Date().getFullYear()} Mountain B&B. All rights reserved.</p>
-        <p class="text-sm">A traditional home in the mountains.</p>
-      </div>
-    </footer>
+    <Footer lang={lang} />
 
     <FloatingBookButton lang={lang} />
   </body>

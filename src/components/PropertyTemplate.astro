@@ -1,6 +1,9 @@
 ---
 import { getEntry } from "astro:content";
 import { marked } from "marked";
+import Navigation from "./Navigation.astro";
+import Footer from "./Footer.astro";
+import FloatingBookButton from "./FloatingBookButton.astro";
 
 // Define the available languages
 type Lang = "en" | "it" | "de";
@@ -12,7 +15,7 @@ type PropertyItem = {
   title: string;
   summary: string;
   coordinates?: [number, number];
-  image: string; // Corrected from 'images' to 'image' based on config.ts
+  image: string;
 };
 
 interface Props {
@@ -52,7 +55,6 @@ if (!propertyEntry) {
 }
 
 // 2. Fetch the DATA content (The list of images/items from the YAML file)
-// We use getEntry here because we ONLY want the data for this specific property file.
 const propertyDataEntry = await getEntry(`${lang}-properties`, propertyId);
 if (!propertyDataEntry) {
   throw new Error("Property data not found");
@@ -71,13 +73,11 @@ const ambientHtml = propertyEntry.data.ambient
 const allItems: PropertyItem[] = propertyDataEntry.data;
 
 // 3. Filter for HERO images
-// Logic: Find all items in this file where the type includes "full-screen-[propertyId]"
 const heroItems = allItems.filter((item: PropertyItem) =>
   item.type.includes(`full-screen-${propertyId}`)
 );
 
 // 4. Filter for CONTENT images
-// Logic: Find all items in this file where the type includes "[propertyId]-page"
 const contentItems = allItems.filter((item: PropertyItem) =>
   item.type.includes(`${propertyId}-page`)
 );
@@ -93,6 +93,8 @@ if (!heroItems.length || contentImages.length < 3) {
   );
 }
 ---
+
+<Navigation lang={lang} />
 
 <section class="relative w-full h-screen overflow-hidden">
   <div
@@ -255,6 +257,10 @@ if (!heroItems.length || contentImages.length < 3) {
     </div>
   </section>
 </div>
+
+<Footer lang={lang} />
+
+<FloatingBookButton lang={lang} />
 
 <script>
   // Parallax scrolling effect and fade animations
