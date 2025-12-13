@@ -28,5 +28,5 @@ highlights:
   - Handtücher, Haartrockner und Waschmaschine
   - Historisches Gebäude mit moderner Einrichtung
   - Check-in bei Villa Anita
-  - "Bozen Card für Gäste verfügbar"
+  - Bolzano Card für Gäste verfügbar
 ---

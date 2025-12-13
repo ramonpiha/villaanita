@@ -1,0 +1,38 @@
+- id: marlene-apartment-slider-1
+  type:
+    - full-screen-marlene-apartment
+    - city
+  title: "Marlene Apartment"
+  summary: "Centralissimo ad un passo da tutto"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3267.avif
+
+- id: marlene-apartment-slider-2
+  type:
+    - full-screen-marlene-apartment
+    - apartment
+  title: "Nel cuore di Bolzano"
+  summary: "Appartmamento spazioso per un soggiorno rilassante"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3165.avif
+
+- id: marlene-apartment-page-1
+  type:
+    - marlene-apartment-page
+  title: "Tavolino"
+  summary: "Tavolino in giardino"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3238.avif
+
+- id: marlene-apartment-page-2
+  type:
+    - marlene-apartment-page
+    - garden
+  title: "Giardinetto"
+  summary: "Giardinetto con tavolino"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3189.avif
+
+- id: marlene-apartment-page-3
+  type:
+    - marlene-apartment-page
+    - apartment
+  title: "Zona pasto"
+  summary: "Tavolo nella zona pasto"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3180.avif

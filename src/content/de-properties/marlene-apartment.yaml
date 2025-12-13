@@ -1,0 +1,38 @@
+- id: marlene-apartment-slider-1
+  type:
+    - full-screen-marlene-apartment
+    - city
+  title: "Marlene Apartment"
+  summary: "Sehr zentral, nur einen Schritt von allem entfernt"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3267.avif
+
+- id: marlene-apartment-slider-2
+  type:
+    - full-screen-marlene-apartment
+    - apartment
+  title: "Im Herzen von Bozen"
+  summary: "Geräumiges Apartment für einen entspannten Aufenthalt"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3165.avif
+
+- id: marlene-apartment-page-1
+  type:
+    - marlene-apartment-page
+  title: "Tischchen"
+  summary: "Tischchen im Garten"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3238.avif
+
+- id: marlene-apartment-page-2
+  type:
+    - marlene-apartment-page
+    - garden
+  title: "Gärtchen"
+  summary: "Gärtchen mit Tischchen"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3189.avif
+
+- id: marlene-apartment-page-3
+  type:
+    - marlene-apartment-page
+    - apartment
+  title: "Essbereich"
+  summary: "Tisch im Essbereich"
+  image: /images/marlene-apartment-page/LR-Marlene-apartment_Y0A3180.avif
