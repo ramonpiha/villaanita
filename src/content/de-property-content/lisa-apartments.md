@@ -11,7 +11,7 @@ generalInfo: |
   
   **Modern eingerichtete Apartments** in einem **historischen Gebäude**, perfekt für unabhängige Aufenthalte in den **Dolomiten**.
   
-  **Check-in bei Villa Anita**. Den Gästen steht die **[Bozen Card](https://www.bolzano-bozen.it/de/bolzano-bozen-card/)** zur Verfügung.
+  **Check-in bei Villa Anita**. Den Gästen steht die **[Bolzano Card](https://www.bolzano-bozen.it/de/bolzano-bozen-card/)** zur Verfügung.
 
 ambient: |
   Erleben Sie das Gefühl, zu Hause zu sein, in einem **historischen Gebäude** mit **modernem Komfort** im Herzen der Fußgängerzone von Bozen.

@@ -1,0 +1,36 @@
+- id: r11-apartment-slider-1
+  type:
+    - full-screen-r11-apartment
+  title: "Temporary Living"
+  summary: "Perfetto per soggiorni medio corti"
+  image: /images/r11-apartment-page/claudine-apartment-_Y0A2885.avif
+
+- id: r11-apartment-slider-2
+  type:
+    - full-screen-r11-apartment
+    - apartment
+  title: "Angolo cucina"
+  summary: "Appartamento confortevole a due passi dal centro"
+  image: /images/r11-apartment-page/claudine-apartment-_Y0A2886.avif
+
+- id: r11-apartment-page-1
+  type:
+    - r11-apartment-page
+  title: "Tavolo da cucina"
+  summary: "Tavolo da cucina"
+  image: /images/r11-apartment-page/claudine-apartment-_Y0A2871.avif
+
+- id: r11-apartment-page-2
+  type:
+    - r11-apartment-page
+  title: "Vista dal balcone"
+  summary: "Vista dal balcone"
+  image: /images/r11-apartment-page/claudine-apartment-_Y0A2971.avif
+
+- id: r11-apartment-page-3
+  type:
+    - r11-apartment-page
+    - apartment
+  title: "Quadri"
+  summary: "Quadri antichi"
+  image: /images/r11-apartment-page/claudine-apartment-_Y0A2946.avif
