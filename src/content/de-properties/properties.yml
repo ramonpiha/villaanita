@@ -3,7 +3,7 @@
     - house
     - map
   title: "VILLA ANITA ROOMS & APARTMENTS"
-  summary: "Via Castel Roncolo , 16 Runkelsteiner Straße"
+  summary: "Runkelsteiner Straße 16"
   coordinates: [2650, 4450]
   image: /images/map/villa-anita-front.avif
 
@@ -12,7 +12,7 @@
     - apartment
     - map
   title: "BOLZANO apartments"
-  summary: "Via Vintola, 5 Vintlerstraße"
+  summary: "Vintlerstraße 5"
   coordinates: [2000, 4550]
   image: /images/map/bolzano-apartments.avif
 
@@ -21,7 +21,7 @@
     - room
     - map
   title: "BOLZANO ROOMS"
-  summary: "Via Brennero, 4 Brennerstraße"
+  summary: "Brennerstraße 4"
   coordinates: [1770, 5820]
   image: /images/map/bolzanorooms.avif
 
@@ -30,7 +30,7 @@
     - apartment
     - map
   title: "PIANI apartment"
-  summary: "Via Piani d'Isarco, 4 Leegtorweg (Ingresso Via Piani di Bolzano - Eintritt bei Bozner-Boden-Weg)"
+  summary: "Leegtorweg 4 (Eintritt bei Bozner-Boden-Weg)"
   coordinates: [1770, 6650]
   image: /images/map/piani-apartment.avif
 
@@ -39,7 +39,7 @@
     - apartment
     - map
   title: "LISA apartment"
-  summary: "Via dei Portici, 71 Laubengasse"
+  summary: "Laubengasse 71"
   coordinates: [1530, 3920]
   image: /images/map/lisa-apartment.avif
 
@@ -48,7 +48,7 @@
     - apartment
     - map
   title: "R-11 apartment"
-  summary: "Via Renon ,11 Rittner Straße"
+  summary: "Rittner Straße 11"
   coordinates: [810, 5180]
   image: /images/map/claudine-apartment.avif
 
@@ -57,6 +57,6 @@
     - apartment
     - map
   title: "MARLENE apartment"
-  summary: "Via L. da Vinci, 14 L. da Vinci Str."
+  summary: "Leonardo da Vinci Straße 14"
   coordinates: [950, 3270]
   image: /images/map/marlene-apartment.avif

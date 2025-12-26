@@ -1,4 +1,10 @@
 ---
+import { getCollection, getEntry } from "astro:content";
+import VideoList from "../../components/VideoList.astro";
+import Layout from "../../components/Layout.astro";
+
+type Lang = "en" | "it" | "de";
+
 export function getStaticPaths() {
   return [
     { params: { lang: "en" } },
@@ -7,17 +13,29 @@ export function getStaticPaths() {
   ];
 }
 
-import Layout from "../../components/Layout.astro";
-const lang = Astro.params.lang;
-const title = "Info";
+const { lang } = Astro.params as { lang: Lang };
+const homeEntry = await getEntry(`${lang}-pages`, "info");
+const { title, heading, subheading } = homeEntry.data;
+const { Content } = await homeEntry.render();
+const videosEntry = await getEntry(`${lang}-check-in-videos`, "check-in-videos");
+const videos = videosEntry.data;
 ---
+
 <Layout lang={lang} title={title}>
   <div class="pt-10 pb-6 px-4 max-w-4xl mx-auto">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-      Info
+    <h1
+      class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight flex items-center gap-3"
+    >
+      <img src="/images/bnbLogo.avif" alt="Home" class="h-10 w-auto" />
+      {heading}
     </h1>
     <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
-      PlaceHolder
+      {subheading}
     </p>
   </div>
+
+  <div class="prose prose-lg max-w-none">
+    <Content />
+  </div>
+  <VideoList videos={videos} lang={lang} />
 </Layout>

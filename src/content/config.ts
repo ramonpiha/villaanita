@@ -24,6 +24,14 @@ const propertyContentSchema = z.object({
   highlights: z.array(z.string()),
 });
 
+const checkInVideos = z.array(z.object({
+  id: z.string(),
+  address: z.string(),
+  title: z.string(),
+  plz: z.number(),
+  city: z.string(),
+}))
+
 const createCollections = (langs: string[]) => {
   const collections: Record<string, ReturnType<typeof defineCollection>> = {};
 
@@ -41,6 +49,11 @@ const createCollections = (langs: string[]) => {
     collections[`${lang}-property-content`] = defineCollection({
       type: 'content',
       schema: propertyContentSchema,
+    });
+
+    collections[`${lang}-check-in-videos`] = defineCollection({
+      type: 'data',
+      schema: checkInVideos,
     });
   });
 

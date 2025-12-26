@@ -1,0 +1,90 @@
+---
+interface VideoItem {
+  id: string;      // The YouTube ID (e.g., "dQw4w9WgXcQ")
+  title: string;
+  address: string;
+  plz: number;
+  city: string;
+}
+
+interface Props {
+  videos: VideoItem[];
+  lang: 'de' | 'it' | 'en';
+}
+
+const { videos, lang } = Astro.props;
+
+// 1. Pick the ID of the video you want featured (Big) [cite: 3]
+const featuredId = videos.length > 0 ? videos[0].id : null; 
+
+// 2. Separate the properties [cite: 4, 5]
+const featuredVideo = videos.find((v) => v.id === featuredId);
+const gridVideos = videos.filter((v) => v.id !== featuredId);
+
+// YouTube specific helpers
+const getThumbnail = (id: string) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+const getYoutubeLink = (id: string) => `https://www.youtube.com/watch?v=${id}`;
+---
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <h2 class="text-3xl font-bold text-gray-900 mb-6">
+    Tutorial Video Check-In
+  </h2>
+
+  {featuredVideo && (
+    <div class="mb-8">
+      <a
+        href={getYoutubeLink(featuredVideo.id)}
+        target="_blank"
+        class="block group relative h-96 md:h-[500px] w-full rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 ease-in-out"
+      >
+        <img
+          src={getThumbnail(featuredVideo.id)}
+          alt={featuredVideo.title}
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div class="w-0 h-0 border-t-[15px] border-t-transparent border-l-[25px] border-l-white border-b-[15px] border-b-transparent ml-2"></div>
+            </div>
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
+          <h3 class="text-3xl md:text-4xl font-bold text-white mb-2">
+            {featuredVideo.title}
+          </h3>
+          <p class="text-gray-200 text-lg md:text-xl max-w-2xl">
+            {featuredVideo.address}, {featuredVideo.plz} {featuredVideo.city}
+          </p>
+        </div>
+      </a>
+    </div>
+  )}
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {gridVideos.map((video) => (
+      <a
+        href={getYoutubeLink(video.id)}
+        target="_blank"
+        class="block group relative h-72 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+      >
+        <img
+          src={getThumbnail(video.id)}
+          alt={video.title}
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+        
+        <div class="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-4 transition-colors group-hover:bg-black/80">
+          <h3 class="text-xl font-bold text-white">
+            {video.title}
+          </h3>
+          <p class="text-sm text-gray-300 truncate">
+            {video.address} • {video.city}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
