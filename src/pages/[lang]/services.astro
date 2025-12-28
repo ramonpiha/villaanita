@@ -1,6 +1,5 @@
 ---
 import { getCollection, getEntry } from "astro:content";
-import VideoList from "../../components/VideoList.astro";
 import Layout from "../../components/Layout.astro";
 
 type Lang = "en" | "it" | "de";
@@ -14,11 +13,9 @@ export function getStaticPaths() {
 }
 
 const { lang } = Astro.params as { lang: Lang };
-const homeEntry = await getEntry(`${lang}-pages`, "info");
+const homeEntry = await getEntry(`${lang}-pages`, "services");
 const { title, heading, subheading } = homeEntry.data;
 const { Content } = await homeEntry.render();
-const videosEntry = await getEntry(`${lang}-check-in-videos`, "check-in-videos");
-const videos = videosEntry.data;
 ---
 
 <Layout lang={lang} title={title}>
@@ -37,5 +34,4 @@ const videos = videosEntry.data;
   <div class="prose prose-lg max-w-none mt-12">
     <Content />
   </div>
-  <VideoList videos={videos} lang={lang} />
 </Layout>
