@@ -1,0 +1,83 @@
+---
+import { getEntry } from "astro:content";
+import { marked } from "marked";
+import Layout from "../../components/Layout.astro";
+
+type Lang = "en" | "it" | "de";
+
+interface Activity {
+  title: string;
+  image: string;
+  alt: string;
+  phone?: string;
+  website?: string;
+  content: string;
+}
+
+export async function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "it" } }, { params: { lang: "de" } }];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const entry = await getEntry(`${lang}-activities`, "activities");
+
+if (!entry) throw new Error("Content not found");
+
+const { title, subtitle, guestnet, neighborhoodIntro, activities } = entry.data;
+---
+
+<Layout lang={lang} title={title}>
+  <header class="py-12 text-center max-w-3xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-brand mb-4">{title}</h1>
+    <p class="text-xl text-gray-500 mb-10">{subtitle}</p>
+
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+      <div class="prose prose-gray mx-auto mb-6" set:html={marked.parse(guestnet.text)} />
+      <a 
+        href={guestnet.link} 
+        target="_blank" 
+        class="inline-block bg-brand text-white px-8 py-3 rounded-full font-bold hover:bg-brand/90 transition-colors"
+      >
+        Open GUESTNET
+      </a>
+    </div>
+  </header>
+
+  <div class="py-12 text-center max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Activities in the Neighborhood</h2>
+    <div class="prose prose-lg text-gray-600" set:html={marked.parse(neighborhoodIntro)} />
+  </div>
+
+  <div class="space-y-24 pb-32">
+    {activities.map((activity: Activity, index: number) => {
+      const isEven = index % 2 === 0;
+      return (
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+          <div class={`rounded-3xl overflow-hidden shadow-xl h-[400px] ${isEven ? 'md:order-1' : 'md:order-2'}`}>
+            <img src={activity.image} alt={activity.alt} class="w-full h-full object-cover" />
+          </div>
+
+          <div class={`space-y-6 ${isEven ? 'md:order-2' : 'md:order-1'}`}>
+            <h2 class="text-3xl font-bold text-brand">{activity.title}</h2>
+            <div class="prose prose-gray" set:html={marked.parse(activity.content)} />
+            
+            {(activity.phone || activity.website) && (
+              <div class="pt-4 border-t border-gray-100 flex flex-wrap gap-4 text-sm">
+                {activity.phone && (
+                  <a href={`tel:${activity.phone}`} class="flex items-center gap-2 text-brand hover:underline">
+                    <span>📞</span> {activity.phone}
+                  </a>
+                )}
+                {activity.website && (
+                  <a href={activity.website} target="_blank" class="flex items-center gap-2 text-brand hover:underline">
+                    <span>🌐</span> {activity.website.replace('https://', '')}
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        </section>
+      );
+    })}
+  </div>
+</Layout>

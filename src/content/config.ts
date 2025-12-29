@@ -24,6 +24,24 @@ const propertyContentSchema = z.object({
   highlights: z.array(z.string()),
 });
 
+const activitiesSchema = z.object({
+  title: z.string(),
+  subtitle: z.string(),
+  guestnet: z.object({
+    text: z.string(),
+    link: z.string(),
+  }),
+  neighborhoodIntro: z.string(),
+  activities: z.array(z.object({
+    title: z.string(),
+    image: z.string(),
+    alt: z.string(),
+    phone: z.string().optional(),
+    website: z.string().optional(),
+    content: z.string(),
+  })),
+});
+
 const checkInVideos = z.array(z.object({
   id: z.string(),
   address: z.string(),
@@ -49,6 +67,11 @@ const createCollections = (langs: string[]) => {
     collections[`${lang}-property-content`] = defineCollection({
       type: 'content',
       schema: propertyContentSchema,
+    });
+
+    collections[`${lang}-activities`] = defineCollection({
+      type: 'content',
+      schema: activitiesSchema,
     });
 
     collections[`${lang}-check-in-videos`] = defineCollection({

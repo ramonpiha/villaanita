@@ -8,13 +8,18 @@ interface Props {
 const { lang } = Astro.props;
 ---
 
-<header 
-  class="border-b border-[#e6ae48]/20 sticky top-0 z-50"
+<header
+  class="border-b border-[#e6ae48]/20 sticky top-0 z-50 w-full overflow-x-hidden"
   style="background-color: rgb(27, 36, 48);"
 >
-  <nav class="max-w-7xl mx-auto p-4 flex justify-between items-center gap-4">
-    <!-- Logo - Far Left -->
-    <a href={`/${lang}/`} class="text-xl font-bold font-serif text-brand flex items-center flex-shrink-0">
+  <nav
+    class="w-full max-w-7xl mx-auto p-4 flex justify-between items-center gap-4"
+  >
+    <!-- Logo -->
+    <a
+      href={`/${lang}/`}
+      class="text-xl font-bold font-serif text-brand flex items-center flex-shrink-0"
+    >
       <img
         src="/images/bnbLogo.avif"
         alt="Villa Anita Bolzano Room Logo"
@@ -23,25 +28,26 @@ const { lang } = Astro.props;
       />
     </a>
 
-    <!-- Desktop Menu Items - Center -->
-    <div class="hidden md:flex items-center gap-6 flex-1 justify-center">
+    <!-- Desktop Menu -->
+    <div class="hidden lg:flex items-center gap-6 flex-1 justify-center">
       <a href={`/${lang}/`} class="desktop-menu-item">Home</a>
       <a href={`/${lang}/info`} class="desktop-menu-item">Info</a>
       <a href={`/${lang}/services`} class="desktop-menu-item">Services</a>
+      <a href={`/${lang}/activities`} class="desktop-menu-item">Activities</a>
       <a href={`/${lang}/contacts`} class="desktop-menu-item">Contacts</a>
       <a href={`/${lang}/gallery`} class="desktop-menu-item">Gallery</a>
     </div>
 
-    <!-- Right Side - Language Switcher & Mobile Menu -->
+    <!-- Right Side -->
     <div class="flex items-center gap-4 flex-shrink-0">
-      <!-- Language Switcher - Far Right on Desktop -->
-      <div class="hidden md:block">
+      <!-- Language Switcher (Desktop) -->
+      <div class="hidden lg:block">
         <LanguageSwitcher />
       </div>
 
-      <!-- Mobile Menu Toggle -->
+      <!-- Hamburger -->
       <button
-        class="md:hidden hover:text-[#e6ae48]/80 transition-colors p-2 relative w-10 h-10 flex items-center justify-center"
+        class="lg:hidden hover:text-[#e6ae48]/80 transition-colors p-2 relative w-10 h-10 flex items-center justify-center"
         id="mobile-menu-toggle"
         aria-label="Toggle Navigation Menu"
         aria-expanded="false"
@@ -57,17 +63,19 @@ const { lang } = Astro.props;
   </nav>
 
   <!-- Mobile Menu -->
-  <div 
-    id="mobile-menu-links" 
-    class="mobile-menu md:hidden"
+  <div
+    id="mobile-menu-links"
+    class="mobile-menu lg:hidden"
     style="background-color: rgb(27, 36, 48);"
   >
     <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-1">
       <a href={`/${lang}/`} class="mobile-menu-item">Home</a>
       <a href={`/${lang}/info`} class="mobile-menu-item">Info</a>
       <a href={`/${lang}/services`} class="mobile-menu-item">Services</a>
+      <a href={`/${lang}/activities`} class="mobile-menu-item">Activities</a>
       <a href={`/${lang}/gallery`} class="mobile-menu-item">Gallery</a>
       <a href={`/${lang}/contacts`} class="mobile-menu-item">Contacts</a>
+
       <div class="mt-4 pt-4 border-t border-brand/10 w-full">
         <LanguageSwitcher />
       </div>
@@ -76,64 +84,44 @@ const { lang } = Astro.props;
 </header>
 
 <style>
-  /* Hamburger Icon Animation */
+  /* Hamburger Icon */
   .hamburger-icon {
     width: 24px;
     height: 18px;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   .hamburger-icon span {
-    display: block;
     height: 2px;
-    width: 100%;
     background-color: currentColor;
     border-radius: 2px;
-    transition: all 0.3s ease-in-out;
-    transform-origin: center;
+    transition: all 0.3s ease;
   }
 
-  /* Active state - transform into X */
   .menu-open .hamburger-icon span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
 
   .menu-open .hamburger-icon span:nth-child(2) {
     opacity: 0;
-    transform: scaleX(0);
   }
 
   .menu-open .hamburger-icon span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* Desktop Menu Styling */
+  /* Desktop Menu */
   .desktop-menu-item {
     color: #e6ae48;
     font-weight: 500;
     font-size: 1.125rem;
-    letter-spacing: 0.025em;
     text-transform: uppercase;
     padding: 0.625rem 1rem;
     border-radius: 0.5rem;
-    transition: all 0.2s ease-in-out;
-    position: relative;
     white-space: nowrap;
-  }
-
-  .desktop-menu-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0.375rem;
-    left: 1rem;
-    right: 1rem;
-    height: 2px;
-    background-color: currentColor;
-    transform: scaleX(0);
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.2s ease;
   }
 
   .desktop-menu-item:hover {
@@ -141,41 +129,25 @@ const { lang } = Astro.props;
     background-color: rgba(230, 174, 72, 0.1);
   }
 
-  .desktop-menu-item:hover::after {
-    transform: scaleX(1);
-  }
-
-  /* Mobile Menu Styling */
+  /* Mobile Menu */
   .mobile-menu {
     max-height: 0;
     overflow: hidden;
-    border-top: 1px solid transparent;
-    transition: max-height 0.4s ease-in-out, border-color 0.3s ease-in-out;
+    transition: max-height 0.4s ease;
   }
 
   .mobile-menu.menu-open {
     max-height: 500px;
-    border-color: rgba(230, 174, 72, 0.2);
   }
 
   .mobile-menu-item {
-    display: block;
     padding: 0.875rem 1rem;
     color: #e6ae48;
     font-size: 1.125rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
     border-radius: 0.5rem;
-    transition: all 0.2s ease-in-out;
   }
 
   .mobile-menu-item:hover {
-    color: #f0c066;
-    background-color: rgba(230, 174, 72, 0.1);
-  }
-
-  .mobile-menu-item:active {
-    color: #f0c066;
     background-color: rgba(230, 174, 72, 0.1);
   }
 </style>
@@ -186,31 +158,17 @@ const { lang } = Astro.props;
 
   if (toggle && menu) {
     toggle.addEventListener("click", () => {
-      const isOpen = menu.classList.contains("menu-open");
-      
       menu.classList.toggle("menu-open");
       toggle.classList.toggle("menu-open");
-      toggle.setAttribute("aria-expanded", String(!isOpen));
     });
 
-    // Close menu when clicking on a link
-    const menuLinks = menu.querySelectorAll("a");
-    menuLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("menu-open");
-        toggle.classList.remove("menu-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    // Close menu when clicking outside
     document.addEventListener("click", (e) => {
-      const target = e.target as Node;
-      if (!toggle.contains(target) && !menu.contains(target)) {
+      if (!(e.target instanceof Node)) return;
+
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
         menu.classList.remove("menu-open");
         toggle.classList.remove("menu-open");
-        toggle.setAttribute("aria-expanded", "false");
       }
-    });
+    })
   }
 </script>
