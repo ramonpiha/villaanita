@@ -58,7 +58,7 @@ activities:
     content: |
       Centro per la **cultura contemporanea**. Il museo espone arte moderna, cinema e performance, fungendo da riferimento internazionale.
   - title: "Funivia del Renon"
-    image: "/images/activities/ts-0710-scaled.avif"
+    image: "/images/activities/rittner-seilbahn_1673607516.avif"
     alt: "Cabina della funivia in ascesa verso il Renon"
     website: "https://www.renon.com"
     content: |

@@ -4,7 +4,7 @@ heading: "Arrivo e Check-In"
 subheading: "Tutto quello che c'è da sapere per un arrivo sereno presso le nostre strutture a Bolzano."
 ---
 
-## Check-In
+## 🏨 Check-In
 
 L'ufficio reception si trova presso **Villa Anita in Via Castel Roncolo n. 16**. Qui potrete contare sul nostro staff che vi accoglierà e vi darà suggerimenti utili per il vostro soggiorno.
 
@@ -12,7 +12,7 @@ Alcune strutture offrono il servizio di **check-in automatico**: in questo caso 
 
 ---
 
-## Check-in / Check-out
+## 🕒 Check-in / Check-out
 **LUNEDÌ – DOMENICA**
 
 | Servizio | Orario | Note |
@@ -22,18 +22,18 @@ Alcune strutture offrono il servizio di **check-in automatico**: in questo caso 
 
 ---
 
-## Orari Reception
+## 🔑 Orari Reception
 **LUNEDÌ – DOMENICA**
 * **Orario:** 08:00 / 20:00
 
 ---
 
-## Animali Domestici
+## 🐾 Animali Domestici
 Nelle nostre strutture i vostri amici a quattro zampe sono i benvenuti, previa comunicazione al momento della prenotazione.
 
 ---
 
-## Come raggiungerci
+## 📍 Come raggiungerci
 
 ### 🚗 In Auto
 Villa Anita si trova in **Via Castel Roncolo 16**, nei pressi della zona pedonale. È possibile raggiungere la reception direttamente **senza attraversare zone a traffico limitato (ZTL)**.

@@ -4,21 +4,21 @@ heading: "Our Services"
 subheading: "Everything you need for a comfortable stay and an unforgettable experience in Bolzano."
 ---
 
-## Service & Reception
+## 🛎️ Service & Reception
 Our staff is available for any special needs or requests. You can find us:
 * **In person:** At the reception of [Villa Anita](https://maps.app.goo.gl/RmrsrcB1DszNz1AU8), Via Castel Roncolo 16.
 * **By phone/WhatsApp:** [+39 348 935 1120](tel:+393489351120).
 
 ---
 
-## Private Parking
+## 🅿️ Private Parking
 At [Villa Anita](https://maps.app.goo.gl/RmrsrcB1DszNz1AU8) (Via Castel Roncolo 16), we offer comfortable and safe parking spaces for cars, motorcycles, and bicycles.
 * **Availability:** Subject to availability; reservation is required.
 * **Payment:** To be paid locally.
 
 ---
 
-## Bike Rent & Cycling
+## <img src="/images/services/logo-bici-alto-adige-2022.avif" width="100" style="display:inline-block; vertical-align:middle; margin:0 10px 0 0;" alt="Logo Bici Alto Adige"> Bike Rent & Cycling
 Explore Bolzano and its surroundings on two wheels.
 
 ### Bike Rental
@@ -34,7 +34,7 @@ In each of our properties, you will find **city maps** with useful suggestions, 
 
 ---
 
-## Travel Designer & Transfers
+## <img src="/images/services/logo-concierge-dolomites.avif" width="100" style="display:inline-block; vertical-align:middle; margin:0 10px 0 0;" alt="Travel Designer & Transfers Logo"> Travel Designer & Transfers
 **Concierge Dolomites** – Your personal partner for transfers and experiences.
 * **Services:** Private driver (NCC), airport/station transfers, experience creator, and professional bike guide.
 * **Contact:** [info@conciergedolomites.com](mailto:info@conciergedolomites.com)
@@ -42,7 +42,7 @@ In each of our properties, you will find **city maps** with useful suggestions, 
 
 ---
 
-## Luggage Storage & Equipment
+## <img src="/images/services/logo.avif" width="100" style="display:inline-block; vertical-align:middle; margin:0 10px 0 0;" alt="Base Camp Logo"> Luggage Storage & Equipment
 **Basecamp Dolomites** – Located at the Bolzano Train Station (Track 1).
 * **Storage:** Safe deposit for luggage and bicycles.
 * **Rentals:** Bikes, climbing equipment, and strollers.

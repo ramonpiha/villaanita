@@ -1,24 +1,25 @@
 ---
 title: "Servizi per gli Ospiti e Informazioni"
 heading: "I Nostri Servizi"
-subheading: "Tutto il necessario per un soggiorno confortevole e un'esperienza indimenticabile a Bolzano."
+subheading: "Tutto per un soggiorno confortevole e un'esperienza indimenticabile a Bolzano."
 ---
 
-## Servizio e Reception
+## 🛎️ Servizio e Reception
 Lo staff è a disposizione degli ospiti per necessità e richieste particolari:
 * **Di persona:** Presso la reception di [Villa Anita](https://maps.app.goo.gl/RmrsrcB1DszNz1AU8), Via Castel Roncolo 16.
 * **Telefono/WhatsApp:** [+39 348 935 1120](tel:+393489351120).
 
 ---
 
-## Parcheggio Privato
+## 🅿️ Parcheggio Privato
 Presso [Villa Anita](https://maps.app.goo.gl/RmrsrcB1DszNz1AU8) (Via Castel Roncolo 16), troverete posti auto, moto e bici comodi e sicuri.
 * **Disponibilità:** Su prenotazione e previa disponibilità.
 * **Pagamento:** Da pagare in loco.
 
 ---
 
-## Noleggio Bici e Ciclabili
+## <img src="/images/services/logo-bici-alto-adige-2022.avif" width="100" style="display:inline-block; vertical-align:middle; margin:0 10px 0 0;" alt="Logo Bici Alto Adige"> Noleggio Bici e Ciclabili Noleggio Bici e Ciclabili
+
 Esplorate Bolzano e i dintorni su due ruote.
 
 ### Noleggio Bici
@@ -34,7 +35,7 @@ In ogni struttura troverete **mappe della città** con suggerimenti utili e itin
 
 ---
 
-## Travel Designer e Trasferimenti
+## <img src="/images/services/logo-concierge-dolomites.avif" width="100" style="display:inline-block; vertical-align:middle; margin:0 10px 0 0;" alt="Travel Designer & Transfers Logo"> Travel Designer e Trasferimenti
 **Concierge Dolomites** – Il vostro partner per trasferimenti ed esperienze.
 * **Servizi:** Noleggio con conducente (NCC), trasferimenti aeroporti/stazioni, experience creator e bike guide professionale.
 * **Contatto:** [info@conciergedolomites.com](mailto:info@conciergedolomites.com)
@@ -42,7 +43,7 @@ In ogni struttura troverete **mappe della città** con suggerimenti utili e itin
 
 ---
 
-## Deposito Bagagli e Attrezzatura
+## <img src="/images/services/logo.avif" width="100" style="display:inline-block; vertical-align:middle; margin:0 10px 0 0;" alt="Base Camp Logo"> Deposito Bagagli e Attrezzatura
 **Basecamp Dolomites** – Situato presso la stazione ferroviaria di Bolzano (Binario 1).
 * **Deposito:** Servizio sicuro per bagagli e biciclette.
 * **Noleggio:** Bici, attrezzatura da arrampicata e passeggini.

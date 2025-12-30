@@ -58,7 +58,7 @@ activities:
     content: |
       A center for **contemporary culture** and art. The museum exhibits modern art, film, and performance, serving as a point of reference for local and international art.
   - title: "Renon cableway"
-    image: "/images/activities/ts-0710-scaled.avif"
+    image: "/images/activities/rittner-seilbahn_1673607516.avif"
     alt: "Red cable car ascending toward the Renon plateau"
     website: "https://www.renon.com"
     content: |

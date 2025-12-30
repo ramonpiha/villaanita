@@ -38,7 +38,7 @@
   type:
     - apartment
     - map
-  title: "LISA apartment"
+  title: "LISA apartments"
   summary: "Via dei Portici 71"
   coordinates: [1530, 3920]
   image: /images/map/lisa-apartment.avif

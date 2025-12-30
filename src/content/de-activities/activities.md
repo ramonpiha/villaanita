@@ -58,7 +58,7 @@ activities:
     content: |
       Ein Zentrum für **zeitgenössische Kultur**. Das Museum zeigt moderne Kunst, Film und Performance jenseits des internationalen Mainstreams.
   - title: "Rittner Seilbahn"
-    image: "/images/activities/ts-0710-scaled.avif"
+    image: "/images/activities/rittner-seilbahn_1673607516.avif"
     alt: "Rote Seilbahnkabine beim Aufstieg zum Ritten"
     website: "https://www.renon.com"
     content: |

@@ -4,7 +4,7 @@ heading: "Arrival and Check-In"
 subheading: "Everything you need to know for a smooth arrival and comfortable stay."
 ---
 
-## Check-In
+## 🏨 Check-In
 
 The reception office is located in **Villa Anita in Via Castel Roncolo n. 16**. Here you can count on our staff who will welcome you and give you useful suggestions.
 
@@ -12,7 +12,7 @@ Some structures offer the **automatic check-in service**, allowing you free acce
 
 ---
 
-## Check-in / Check-out
+## 🕒 Check-in / Check-out
 **MONDAY – SUNDAY**
 
 | Service | Time | Notes |
@@ -22,18 +22,18 @@ Some structures offer the **automatic check-in service**, allowing you free acce
 
 ---
 
-## Reception Timetables
+## 🔑 Reception Timetables
 **MONDAY – SUNDAY**
 * **Hours:** 08:00 / 20:00
 
 ---
 
-## Pets
+## 🐾 Pets
 In our facilities your four-legged friends are welcome, upon notice at the time of booking.
 
 ---
 
-## How to reach us
+## 📍 How to reach us
 
 ### 🚗 By Car
 Villa Anita is located at **Via Castel Roncolo 16**, near the pedestrian zone. It is possible to reach the reception directly **without crossing restricted traffic areas (ZTL)**.

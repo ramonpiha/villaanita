@@ -4,7 +4,7 @@ heading: "Ankunft & Check-In"
 subheading: "Alle wichtigen Informationen für Ihre Ankunft in unseren Unterkünften in Bozen."
 ---
 
-## Check-In
+## 🏨 Check-In
 
 Das Rezeptionsbüro befindet sich in der **Villa Anita, Runkelsteiner Straße 16**. Hier steht Ihnen unser Team gerne zur Verfügung, um Sie willkommen zu heißen und Ihnen nützliche Tipps zu geben.
 
@@ -12,7 +12,7 @@ Einige Unterkünfte bieten einen **automatischen Check-in-Service** an. In diese
 
 ---
 
-## Check-in / Check-out
+## 🕒 Check-in / Check-out
 **MONTAG – SONNTAG**
 
 | Service | Zeit | Anmerkungen |
@@ -22,18 +22,18 @@ Einige Unterkünfte bieten einen **automatischen Check-in-Service** an. In diese
 
 ---
 
-## Öffnungszeiten der Rezeption
+## 🔑 Öffnungszeiten der Rezeption
 **MONTAG – SONNTAG**
 * **Uhrzeit:** 08:00 / 20:00 Uhr
 
 ---
 
-## Haustiere
+## 🐾 Haustiere
 In unseren Unterkünften sind Ihre vierbeinigen Freunde herzlich willkommen, sofern dies bei der Buchung angegeben wird.
 
 ---
 
-## So erreichen Sie uns
+## 📍 So erreichen Sie uns
 
 ### 🚗 Mit dem Auto
 Die Villa Anita befindet sich in der **Runkelsteiner Straße 16**, in der Nähe der Fußgängerzone. Die Rezeption kann direkt erreicht werden, **ohne verkehrsberuhigte Zonen (ZTL) zu durchfahren**.
