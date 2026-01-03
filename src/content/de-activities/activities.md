@@ -8,7 +8,7 @@ guestnet:
 neighborhoodIntro: |
   Tipps zu Orten in **Südtirol**. Entdecken Sie Museen, Promenaden, Burgen und Restaurants. Besuchen Sie den Obstmarkt am **Kornplatz** und genießen Sie lokale Köstlichkeiten.
 activities:
-  - title: "KLETTERN IN DEN DOLOMITEN"
+  - title: "Klettern in den Dolomiten"
     image: "/images/activities/Guida-Alpina-Bergfuehrer-plakat-FERRATE-02.avif"
     alt: "Ein Kletterer in einem Klettersteig in den Dolomiten"
     phone: "+39 328 3583653"

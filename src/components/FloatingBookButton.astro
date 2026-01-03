@@ -7,11 +7,13 @@ const buttonText = {
   en: "Book now"
 };
 
-const bookingUrl = `/${lang}/booking`; // Adjust this to your actual booking page URL
+const bookingUrl = `https://www.scidoo.com/preventivov2/?cod=1530&lang=1`; // Adjust this to your actual booking page URL
 ---
 
 <a
   href={bookingUrl}
+  target="_blank"
+  rel="noopener noreferrer"
   class="floating-book-button"
   aria-label={buttonText[lang as keyof typeof buttonText]}
 >

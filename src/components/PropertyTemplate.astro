@@ -94,269 +94,295 @@ if (!heroItems.length || contentImages.length < 3) {
 }
 ---
 
-<Navigation lang={lang} />
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
 
-<section class="relative w-full h-screen overflow-hidden">
-  <div
-    id="parallax-hero"
-    class="absolute inset-0 w-full h-[120vh] will-change-transform"
-  >
-    {
-      heroItems.map((item: PropertyItem, index: number) => (
-        <div
-          class={`absolute inset-0 w-full h-full transition-opacity duration-1000 z-0 ${
-            index === 0 ? "opacity-100" : "opacity-0"
-          }`}
-          data-slide-index={index}
-        >
-          <img
-            src={item.image}
-            alt={`${item.title} - Hero Image ${index + 1}`}
-            class="w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-black/40 z-1" />
-        </div>
-      ))
-    }
-  </div>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <div
-    id="hero-text-container"
-    class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20 pointer-events-none -mt-32"
-  >
-    {
-      heroItems.map((item: PropertyItem, index: number) => (
-        <div
-          class={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-1000 ${
-            index === 0 ? "opacity-100" : "opacity-0"
-          }`}
-          data-text-slide={index}
-        >
-          {item.title && (
-            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide drop-shadow-2xl mb-4">
-              {item.title}
-            </h1>
-          )}
-          {item.summary && (
-            <p class="text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg max-w-2xl mx-auto">
-              {item.summary}
-            </p>
-          )}
-        </div>
-      ))
-    }
-  </div>
-
-  <div
-    id="scroll-indicator"
-    class="absolute bottom-32 left-1/2 -translate-x-1/2 z-30 pointer-events-none opacity-100"
-  >
-    <img
-      src="/images/scroll-down-18.png"
-      alt="Scroll down"
-      class="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-2xl"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
     />
-  </div>
-</section>
 
-<div class="relative z-20">
-  <section class="py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div class="rounded-2xl overflow-hidden shadow-2xl">
-          <img
-            src={contentImages[0]}
-            alt={contentSummaries[0]}
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            {texts.generalInfo[lang]}
-          </h2>
-          {
-            generalInfoHtml && (
-              <div
-                class="prose prose-lg prose-gray max-w-none"
-                set:html={generalInfoHtml}
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+
+  <body class="bg-bg text-brand font-sans antialiased">
+    <Navigation lang={lang} />
+
+    <section class="relative w-full h-screen overflow-hidden">
+      <div
+        id="parallax-hero"
+        class="absolute inset-0 w-full h-[120vh] will-change-transform"
+      >
+        {
+          heroItems.map((item: PropertyItem, index: number) => (
+            <div
+              class={`absolute inset-0 w-full h-full transition-opacity duration-1000 z-0 ${
+                index === 0 ? "opacity-100" : "opacity-0"
+              }`}
+              data-slide-index={index}
+            >
+              <img
+                src={item.image}
+                alt={`${item.title} - Hero Image ${index + 1}`}
+                class="w-full h-full object-cover"
               />
-            )
-          }
-        </div>
+              <div class="absolute inset-0 bg-black/40 z-1" />
+            </div>
+          ))
+        }
       </div>
-    </div>
-  </section>
 
-  <section class="py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div class="order-2 md:order-1">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            {texts.ambient[lang]}
-          </h2>
-          {
-            ambientHtml && (
-              <div
-                class="prose prose-lg prose-gray max-w-none"
-                set:html={ambientHtml}
+      <div
+        id="hero-text-container"
+        class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20 pointer-events-none -mt-32"
+      >
+        {
+          heroItems.map((item: PropertyItem, index: number) => (
+            <div
+              class={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-1000 ${
+                index === 0 ? "opacity-100" : "opacity-0"
+              }`}
+              data-text-slide={index}
+            >
+              {item.title && (
+                <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide drop-shadow-2xl mb-4">
+                  {item.title}
+                </h1>
+              )}
+              {item.summary && (
+                <p class="text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-lg max-w-2xl mx-auto">
+                  {item.summary}
+                </p>
+              )}
+            </div>
+          ))
+        }
+      </div>
+
+      <div
+        id="scroll-indicator"
+        class="absolute bottom-32 left-1/2 -translate-x-1/2 z-30 pointer-events-none opacity-100"
+      >
+        <img
+          src="/images/scroll-down-18.png"
+          alt="Scroll down"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-2xl"
+        />
+      </div>
+    </section>
+
+    <div class="relative z-20">
+      <section class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={contentImages[0]}
+                alt={contentSummaries[0]}
+                class="w-full h-full object-cover"
               />
-            )
-          }
+            </div>
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                {texts.generalInfo[lang]}
+              </h2>
+              {
+                generalInfoHtml && (
+                  <div
+                    class="prose prose-lg prose-gray max-w-none"
+                    set:html={generalInfoHtml}
+                  />
+                )
+              }
+            </div>
+          </div>
         </div>
-        <div class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-xl">
-          <img
-            src={contentImages[1]}
-            alt={contentSummaries[1]}
-            class="w-full h-full object-cover"
-          />
+      </section>
+
+      <section class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="order-2 md:order-1">
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                {texts.ambient[lang]}
+              </h2>
+              {
+                ambientHtml && (
+                  <div
+                    class="prose prose-lg prose-gray max-w-none"
+                    set:html={ambientHtml}
+                  />
+                )
+              }
+            </div>
+            <div
+              class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-xl"
+            >
+              <img
+                src={contentImages[1]}
+                alt={contentSummaries[1]}
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={contentImages[2]}
+                alt={contentSummaries[2]}
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                {texts.highlights[lang]}
+              </h2>
+
+              <ul class="space-y-3">
+                {
+                  highlights &&
+                    highlights.map((highlight: string) => (
+                      <li class="flex items-start gap-3">
+                        <svg
+                          class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <span class="text-base md:text-lg text-gray-700">
+                          {highlight}
+                        </span>
+                      </li>
+                    ))
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
 
-  <section class="py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div class="rounded-2xl overflow-hidden shadow-xl">
-          <img
-            src={contentImages[2]}
-            alt={contentSummaries[2]}
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            {texts.highlights[lang]}
-          </h2>
+    <Footer lang={lang} />
 
-          <ul class="space-y-3">
-            {
-              highlights &&
-                highlights.map((highlight: string) => (
-                  <li class="flex items-start gap-3">
-                    <svg
-                      class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="text-base md:text-lg text-gray-700">
-                      {highlight}
-                    </span>
-                  </li>
-                ))
+    <FloatingBookButton lang={lang} />
+
+    <script>
+      // Parallax scrolling effect and fade animations
+      function initParallax() {
+        const parallaxElement = document.getElementById("parallax-hero");
+        const heroTextContainer = document.getElementById(
+          "hero-text-container"
+        );
+        const scrollIndicator = document.getElementById("scroll-indicator");
+
+        // Slideshow functionality for images
+        const slides = parallaxElement?.querySelectorAll<HTMLElement>(
+          "div[data-slide-index]"
+        );
+        // Slideshow functionality for text
+        const textSlides = heroTextContainer?.querySelectorAll<HTMLElement>(
+          "div[data-text-slide]"
+        );
+
+        let currentSlide = 0;
+
+        if (!parallaxElement || !slides || slides.length === 0) return;
+
+        function changeSlide() {
+          // Hide current image slide
+          if (slides[currentSlide]) {
+            slides[currentSlide].style.opacity = "0";
+          }
+          // Hide current text slide
+          if (textSlides && textSlides[currentSlide]) {
+            textSlides[currentSlide].style.opacity = "0";
+          }
+
+          // Move to next slide
+          currentSlide = (currentSlide + 1) % slides.length;
+
+          // Show next image slide
+          if (slides[currentSlide]) {
+            slides[currentSlide].style.opacity = "1";
+          }
+          // Show next text slide
+          if (textSlides && textSlides[currentSlide]) {
+            textSlides[currentSlide].style.opacity = "1";
+          }
+        }
+
+        // Auto-advance slides every 5 seconds
+        const slideInterval = setInterval(changeSlide, 5000);
+
+        function updateParallax() {
+          const scrolled = window.scrollY;
+          const heroHeight = window.innerHeight;
+
+          // Only apply parallax while hero is visible
+          if (scrolled < heroHeight) {
+            // Move the whole parallax container slower than scroll
+            const yPos = scrolled * 0.5;
+            parallaxElement.style.transform = `translate3d(0, ${yPos}px, 0)`;
+
+            // Fade out text and scroll indicator based on scroll position
+            const fadePoint = heroHeight * 0.4;
+            const opacity = Math.max(0, 1 - scrolled / fadePoint);
+
+            // Fade out the scroll indicator
+            if (scrollIndicator) {
+              scrollIndicator.style.opacity = opacity.toString();
             }
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
 
-<Footer lang={lang} />
-
-<FloatingBookButton lang={lang} />
-
-<script>
-  // Parallax scrolling effect and fade animations
-  function initParallax() {
-    const parallaxElement = document.getElementById("parallax-hero");
-    const heroTextContainer = document.getElementById("hero-text-container");
-    const scrollIndicator = document.getElementById("scroll-indicator");
-
-    // Slideshow functionality for images
-    const slides = parallaxElement?.querySelectorAll<HTMLElement>(
-      "div[data-slide-index]"
-    );
-    // Slideshow functionality for text
-    const textSlides = heroTextContainer?.querySelectorAll<HTMLElement>(
-      "div[data-text-slide]"
-    );
-
-    let currentSlide = 0;
-
-    if (!parallaxElement || !slides || slides.length === 0) return;
-
-    function changeSlide() {
-      // Hide current image slide
-      if (slides[currentSlide]) {
-        slides[currentSlide].style.opacity = "0";
-      }
-      // Hide current text slide
-      if (textSlides && textSlides[currentSlide]) {
-        textSlides[currentSlide].style.opacity = "0";
-      }
-
-      // Move to next slide
-      currentSlide = (currentSlide + 1) % slides.length;
-
-      // Show next image slide
-      if (slides[currentSlide]) {
-        slides[currentSlide].style.opacity = "1";
-      }
-      // Show next text slide
-      if (textSlides && textSlides[currentSlide]) {
-        textSlides[currentSlide].style.opacity = "1";
-      }
-    }
-
-    // Auto-advance slides every 5 seconds
-    const slideInterval = setInterval(changeSlide, 5000);
-
-    function updateParallax() {
-      const scrolled = window.scrollY;
-      const heroHeight = window.innerHeight;
-
-      // Only apply parallax while hero is visible
-      if (scrolled < heroHeight) {
-        // Move the whole parallax container slower than scroll
-        const yPos = scrolled * 0.5;
-        parallaxElement.style.transform = `translate3d(0, ${yPos}px, 0)`;
-
-        // Fade out text and scroll indicator based on scroll position
-        const fadePoint = heroHeight * 0.4;
-        const opacity = Math.max(0, 1 - scrolled / fadePoint);
-
-        // Fade out the scroll indicator
-        if (scrollIndicator) {
-          scrollIndicator.style.opacity = opacity.toString();
+            // Fade out the hero text container
+            if (heroTextContainer) {
+              heroTextContainer.style.opacity = opacity.toString();
+            }
+          }
         }
 
-        // Fade out the hero text container
-        if (heroTextContainer) {
-          heroTextContainer.style.opacity = opacity.toString();
-        }
-      }
-    }
-
-    // Use requestAnimationFrame for smooth performance
-    let ticking = false;
-    window.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          updateParallax();
-          ticking = false;
+        // Use requestAnimationFrame for smooth performance
+        let ticking = false;
+        window.addEventListener("scroll", () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              updateParallax();
+              ticking = false;
+            });
+            ticking = true;
+          }
         });
-        ticking = true;
+
+        // Initial call
+        updateParallax();
+
+        // Cleanup interval on page navigation
+        document.addEventListener("astro:before-preparation", () => {
+          clearInterval(slideInterval);
+        });
       }
-    });
 
-    // Initial call
-    updateParallax();
-
-    // Cleanup interval on page navigation
-    document.addEventListener("astro:before-preparation", () => {
-      clearInterval(slideInterval);
-    });
-  }
-
-  // Initialize on page load
-  initParallax();
-  // Re-initialize on view transitions (if using Astro's view transitions)
-  document.addEventListener("astro:page-load", initParallax);
-</script>
+      // Initialize on page load
+      initParallax();
+      // Re-initialize on view transitions (if using Astro's view transitions)
+      document.addEventListener("astro:page-load", initParallax);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+- id: gallery-image-1
+  type:
+    - gallery
+  title: "Garderobe"
+  summary: "Schwarze Garderobe mit Jacke und hängender Kamera"
+  image: /images/gallery/16102015-_MG_9720.avif
+
+- id: gallery-image-2
+  type:
+    - gallery
+  title: "Haus des Nachbarn"
+  summary: "Hellblaues Nachbarhaus"
+  image: /images/gallery/bolzano-rooms-5372-e1638561274584(1).avif
+
+- id: gallery-image-3
+  type:
+    - gallery
+    - room
+  title: "Zimmer mit Doppelbett"
+  summary: "Zimmer mit Doppelbett"
+  image: /images/gallery/bolzanorooms-17(1).avif
+
+- id: gallery-image-4
+  type:
+    - gallery
+  title: "Tür zu Zimmer 106"
+  summary: "Tür zu Zimmer 106 in Bolzano Rooms"
+  image: /images/gallery/bolzanorooms-6(1).avif
+
+- id: gallery-image-5
+  type:
+    - gallery
+  title: "Gedeckter Tisch"
+  summary: "Gedeckter Tisch aus der Vogelperspektive"
+  image: /images/gallery/claudine-apartment-_Y0A2882.avif
+
+- id: gallery-image-6
+  type:
+    - gallery
+  title: "Gemälde"
+  summary: "Zwei antike Gemälde"
+  image: /images/gallery/claudine-apartment-_Y0A2946(1).avif
+
+- id: gallery-image-7
+  type:
+    - gallery
+    - room
+  title: "Schlafzimmer"
+  summary: "Schlafzimmer mit zwei Einzelbetten als Doppelbett arrangiert"
+  image: /images/gallery/claudine-apartment-_Y0A3011.avif
+
+- id: gallery-image-8
+  type:
+    - gallery
+    - house
+  title: "Villa Anita"
+  summary: "Villa Anita vom Eingang aus fotografiert"
+  image: /images/gallery/LQ-villa-anita-bolzano-_Y0A4993-HDR-Modifica(1).avif
+
+- id: gallery-image-9
+  type:
+    - gallery
+    - garden
+  title: "Garten Villa Anita"
+  summary: "Der Garten der Villa Anita mit einer Bank, 3 Stühlen und einem Sonnenschirm"
+  image: /images/gallery/LR-villa-anita-bolzano-_Y0A5000(1).avif
+
+- id: gallery-image-10
+  type:
+    - gallery
+  title: "Blumen"
+  summary: "Gelbe Blumen"
+  image: /images/gallery/LR-villa-anita-bolzano-_Y0A5026.avif
+
+- id: gallery-image-11
+  type:
+    - gallery
+    - garden
+  title: "Garten"
+  summary: "Garten mit einer roten Bank"
+  image: /images/gallery/LR-villa-anita-bolzano-_Y0A5033.avif
+
+- id: gallery-image-12
+  type:
+    - gallery
+    - garden
+  title: "Bank"
+  summary: "Rote Bank im Garten"
+  image: /images/gallery/LR-villa-anita-bolzano-_Y0A5037.avif
+
+- id: gallery-image-13
+  type:
+    - gallery
+  title: "Eingang Villa Anita"
+  summary: "Eingang Villa Anita mit Blumen"
+  image: /images/gallery/LR-villa-anita-bolzano-_Y0A5045.avif
+
+- id: gallery-image-14
+  type:
+    - gallery
+    - garden
+  title: "Liegestühle im Garten"
+  summary: "Zwei grüne Liegestühle im Garten"
+  image: /images/gallery/LR-villa-anita-bolzano-_Y0A5054.avif
+
+- id: gallery-image-15
+  type:
+    - gallery
+    - garden
+  title: "Blumen auf dem Tisch"
+  summary: "Blumen neben einer Zeitschrift auf einem Tisch im Garten"
+  image: /images/gallery/LR-villa-anita-bolzano-_Y0A5068.avif
+
+- id: gallery-image-16
+  type:
+    - gallery
+  title: "Eingang von der Straße"
+  summary: "Eingang durch das Tor von der Straße aus"
+  image: /images/gallery/MG_0575-scaled.avif
+
+- id: gallery-image-17
+  type:
+    - gallery
+    - room
+  title: "Zimmer 1"
+  summary: "Zimmer 1 im ersten Stock der Villa Anita"
+  image: /images/gallery/MG_0635-scaled.avif
+
+- id: gallery-image-18
+  type:
+    - gallery
+  title: "Balkon"
+  summary: "Balkon von Zimmer 1 der Villa Anita"
+  image: /images/gallery/MG_0678-HDR.avif
+
+- id: gallery-image-19
+  type:
+    - gallery
+  title: "Kinder auf dem Rasen"
+  summary: "Kinder, die auf dem Rasen im Garten der Villa Anita liegen"
+  image: /images/gallery/MG_0812-scaled.avif
+
+- id: gallery-image-20
+  type:
+    - gallery
+  title: "Seitenansicht Villa Anita"
+  summary: "Villa Anita von der Seite gesehen"
+  image: /images/gallery/roomsapartmentsbz_vill-anita@1130-px.avif
+
+- id: gallery-image-21
+  type:
+    - gallery
+  title: "Studio-Apartment"
+  summary: "Studio-Apartment mit Tisch im Vordergrund und Küche im Hintergrund"
+  image: /images/gallery/villa-anita-bolzano-rooms-apartments-0005-1(1).avif
+
+- id: gallery-image-22
+  type:
+    - gallery
+  title: "Panorama von Villa Anita"
+  summary: "Panorama von Villa Anita im Grünen"
+  image: /images/gallery/villa-anita-bolzano-rooms-apartments-00061-scaled(1).avif
+
+- id: gallery-image-23
+  type:
+    - gallery
+  title: "Treppenhaus"
+  summary: "Treppenhaus der Villa Anita"
+  image: /images/gallery/villa-anita-bolzano-rooms-apartments-0600.avif
+
+- id: gallery-image-24
+  type:
+    - gallery
+  title: "Zimmer 2"
+  summary: "Zimmer 2 der Villa Anita von außen gesehen"
+  image: /images/gallery/villa-anita-bolzano-rooms-apartments-0652.avif
+
+- id: gallery-image-25
+  type:
+    - gallery
+  title: "Kleiderschrank"
+  summary: "Kleiderschrank der Villa Anita"
+  image: /images/gallery/villa-anita-bolzano-rooms-apartments-0725.avif
+
+- id: gallery-image-26
+  type:
+    - gallery
+  title: "Küchenbereich"
+  summary: "Küchenbereich einer Wohnung in Villa Anita"
+  image: /images/gallery/villa-anita-bolzano-_B6A6257.avif
+
+- id: gallery-image-27
+  type:
+    - gallery
+  title: "Badezimmer"
+  summary: "Privates Badezimmer"
+  image: /images/gallery/villa-anita-bolzano-_B6A6347.avif

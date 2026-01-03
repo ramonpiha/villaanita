@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getEntry } from "astro:content";
 import Layout from "../../components/Layout.astro";
 import MapClient from "../../components/MapClient.js";
 import AutoDetect from "../../components/AutoDetectLang.astro";
@@ -22,12 +22,23 @@ const { lang } = Astro.params as { lang: Lang };
 const homeEntry = await getEntry(`${lang}-pages`, "home");
 
 // Get properties data
-const propertiesEntry = await getEntry(`${lang}-properties`, "properties");
+const propertiesEntry = await getEntry(`${lang}-properties`, "properties"); 
+// Fetch gallery data to populate the slider
+const galleryEntry = await getEntry(`${lang}-properties`, "gallery"); // 
 
-// 1. Destructure title, heading, and subheading from the markdown frontmatter
+// Destructure title, heading, and subheading from the markdown frontmatter
 const { title, heading, subheading } = homeEntry.data;
 const { Content } = await homeEntry.render();
 const properties = propertiesEntry.data;
+
+/**
+ * Transform the gallery YAML data into the format expected by Slider.tsx.
+ * We map 'image' to 'src' and 'summary' to 'alt'.
+ */
+const sliderImages = galleryEntry.data.map((item: any) => ({
+  src: item.image,
+  alt: item.summary
+}));
 ---
 
 <Layout lang={lang} title={title}>
@@ -46,7 +57,8 @@ const properties = propertiesEntry.data;
   </div>
 
   <div class="my-8">
-    <Slider client:load />
+    {/* Use client:load to ensure the React slider is interactive */}
+    <Slider slides={sliderImages} client:load />
   </div>
 
   <div class="prose prose-lg max-w-none">
