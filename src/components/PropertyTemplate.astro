@@ -4,6 +4,7 @@ import { marked } from "marked";
 import Navigation from "./Navigation.astro";
 import Footer from "./Footer.astro";
 import FloatingBookButton from "./FloatingBookButton.astro";
+import "../styles/global.css";
 
 // Define the available languages
 type Lang = "en" | "it" | "de";
@@ -109,8 +110,6 @@ if (!heroItems.length || contentImages.length < 3) {
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
 
   <body class="bg-bg text-brand font-sans antialiased">
