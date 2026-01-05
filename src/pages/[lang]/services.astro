@@ -18,7 +18,7 @@ const { title, heading, subheading } = homeEntry.data;
 const { Content } = await homeEntry.render();
 ---
 
-<Layout lang={lang} title={title}>
+<Layout lang={lang} title={title} description={subheading}>
   <div class="pt-10 pb-6 px-4 max-w-4xl mx-auto">
     <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight flex items-center gap-3">
       <img src="/images/bnbLogo.avif" alt="Home" class="h-10 w-auto" />

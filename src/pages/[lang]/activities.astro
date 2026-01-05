@@ -26,7 +26,7 @@ if (!entry) throw new Error("Content not found");
 const { title, subtitle, guestnet, neighborhoodIntro, activities } = entry.data;
 ---
 
-<Layout lang={lang} title={title}>
+<Layout lang={lang} title={title} description={subtitle}>
   <header class="py-12 text-center max-w-3xl mx-auto">
     <h1 class="text-4xl md:text-5xl font-bold text-brand mb-4">{title}</h1>
     <p class="text-xl text-gray-500 mb-10">{subtitle}</p>

@@ -102,14 +102,18 @@ if (!heroItems.length || contentImages.length < 3) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="description" content={subtitle} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={subtitle} />
+    <meta property="og:image" content={heroItems[0]?.image} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={subtitle} />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
 
   <body class="bg-bg text-brand font-sans antialiased">
