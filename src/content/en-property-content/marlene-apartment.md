@@ -10,7 +10,7 @@ generalInfo: |
   - Restaurants
   - Train station
   
-  **Modern furnished apartment** in a **historic building**, perfect for independent stays in the **Dolomites**.
+  **Modern furnished apartment** in a **historic building**, ideal for independent stays in the **Dolomites**.
   
   **Self check-in** available. Guests have access to the **[Bolzano Card](https://www.bolzano-bozen.it/en/bolzano-bozen-card/)**.
 

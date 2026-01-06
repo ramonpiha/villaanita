@@ -2,34 +2,31 @@
 title: Villa Anita
 subtitle: Zimmer & Apartments
 generalInfo: |
-  **Villa Anita** befindet sich in Bozens **exklusivster und ruhigster Gegend** (Via Castel Roncolo 16), umgeben von einem **privaten Garten**.
+  In der **exklusivsten und ruhigsten** Gegend des Bozner Stadtzentrums (Via Castel Roncolo 16), umgeben von einem **privaten Garten** und Parkplatz.
   
-  Sie liegt nur wenige Schritte entfernt von:
-  - der Fußgängerzone
-  - dem historischen Zentrum
-  - den Seilbahnen
-  - den Verkehrsknotenpunkten
+  Nur wenige Schritte entfernt von:
+  - Fußgängerzone
+  - Verkehrsknotenpunkten
+  - Seilbahnen
+  - Museen
   
-  Die **1904** erbaute Villa verbindet **historische Eleganz** mit einer **idealen Lage**.
+  Ein **historisches Domizil**, erbaut im Jahr **1904** — **Eleganz und Ruhe** in idealer Lage.
   
-  Die Eigentümer wohnen vor Ort, pflegen den Park und kümmern sich persönlich um die Gäste, um einen **authentischen und charmanten Aufenthalt** zu gewährleisten.
-  
-  Zimmer und Apartments in **verschiedenen Größen** stehen für **kurze oder längere Aufenthalte** im Herzen der **Dolomiten** zur Verfügung.
+  Die Eigentümer wohnen vor Ort, pflegen den Garten und kümmern sich persönlich um die Gäste, was einen **authentischen und faszinierenden Aufenthalt** garantiert.
 
 ambient: |
-  Genießen Sie eine ruhige Atmosphäre in der Villa Anita mit einem **privaten Garten** und **bezauberndem Blick** auf Weinberge und prestigeträchtige Anwesen.
+  Genießen Sie eine heitere Atmosphäre in der Villa Anita mit einem **privaten Garten** und **zauberhaftem Blick** auf Weinberge und prestigeträchtige Anwesen.
   
-  Ideal für **Familien und Freunde**, die **alpinen Charme** und **modernen Komfort** im Herzen der **Dolomiten** suchen.
+  Ideal für **Familien und Freunde**, die **Charme** und **Komfort** im Herzen von **Bozen** suchen.
 
 highlights:
-  - Privater Garten mit Panoramablick auf Weinberge
-  - Parkplätze für Auto, Motorrad und Fahrrad
-  - Highspeed-WLAN & Smart-TV in jedem Zimmer
+  - Privater Garten mit Panoramablick auf die Weinberge
+  - Parkplatz für Autos, Motorräder und Fahrräder
+  - Highspeed-WLAN und Smart-TV in jedem Zimmer
   - Premium-Bettwäsche und Handtücher, Haartrockner
   - Kaffeemaschinen und Wasserkocher
   - Willkommens-Frühstücksartikel
-  - Fußläufig zum historischen Zentrum
+  - Nur wenige Schritte vom historischen Zentrum entfernt
   - In der Nähe von Seilbahnen und öffentlichen Verkehrsmitteln
   - Zimmer und Apartments für alle Bedürfnisse
-  - Persönliche Betreuung durch die Eigentümer vor Ort
 ---

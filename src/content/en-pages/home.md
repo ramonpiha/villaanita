@@ -1,16 +1,24 @@
 ---
 title: Home
 heading: Rooms & Apartments Bz
-subheading: Experience Bolzano, from the historic heart to quiet nearby zones.
+subheading: Smart stay in the City Center
 ---
 
-## Strategic Locations
-Our properties are distributed across key areas to suit your preference:
-* **Historic Center:** Some properties are located directly in the pedestrian heart of Bolzano, steps away from Piazza Walther.
-* **Just Outside:** Other locations are just **5 minutes from the center**, offering proximity to amenities with easier car accessibility.
-* **Connections:** Regardless of your choice, the train station, bus terminal, and Renon cable car remain easily accessible.
+<div align="center">
 
-## Accommodation Options
-We provide versatile lodging solutions to fit different needs and budgets:
-* **Temporary Apartments:** Fully equipped living spaces with kitchens, ideal for professionals and extended stays.
-* **Economy Rooms:** Simple, budget-friendly rooms with **shared bathroom facilities**, designed for travelers prioritizing value.
+## LIVE IN THE CENTER OF BOLZANO, in the characteristic places of the city 
+### ideal solutions for leisure trips and professional residences
+
+</div>
+
+* **HISTORIC CENTER:** Some properties are located in the pedestrian area, directly in the heart of Bolzano; others are located in the immediate vicinity, accessible by car and still close to the city's most important attractions.
+* **TRANSPORT:** All facilities are in the immediate vicinity of the Train station, Bus station, and the Renon cable car. Also reachable on foot.
+
+<div align="center">
+
+## ROOMS & APARTMENTS in the city center
+
+</div>
+
+* **Temporary Apartments:** Fully equipped apartments with kitchens and all comforts, ideal for families, professionals, and corporate needs.
+* **ROOMS:** Different types of rooms for all needs - practical and comfortable.

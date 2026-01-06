@@ -12,7 +12,7 @@ generalInfo: |
   
   **Modern eingerichtet** und **hell**, verfügt die Wohnung über einen **exklusiven privaten Garten**.
   
-  Mit **ausgestatteter Küche**, **Wohnzimmer**, **2 Schlafzimmern** und **Bad** ist sie perfekt für **1-5 Personen**, die Komfort und Unabhängigkeit in den **Dolomiten** suchen.
+  Mit **ausgestatteter Küche**, **Wohnzimmer**, **2 Schlafzimmern** und **Badezimmer** bietet es Platz für bis zu **6 Personen**, die **Komfort und Unabhängigkeit** suchen.
 
 ambient: |
   Erleben Sie das Gefühl, zu Hause zu sein, in einer **komfortablen Umgebung** mit allem Notwendigen für einen unabhängigen Aufenthalt.

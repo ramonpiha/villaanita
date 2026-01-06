@@ -9,7 +9,7 @@ generalInfo: |
   - Renon Cable Car
   - Train station
   
-  The accommodation features a **large balcony** overlooking an internal courtyard, perfect for relaxing moments.
+  The accommodation features a **large balcony** overlooking an internal courtyard, ideal for relaxing moments.
   
   **Furnished with modern style**, the apartment offers everything you need for a comfortable stay in the **Dolomites**.
   

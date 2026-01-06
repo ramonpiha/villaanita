@@ -11,7 +11,7 @@ generalInfo: |
   
   Le camere, arredate secondo **criteri moderni**, si trovano al primo piano e offrono un'**atmosfera informale e tranquilla**.
   
-  **Easy Check-in h24** con codici per la massima flessibilità durante il tuo soggiorno nel cuore delle **Dolomiti**.
+  **Easy Check-in h24** con codici per la massima flessibilità durante il tuo soggiorno nel cuore di **Bolzano**.
 
 ambient: |
   Vivi un'esperienza **informale e tranquilla** in un palazzo storico con camere moderne e tutti i comfort necessari.

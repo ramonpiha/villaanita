@@ -10,7 +10,7 @@ generalInfo: |
   - Restaurants
   - Bahnhof
   
-  **Modern eingerichtetes Apartment** in einem **historischen Gebäude**, perfekt für unabhängige Aufenthalte in den **Dolomiten**.
+  **Modern eingerichtetes Apartment** in einem **historischen Gebäude**, ideal für unabhängige Aufenthalte in den **Dolomiten**.
   
   **Self Check-in** verfügbar. Den Gästen steht die **[Bolzano Card](https://www.bolzano-bozen.it/de/bolzano-bozen-card/)** zur Verfügung.
 

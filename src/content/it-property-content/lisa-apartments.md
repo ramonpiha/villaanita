@@ -9,9 +9,9 @@ generalInfo: |
   - Locali e ristoranti
   - Negozi del centro storico
   
-  **Appartamenti arredati secondo criteri moderni** in un **palazzo d'epoca**, perfetti per soggiorni indipendenti nelle **Dolomiti**.
-  
-  **Check-in presso Villa Anita**. Gli ospiti hanno a disposizione la **[Bolzano Card](https://www.bolzano-bozen.it/it/bolzano-bozen-card/)**.
+  **Appartamenti arredati secondo criteri moderni** in un **palazzo d'epoca**, per **soggiorni pratici e indipendenti** nel cuore del **centro di Bolzano**.
+
+  **Check-in e parcheggio presso Villa Anita**. Gli ospiti hanno a disposizione la **[Bolzano Bozen Card Mobility](https://www.bolzano-bozen.it/it/bolzano-bozen-card/)**.
 
 ambient: |
   Vivi l'esperienza di sentirsi a casa in un **palazzo d'epoca** con **comfort moderno** nel cuore della zona pedonale di Bolzano.
@@ -28,5 +28,5 @@ highlights:
   - Asciugamani, asciugacapelli e lavatrice
   - Palazzo d'epoca con arredamento moderno
   - Check-in presso Villa Anita
-  - Bolzano Card disponibile per gli ospiti
+  - Bolzano Bozen Card Mobility disponibile per gli ospiti
 ---

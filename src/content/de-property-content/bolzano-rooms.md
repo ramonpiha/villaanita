@@ -11,7 +11,7 @@ generalInfo: |
   
   Die nach **modernen Kriterien** eingerichteten Zimmer befinden sich im ersten Stock und bieten eine **informelle und ruhige Atmosphäre**.
   
-  **Easy Check-in rund um die Uhr** mit Codes für maximale Flexibilität während Ihres Aufenthalts im Herzen der **Dolomiten**.
+  **Easy Check-in rund um die Uhr** mit Codes für maximale Flexibilität während Ihres Aufenthalts im Herzen von **Bozen**.
 
 ambient: |
   Erleben Sie eine **informelle und ruhige** Atmosphäre in einem historischen Gebäude mit modernen Zimmern und allen notwendigen Annehmlichkeiten.

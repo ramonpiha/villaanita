@@ -9,7 +9,7 @@ generalInfo: |
   - Funivia del Renon
   - Stazione dei treni
   
-  L'alloggio dispone di un **ampio balcone** che affaccia su un cortile interno, perfetto per momenti di relax.
+  L'alloggio dispone di un **ampio balcone** che affaccia su un cortile interno, ideale per momenti di relax.
   
   **Arredato secondo criteri moderni**, l'appartamento offre tutto il necessario per un soggiorno confortevole nelle **Dolomiti**.
   

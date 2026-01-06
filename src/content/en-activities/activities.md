@@ -49,7 +49,7 @@ activities:
     image: "/images/activities/HR-spring-_Y0A5008-scaled.avif"
     alt: "Green meadows and trees lining the Talvera stream"
     content: |
-      The **green lung** of the city. These lush meadows along the Talvera stream feature playgrounds, sports fields, and cycle paths. It is the perfect spot for relaxation or a circular stroll.
+      The **green lung** of the city. These lush meadows along the Talvera stream feature playgrounds, sports fields, and cycle paths. It is the ideal spot for relaxation or a circular stroll.
   - title: "Museion"
     image: "/images/activities/LR-facciata-multimediale-_Y0A9305.avif"
     alt: "The modern glass architecture of the Museion museum"

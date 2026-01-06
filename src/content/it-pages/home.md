@@ -1,16 +1,24 @@
 ---
 title: Home
 heading: Rooms & Apartments Bz
-subheading: Vivi Bolzano, dal centro storico alle zone più tranquille.
+subheading: Smart stay in the City Center
 ---
 
-## Posizione Strategica
-Le nostre strutture sono dislocate in punti chiave della città per ogni preferenza:
-* **Centro Storico:** Alcune proprietà si trovano direttamente nel cuore pulsante di Bolzano, in zona pedonale a due passi da Piazza Walther.
-* **Adiacenze:** Altre soluzioni sono situate a soli **5 minuti dal centro**, perfette per chi cerca la vicinanza ai servizi ma con maggiore accessibilità in auto.
-* **Trasporti:** Indipendentemente dalla scelta, la stazione dei treni, dei bus e la funivia del Renon rimangono facilmente raggiungibili.
+<div align="center">
 
-## Le Nostre Soluzioni
-Offriamo diverse tipologie di alloggio per soddisfare ogni esigenza di budget e comfort:
-* **Temporary Apartments:** Alloggi completi con cucina, ideali per famiglie, professionisti e soggiorni prolungati.
-* **Camere Economy:** Stanze pratiche ed essenziali con **bagno in comune**, perfette per viaggiatori che cercano la convenienza.
+## VIVI NEL CENTRO DI BOLZANO, nei luoghi caratteristici della città 
+### soluzioni ideali per viaggi di piacere e residenze professionali
+
+</div>
+
+* **CENTRO STORICO:** alcune proprietà si trovano in zona pedonale, direttamente nel cuore pulsante di Bolzano, altre si trovano nelle immediate vicinanze raggiungibili anche in auto e comunque vicine alle più importanti attrazioni della città.
+* **TRASPORTI:** tutte le strutture sono nelle immediate vicinanze della stazione dei Treni, dei Bus e della funivia del Renon. Raggiungibili anche a piedi.
+
+<div align="center">
+
+## ROOMS & APARTMENTS in the city center
+
+</div>
+
+* **Temporary Apartments:** Alloggi completi di cucina e tutti i comfort, ideali per famiglie, professionisti ed esigenze aziendali.
+* **ROOMS:** diverse tipologie di stanze per tutte le esigenze - pratiche e confortevoli.

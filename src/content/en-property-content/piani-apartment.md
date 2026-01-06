@@ -12,7 +12,7 @@ generalInfo: |
   
   **Furnished with modern style** and **bright**, the apartment features an **exclusive private garden**.
   
-  With an **equipped kitchen**, **living room**, **2 bedrooms**, and **bathroom**, it's perfect for **1-5 people** seeking comfort and independence in the **Dolomites**.
+  With an **equipped kitchen**, **living room**, **2 bedrooms**, and **bathroom**, it can accommodate up to **6 people** looking for **comfort and independence**.
 
 ambient: |
   Experience the feeling of being at home in a **comfortable environment** with everything you need for an independent stay.

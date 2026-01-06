@@ -11,7 +11,7 @@ generalInfo: |
   
   The rooms, furnished with **modern style**, are located on the first floor and offer an **informal and peaceful atmosphere**.
   
-  **Easy Check-in 24/7** with codes for maximum flexibility during your stay in the heart of the **Dolomites**.
+  **Easy Check-in 24/7** with codes for maximum flexibility during your stay in the heart of **Bolzano**.
 
 ambient: |
   Experience an **informal and peaceful** atmosphere in a historic building with modern rooms and all necessary comforts.

@@ -10,7 +10,7 @@ generalInfo: |
   - Ristoranti
   - Stazione dei treni
   
-  **Appartamento arredato secondo criteri moderni** in un **palazzo d'epoca**, perfetto per soggiorni indipendenti nelle **Dolomiti**.
+  **Appartamento arredato secondo criteri moderni** in un **palazzo d'epoca**, ideale per soggiorni indipendenti nelle **Dolomiti**.
   
   **Self check-in** disponibile. Gli ospiti hanno a disposizione la **[Bolzano Card](https://www.bolzano-bozen.it/it/bolzano-bozen-card/)**.
 

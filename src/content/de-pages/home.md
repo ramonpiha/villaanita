@@ -1,16 +1,24 @@
 ---
 title: Home
 heading: Rooms & Apartments Bz
-subheading: Erleben Sie Bozen – mitten im Zentrum oder in ruhiger Nähe.
+subheading: Smart stay in the City Center
 ---
 
-## Strategische Lage
-Unsere Unterkünfte verteilen sich auf verschiedene strategische Punkte:
-* **Historisches Zentrum:** Einige Objekte befinden sich direkt im Herzen der Fußgängerzone, nur wenige Schritte vom Waltherplatz entfernt.
-* **Zentrumsnahe:** Andere Standorte sind nur **5 Minuten vom Zentrum** entfernt – ideal für alle, die Nähe zur Stadt mit besserer Erreichbarkeit per Auto verbinden möchten.
-* **Verbindungen:** Egal wofür Sie sich entscheiden, Bahnhof, Busbahnhof und die Rittner Seilbahn sind stets gut erreichbar.
+<div align="center">
 
-## Unsere Unterkünfte
-Wir bieten verschiedene Lösungen für jedes Budget:
-* **Temporary Apartments:** Komplett eingerichtete Wohnungen mit Küche, ideal für Berufstätige und längere Aufenthalte.
-* **Economy Zimmer:** Einfache, preiswerte Zimmer mit **Gemeinschaftsbad** (Etagendusche), perfekt für preisbewusste Reisende.
+## WOHNEN IM ZENTRUM VON BOZEN, an den charakteristischen Orten der Stadt 
+### ideale Lösungen für Urlaubsreisen und berufliche Aufenthalte
+
+</div>
+
+* **HISTORISCHES ZENTRUM:** Einige Unterkünfte befinden sich in der Fußgängerzone, direkt im pulsierenden Herzen von Bozen; andere befinden sich in unmittelbarer Nähe, sind mit dem Auto erreichbar und dennoch nah an den wichtigsten Sehenswürdigkeiten der Stadt.
+* **VERKEHRSMITTEL:** Alle Einrichtungen befinden sich in unmittelbarer Nähe des Bahnhofs, des Busbahnhofs und der Rittner Seilbahn. Auch zu Fuß erreichbar.
+
+<div align="center">
+
+## ROOMS & APARTMENTS in the city center
+
+</div>
+
+* **Temporary Apartments:** Komplett ausgestattete Apartments mit Küche und allem Komfort, ideal für Familien, Fachkräfte und geschäftliche Anforderungen.
+* **ROOMS:** Verschiedene Zimmertypen für alle Bedürfnisse - praktisch und komfortabel.

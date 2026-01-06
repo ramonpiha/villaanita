@@ -9,9 +9,9 @@ generalInfo: |
   - Bars and restaurants
   - Old town shops
   
-  **Modern furnished apartments** in a **historic building**, perfect for independent stays in the **Dolomites**.
-  
-  **Check-in at Villa Anita**. Guests have access to the **[Bolzano Card](https://www.bolzano-bozen.it/en/bolzano-bozen-card/)**.
+  **Apartments furnished according to modern criteria** in a **period building**, for **practical and independent stays** in the heart of **Bolzano city center**.
+
+  **Check-in and parking at Villa Anita**. Guests have the **[Bolzano Bozen Card Mobility](https://www.bolzano-bozen.it/en/bolzano-bozen-card/)** at their disposal.
 
 ambient: |
   Experience the feeling of being at home in a **historic building** with **modern comfort** in the heart of Bolzano's pedestrian zone.
@@ -28,5 +28,5 @@ highlights:
   - Towels, hairdryer, and washing machine
   - Historic building with modern furnishings
   - Check-in at Villa Anita
-  - Bolzano Card available for guests
+  - Bolzano Bozen Card Mobility available for guests
 ---

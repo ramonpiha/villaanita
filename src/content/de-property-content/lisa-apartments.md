@@ -9,9 +9,9 @@ generalInfo: |
   - Lokalen und Restaurants
   - Geschäften der Altstadt
   
-  **Modern eingerichtete Apartments** in einem **historischen Gebäude**, perfekt für unabhängige Aufenthalte in den **Dolomiten**.
-  
-  **Check-in bei Villa Anita**. Den Gästen steht die **[Bolzano Card](https://www.bolzano-bozen.it/de/bolzano-bozen-card/)** zur Verfügung.
+  **Nach modernen Kriterien eingerichtete Apartments** in einem **historischen Gebäude**, für **praktische und unabhängige Aufenthalte** direkt im **Zentrum von Bozen**.
+
+  **Check-in und Parkplatz bei Villa Anita**. Den Gästen steht die **[Bolzano Bozen Card Mobility](https://www.bolzano-bozen.it/de/bolzano-bozen-card/)** zur Verfügung.
 
 ambient: |
   Erleben Sie das Gefühl, zu Hause zu sein, in einem **historischen Gebäude** mit **modernem Komfort** im Herzen der Fußgängerzone von Bozen.
@@ -28,5 +28,5 @@ highlights:
   - Handtücher, Haartrockner und Waschmaschine
   - Historisches Gebäude mit moderner Einrichtung
   - Check-in bei Villa Anita
-  - Bolzano Card für Gäste verfügbar
+  - Bolzano Bozen Card Mobility für Gäste verfügbar
 ---

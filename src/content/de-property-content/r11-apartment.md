@@ -9,7 +9,7 @@ generalInfo: |
   - Rittner Seilbahn
   - Bahnhof
   
-  Die Unterkunft verfügt über einen **großen Balkon** mit Blick auf einen Innenhof, perfekt für entspannende Momente.
+  Die Unterkunft verfügt über einen **großen Balkon** mit Blick auf einen Innenhof, ideal für entspannende Momente.
   
   **Modern eingerichtet**, bietet das Apartment alles Notwendige für einen komfortablen Aufenthalt in den **Dolomiten**.
   
