@@ -6,9 +6,13 @@ subheading: "Alle wichtigen Informationen für Ihre Ankunft in unseren Unterkün
 
 ## 🏨 Check-In
 
-Das Rezeptionsbüro befindet sich in der **Villa Anita, Runkelsteiner Straße 16**. Hier steht Ihnen unser Team gerne zur Verfügung, um Sie willkommen zu heißen und Ihnen nützliche Tipps zu geben.
+Die Rezeption befindet sich in der **Villa Anita, Via Castel Roncolo Nr. 16**.
 
-Einige Unterkünfte bieten einen **automatischen Check-in-Service** an. In diesem Fall erhalten Sie bei der Buchung einen Code auf Ihr Smartphone, mit dem Sie freien Zugang zur Unterkunft haben.
+Hier steht Ihnen unser Team zur Verfügung, um Sie zu begrüßen und Ihnen nützliche Tipps für Ihren Aufenthalt zu geben.
+
+**Öffnungszeiten: 8:00 – 20:00 Uhr**
+
+Einige Unterkünfte bieten einen **Self-Check-in** an: In diesem Fall erhalten Sie vorab alle Informationen und Codes, um die Unterkunft eigenständig zu betreten.
 
 ---
 
@@ -18,7 +22,7 @@ Einige Unterkünfte bieten einen **automatischen Check-in-Service** an. In diese
 | Service | Zeit | Anmerkungen |
 | :--- | :--- | :--- |
 | **Check-in** | 14:00 / 20:00 | Abweichende Zeiten sind nach vorheriger Absprache möglich. |
-| **Check-out** | 08:00 / 11:30 | Das Gepäck kann nach dem Check-out sicher bei uns verwahrt werden. |
+| **Check-out** | 08:00 / 10:30 | Es ist möglich, das Gepäck nach dem Check-out zu hinterlassen. |
 
 ---
 

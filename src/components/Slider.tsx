@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react"; // Added useEffect
 
 interface Slide {
   src: string;
@@ -10,33 +10,42 @@ interface SliderProps {
 }
 
 const Slider: React.FC<SliderProps> = ({ slides = [] }) => {
-  const [current, setCurrent] = useState<number>(0); 
+  const [current, setCurrent] = useState<number>(0);
+
+  // Function to move to next slide
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  useEffect(() => {
+    if (!slides || slides.length === 0) return;
+
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 2000); // 2000ms = 2 seconds
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, [current, slides.length]); // Restarts timer if user manually clicks next/prev
 
   if (!slides || slides.length === 0) {
     return null;
   }
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
 
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
   return (
-    // Changed: Removed 'h-96' and added 'aspect-[3/4]' for a vertical orientation
-    // Added 'bg-gray-100' as a placeholder while images load
     <div className="relative w-full aspect-[20/11] overflow-hidden rounded-lg shadow-xl bg-gray-100">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-            index === current ? 'opacity-100' : 'opacity-0'
+            index === current ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* The image already has object-cover, so it will fill the new vertical space appropriately  */}
           <img
             src={slide.src}
             alt={slide.alt || `Slide ${index + 1}`}
@@ -68,7 +77,7 @@ const Slider: React.FC<SliderProps> = ({ slides = [] }) => {
             key={index}
             onClick={() => setCurrent(index)}
             className={`h-2 w-2 rounded-full transition-all ${
-              index === current ? 'bg-white w-4' : 'bg-white/50'
+              index === current ? "bg-white w-4" : "bg-white/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

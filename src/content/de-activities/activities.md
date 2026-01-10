@@ -3,7 +3,9 @@ title: "Aktivitäten & Erlebnisse"
 subtitle: "Entdecken Sie Bozen und die Dolomiten"
 guestnet:
   text: |
-    **Infos & Dienste**, Wetter, Fahrpläne und kulturelle Attraktionen finden Sie auf der **GUESTNET-Seite** des Bozner Tourismusverbandes. Alles zu Weinkellern, Shopping und Seilbahnen.
+    **Infos & Dienste**, Wetter, Fahrpläne und kulturelle Attraktionen finden Sie auf der **GUESTNET-Seite** des Bozner Tourismusverbandes.  
+    
+    Alles zu Weinkellern, Shopping und Seilbahnen.
   link: "https://bolzano-bozen.guest.net/"
 neighborhoodIntro: |
   Tipps zu Orten in **Südtirol**. Entdecken Sie Museen, Promenaden, Burgen und Restaurants. Besuchen Sie den Obstmarkt am **Kornplatz** und genießen Sie lokale Köstlichkeiten.

@@ -6,9 +6,13 @@ subheading: "Tutto quello che c'è da sapere per un arrivo sereno presso le nost
 
 ## 🏨 Check-In
 
-L'ufficio reception si trova presso **Villa Anita in Via Castel Roncolo n. 16**. Qui potrete contare sul nostro staff che vi accoglierà e vi darà suggerimenti utili per il vostro soggiorno.
+L'ufficio reception si trova presso **Villa Anita in Via Castel Roncolo n. 16**.
 
-Alcune strutture offrono il servizio di **check-in automatico**: in questo caso riceverete un codice sul vostro smartphone al momento della prenotazione, che vi permetterà di accedere liberamente alla struttura.
+Qui potrete contare sul nostro staff che vi accoglierà e vi darà suggerimenti utili per il vostro soggiorno.
+
+**Orari Reception h 8:00 – 20:00**
+
+Alcune strutture offrono il servizio di **check-in automatico**: in questo caso riceverete tutte le info e i codici, che vi permetteranno di accedere liberamente alla struttura.
 
 ---
 
@@ -18,7 +22,7 @@ Alcune strutture offrono il servizio di **check-in automatico**: in questo caso 
 | Servizio | Orario | Note |
 | :--- | :--- | :--- |
 | **Check-in** | 14:00 / 20:00 | È possibile gestire orari differenti previa comunicazione. |
-| **Check-out** | 08:00 / 11:30 | È possibile lasciare i bagagli custoditi oltre l’ora di check-out. |
+| **Check-out** | 08:00 / 10:30 | È possibile lasciare i bagagli oltre l’ora di check-out. |
 
 ---
 

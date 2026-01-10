@@ -2,7 +2,9 @@
 title: BolzanoRooms
 subtitle: 6 Stanze in Via Brennero 4
 generalInfo: |
-  **BolzanoRooms** offre **6 stanze moderne** al primo piano di un **palazzo storico** in Via Brennero 4.
+  Via Brennero 4, Bolzano Bozen
+
+  **BolzanoRooms** offre **6 stanze moderne** al primo piano di un **palazzo storico**.
   
   A pochi passi da:
   - Zona pedonale del centro storico
@@ -11,7 +13,7 @@ generalInfo: |
   
   Le camere, arredate secondo **criteri moderni**, si trovano al primo piano e offrono un'**atmosfera informale e tranquilla**.
   
-  **Easy Check-in h24** con codici per la massima flessibilità durante il tuo soggiorno nel cuore delle **Dolomiti**.
+  **Easy Check-in h24** con codici per la massima flessibilità durante il tuo soggiorno nel cuore di **Bolzano**.
 
 ambient: |
   Vivi un'esperienza **informale e tranquilla** in un palazzo storico con camere moderne e tutti i comfort necessari.

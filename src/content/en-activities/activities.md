@@ -3,7 +3,9 @@ title: "Activities & Exploration"
 subtitle: "Discover Bolzano and the Dolomites"
 guestnet:
   text: |
-    **Info & services**, weather, public transport timetables, and cultural attractions can be found on the dedicated **GUESTNET** page of the Bolzano accommodation agency. Explore wine cellars, shopping, and cable car schedules.
+    **Info & services**, weather, public transport timetables, and cultural attractions can be found on the dedicated **GUESTNET** page of the Bolzano accommodation agency. 
+    
+    Explore wine cellars, shopping, and cable car schedules.
   link: "https://bolzano-bozen.guest.net/"
 neighborhoodIntro: |
   Advice and tips on places in **South Tyrol**. Explore museums, walks, castles, and restaurants. Visit the old market in **Piazza delle Erbe**, local pastry shops, and get the latest updates from the Bolzano Tourist Board.
@@ -49,7 +51,7 @@ activities:
     image: "/images/activities/HR-spring-_Y0A5008-scaled.avif"
     alt: "Green meadows and trees lining the Talvera stream"
     content: |
-      The **green lung** of the city. These lush meadows along the Talvera stream feature playgrounds, sports fields, and cycle paths. It is the perfect spot for relaxation or a circular stroll.
+      The **green lung** of the city. These lush meadows along the Talvera stream feature playgrounds, sports fields, and cycle paths. It is the ideal spot for relaxation or a circular stroll.
   - title: "Museion"
     image: "/images/activities/LR-facciata-multimediale-_Y0A9305.avif"
     alt: "The modern glass architecture of the Museion museum"

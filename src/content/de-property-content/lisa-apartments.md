@@ -2,6 +2,8 @@
 title: Lisa Apartments
 subtitle: 2 Apartments mit Küche, Wohnzimmer und Schlafzimmer
 generalInfo: |
+  Laubengasse 71, Bolzano Bozen
+
   **Lisa Apartments** bietet **2 Apartments** für ein komfortables Erlebnis mit **maximaler Freiheit** im Herzen von Bozen.
   
   Im **1. und 2. Stock** am **Obstplatz** in der Fußgängerzone des Zentrums gelegen, nur wenige Schritte von:
@@ -9,9 +11,9 @@ generalInfo: |
   - Lokalen und Restaurants
   - Geschäften der Altstadt
   
-  **Modern eingerichtete Apartments** in einem **historischen Gebäude**, perfekt für unabhängige Aufenthalte in den **Dolomiten**.
-  
-  **Check-in bei Villa Anita**. Den Gästen steht die **[Bolzano Card](https://www.bolzano-bozen.it/de/bolzano-bozen-card/)** zur Verfügung.
+  **Nach modernen Kriterien eingerichtete Apartments** in einem **historischen Gebäude**, für **praktische und unabhängige Aufenthalte** direkt im **Zentrum von Bozen**.
+
+  **Check-in und Parkplatz bei Villa Anita**. Den Gästen steht die **[Bolzano Bozen Card Mobility](https://www.bolzano-bozen.it/de/bolzano-bozen-card/)** zur Verfügung.
 
 ambient: |
   Erleben Sie das Gefühl, zu Hause zu sein, in einem **historischen Gebäude** mit **modernem Komfort** im Herzen der Fußgängerzone von Bozen.
@@ -28,5 +30,5 @@ highlights:
   - Handtücher, Haartrockner und Waschmaschine
   - Historisches Gebäude mit moderner Einrichtung
   - Check-in bei Villa Anita
-  - Bolzano Card für Gäste verfügbar
+  - Bolzano Bozen Card Mobility für Gäste verfügbar
 ---

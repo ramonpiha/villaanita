@@ -2,36 +2,34 @@
 title: Little ROOMS
 subtitle: Bolzano Apartments
 generalInfo: |
-  **Little ROOMS** offers **rooms with kitchenette** for maximum freedom, located in the heart of Bolzano at Via Vintola 5.
+  Via Vintola 5, Bolzano Bozen
+
+  **Little ROOMS** offers rooms with kitchenette for maximum freedom, located in the heart of Bolzano.
   
-  On the **2nd floor with elevator**, in a building adjacent to the pedestrian zone, our rooms are perfect for a practical stay with:
+  On the **2nd floor with elevator**, in a building right next to the pedestrian area, our rooms are ideal for a practical experience with:
   - private bathroom
   - equipped kitchenette
   - central location
   
-  Just steps away from:
+  A stone's throw from:
   - Walther Square
   - Renon Cable Car
   - Train and bus stations
   - Restaurants and shops
   - Main city attractions
   
-  **5 rooms** furnished with **modern style**, ideal for **short or extended stays** in the heart of the **Dolomites**.
+  **5 rooms** furnished with **modern criteria**, ideal for **short or extended stays** in the heart of **Bolzano**.
 
 ambient: |
-  Experience Bolzano with the **freedom of an apartment** and the **comfort of a hotel** in our modern and functional rooms.
-  
-  Ideal for **independent travelers** seeking **practicality** and a **strategic location** in the center of Bolzano.
+  Experience Bolzano with **maximum freedom** in **practical and functional** rooms. Furnished with **modern criteria**, these spaces are ideal for **independent travelers and professionals** looking for convenience in a **strategic location**.
 
 highlights:
-  - Equipped kitchenette in every room
+  - Equipped kitchenette
+  - Wi-Fi and TV
+  - Bed and bath linen
+  - 24h self check-in available
   - Private bathroom with shower
-  - Free Wi-Fi and TV in every room
-  - Bed and bath linens included
   - 2nd floor with elevator
-  - Steps away from Walther Square
-  - Close to Renon Cable Car
-  - Close to train and bus stations
-  - Check-in at nearby Villa Anita
-  - Parking available upon reservation at Villa Anita
+  - Check-in at the nearby Villa Anita
+  - Parking available by reservation at Villa Anita
 ---

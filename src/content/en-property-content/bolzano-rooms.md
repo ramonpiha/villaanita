@@ -2,7 +2,9 @@
 title: BolzanoRooms
 subtitle: 6 Rooms at Via Brennero 4
 generalInfo: |
-  **BolzanoRooms** offers **6 modern rooms** on the first floor of a **historic building** at Via Brennero 4.
+  Via Brennero 4, Bolzano Bozen
+
+  **BolzanoRooms** offers **6 modern rooms** on the first floor of a **historic building**.
   
   Just steps away from:
   - Pedestrian zone of the old town
@@ -11,7 +13,7 @@ generalInfo: |
   
   The rooms, furnished with **modern style**, are located on the first floor and offer an **informal and peaceful atmosphere**.
   
-  **Easy Check-in 24/7** with codes for maximum flexibility during your stay in the heart of the **Dolomites**.
+  **Easy Check-in 24/7** with codes for maximum flexibility during your stay in the heart of **Bolzano**.
 
 ambient: |
   Experience an **informal and peaceful** atmosphere in a historic building with modern rooms and all necessary comforts.

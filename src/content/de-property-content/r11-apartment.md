@@ -2,18 +2,20 @@
 title: R-11 Apartment
 subtitle: Küche, Wohnzimmer, Doppelzimmer, Balkon
 generalInfo: |
-  **R-11 Apartment** bietet ein komfortables Erlebnis mit **maximaler Freiheit** im Herzen von Bozen.
+  Rittner Straße 4, Bolzano Bozen
+
+  **Maximale Freiheit** im Herzen von Bozen.
   
   Im **vierten Stock mit Aufzug** gelegen, befindet sich das Apartment in der Nähe von:
   - Waltherplatz
   - Rittner Seilbahn
   - Bahnhof
   
-  Die Unterkunft verfügt über einen **großen Balkon** mit Blick auf einen Innenhof, perfekt für entspannende Momente.
+  Die Unterkunft verfügt über einen **großen Balkon** mit Blick auf einen Innenhof, ideal für entspannende Momente.
   
-  **Modern eingerichtet**, bietet das Apartment alles Notwendige für einen komfortablen Aufenthalt in den **Dolomiten**.
+  **Nach modernen Kriterien eingerichtet**, bietet das Apartment alles, was Sie für einen komfortablen Aufenthalt im Zentrum von **Bozen** benötigen.
   
-  Den Gästen stehen die **[Bolzano Card](https://www.bolzano-bozen.it/de/bolzano-bozen-card/)** zur Verfügung, um die Aktivitäten und historischen und künstlerischen Schönheiten Südtirols in vollen Zügen zu genießen.
+  Den Gästen stehen die **[Bolzano Bozen Card Mobility](https://www.bolzano-bozen.it/de/bolzano-bozen-card/)** zur Verfügung, um die Aktivitäten und historischen und künstlerischen Schönheiten Südtirols in vollen Zügen zu genießen.
 
 ambient: |
   Erleben Sie das Gefühl, zu Hause zu sein, mit einer **komfortablen Umgebung** und einem **privaten Balkon**, um die Ruhe zu genießen.
@@ -30,5 +32,6 @@ highlights:
   - Handtücher und Haartrockner
   - Nahe Waltherplatz und Rittner Seilbahn
   - Nahe dem Bahnhof
-  - Bolzano Card für Gäste verfügbar
+  - Bolzano Bozen Card Mobility für Gäste verfügbar
+  - Self Check-In h24
 ---

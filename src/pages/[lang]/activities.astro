@@ -43,11 +43,6 @@ const { title, subtitle, guestnet, neighborhoodIntro, activities } = entry.data;
     </div>
   </header>
 
-  <div class="py-12 text-center max-w-3xl mx-auto">
-    <h2 class="text-2xl font-bold mb-4">Activities in the Neighborhood</h2>
-    <div class="prose prose-lg text-gray-600" set:html={marked.parse(neighborhoodIntro)} />
-  </div>
-
   <div class="space-y-24 pb-32">
     {activities.map((activity: Activity, index: number) => {
       const isEven = index % 2 === 0;

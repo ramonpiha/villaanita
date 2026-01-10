@@ -6,9 +6,13 @@ subheading: "Everything you need to know for a smooth arrival and comfortable st
 
 ## 🏨 Check-In
 
-The reception office is located in **Villa Anita in Via Castel Roncolo n. 16**. Here you can count on our staff who will welcome you and give you useful suggestions.
+The reception office is located at **Villa Anita, Via Castel Roncolo n. 16**.
 
-Some structures offer the **automatic check-in service**, allowing you free access to the structures with a code that you will receive on your smartphone at the time of booking.
+Our staff will be there to welcome you and provide helpful tips for your stay.
+
+**Hours: 8:00 AM – 8:00 PM**
+
+Some properties offer a **self check-in** service: in this case, you will receive all necessary information and codes to access the property independently.
 
 ---
 
@@ -18,7 +22,7 @@ Some structures offer the **automatic check-in service**, allowing you free acce
 | Service | Time | Notes |
 | :--- | :--- | :--- |
 | **Check in** | 14:00 / 20:00 | Different times can be managed with prior notice. |
-| **Check out** | 08:00 / 11:30 | Luggage can be stored safely after check-out. |
+| **Check out** | 08:00 / 10:30 | It is possible to leave your luggage after check-out time. |
 
 ---
 

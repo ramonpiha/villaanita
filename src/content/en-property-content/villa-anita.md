@@ -2,34 +2,33 @@
 title: Villa Anita
 subtitle: Rooms & Apartments
 generalInfo: |
-  **Villa Anita** is located in Bolzano's most **exclusive and tranquil area** (Via Castel Roncolo 16), surrounded by a **private garden**.
+  Via Castel Roncolo 16, Bolzano Bozen
   
-  It is just steps away from:
-  - the pedestrian zone
-  - the historic center
-  - cable cars
+  In the most **exclusive and quiet** area of Bolzano city center (Via Castel Roncolo 16), surrounded by a **private garden** and parking.
+  
+  It is just a few steps from:
+  - pedestrian area
   - transport stations
+  - cable cars
+  - museums
   
-  Built in **1904**, the villa combines **historical elegance** with an **ideal location**.
+  A **historic residence**, built in **1904** — **elegance and tranquility** in an ideal location.
   
-  The owners live on-site, maintain the park, and personally attend to guests, ensuring a **genuine and charming stay**.
-  
-  Rooms and apartments of **various sizes** are available for **short or extended visits** in the heart of the **Dolomites**.
+  The owners live on-site, tend to the garden, and personally take care of the guests, ensuring an **authentic and charming stay**.
 
 ambient: |
   Enjoy a serene atmosphere at Villa Anita with a **private garden** and **enchanting views** of vineyards and prestigious properties.
   
-  Ideal for **families and friends** seeking **alpine charm** and **modern comfort** in the heart of the **Dolomites**.
+  Ideal for **families and friends** looking for **charm** and **comfort** in the heart of **Bolzano**.
 
 highlights:
   - Private garden with panoramic vineyard views
-  - Car, motorcycle, and bicycle parking
-  - High-speed Wi-Fi & Smart TV in every room
-  - Premium bed/bath linens, hairdryer
+  - Parking for cars, motorcycles, and bicycles
+  - High-speed Wi-Fi and Smart TV in every room
+  - Premium bed and bath linens, hairdryer
   - Coffee machines and tea kettles
   - Welcome breakfast items
-  - Walking distance to historic center
-  - Near cable cars and public transport
+  - Just steps away from the historic center
+  - Close to cable cars and public transport
   - Rooms and apartments for all needs
-  - Personal attention from resident owners
 ---

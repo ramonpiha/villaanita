@@ -3,7 +3,9 @@ title: "Attività e Scoperte"
 subtitle: "Esplora Bolzano e le Dolomiti"
 guestnet:
   text: |
-    **Informazioni e servizi**, meteo, orari dei trasporti e attrazioni culturali sono disponibili sulla pagina **GUESTNET** dell'azienda di soggiorno di Bolzano. Dettagli su cantine, shopping e funivie.
+    **Informazioni e servizi**, meteo, orari dei trasporti e attrazioni culturali sono disponibili sulla pagina **GUESTNET** dell'azienda di soggiorno di Bolzano.
+    
+    Dettagli su cantine, shopping e funivie.
   link: "https://bolzano-bozen.guest.net/"
 neighborhoodIntro: |
   Consigli su luoghi e attività in **Alto Adige**. Scoprite musei, passeggiate, castelli e ristoranti. Visitate lo storico mercato di **Piazza delle Erbe** e le pasticcerie locali.
