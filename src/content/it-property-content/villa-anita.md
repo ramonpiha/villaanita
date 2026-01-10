@@ -2,7 +2,9 @@
 title: Villa Anita
 subtitle: Camere & Appartamenti
 generalInfo: |
-  Nella zona più **esclusiva e tranquilla** del centro di Bolzano (Via Castel Roncolo 16), circondata da un **giardino privato** e parcheggio.
+  Via Castel Roncolo 16, Bolzano Bozen
+  
+  Nella zona più **esclusiva e tranquilla** del centro di Bolzano, circondata da un **giardino privato** e parcheggio.
   
   È a pochi passi da:
   - zona pedonale

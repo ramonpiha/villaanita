@@ -2,7 +2,9 @@
 title: Little ROOMS
 subtitle: Bolzano Apartments
 generalInfo: |
-  **Little ROOMS**, rooms with kitchenette for maximum freedom, located in the heart of Bolzano at Via Vintola 5.
+  Via Vintola 5, Bolzano Bozen
+
+  **Little ROOMS** offers rooms with kitchenette for maximum freedom, located in the heart of Bolzano.
   
   On the **2nd floor with elevator**, in a building right next to the pedestrian area, our rooms are ideal for a practical experience with:
   - private bathroom

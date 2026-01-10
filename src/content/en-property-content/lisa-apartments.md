@@ -2,6 +2,8 @@
 title: Lisa Apartments
 subtitle: 2 Apartments with Kitchen, Living Room and Bedroom
 generalInfo: |
+  Via Brennero 4, Bolzano Bozen
+  
   **Lisa Apartments** offers **2 apartments** for a comfortable experience with **maximum freedom** in the heart of Bolzano.
   
   Located on the **1st and 2nd floor** of **Piazza delle Erbe** in the pedestrian zone of the center, just steps away from:

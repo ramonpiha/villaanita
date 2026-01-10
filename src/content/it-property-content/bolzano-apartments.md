@@ -2,7 +2,9 @@
 title: Little ROOMS
 subtitle: Bolzano Apartments
 generalInfo: |
-  **Little ROOMS**, stanze con angolo cucina per la massima libertà, situate nel cuore di Bolzano in Via Vintola 5.
+  Via Vintola 5, Bolzano Bozen
+  
+  **Little ROOMS** offre stanze con angolo cucina per la massima libertà, situate nel cuore di Bolzano.
   
   Al **2° piano con ascensore**, in un edificio a ridosso della zona pedonale, le nostre stanze sono perfette per un'esperienza pratica con:
   - bagno privato

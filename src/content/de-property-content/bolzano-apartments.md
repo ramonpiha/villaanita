@@ -2,7 +2,9 @@
 title: Little ROOMS
 subtitle: Bolzano Apartments
 generalInfo: |
-  **Little ROOMS**, Zimmer mit Kochnische für maximale Freiheit, im Herzen von Bozen in der Vintlerstraße 5 gelegen.
+  Vintlerstraße 5, Bolzano Bozen
+
+  Zimmer mit Kochnische für maximale Freiheit, im Herzen von Bozen gelegen.
   
   Im **2. Stock mit Aufzug**, in einem Gebäude direkt an der Fußgängerzone, sind unsere Zimmer ideal für einen praktischen Aufenthalt mit:
   - privatem Badezimmer

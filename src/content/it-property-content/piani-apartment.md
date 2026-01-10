@@ -2,6 +2,8 @@
 title: Piani Apartment
 subtitle: Cucina, Soggiorno, 2 Stanze da Letto, Bagno, Giardino Privato
 generalInfo: |
+  Via Piani d'Isarco 4, Bolzano Bozen
+  
   **Piani Apartment** offre un'esperienza comoda e di **massima libertà** nel cuore di Bolzano.
   
   L'appartamento di **80 m²** è situato nelle vicinanze di:

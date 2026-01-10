@@ -2,6 +2,8 @@
 title: Lisa Apartments
 subtitle: 2 Apartments mit Küche, Wohnzimmer und Schlafzimmer
 generalInfo: |
+  Laubengasse 71, Bolzano Bozen
+
   **Lisa Apartments** bietet **2 Apartments** für ein komfortables Erlebnis mit **maximaler Freiheit** im Herzen von Bozen.
   
   Im **1. und 2. Stock** am **Obstplatz** in der Fußgängerzone des Zentrums gelegen, nur wenige Schritte von:

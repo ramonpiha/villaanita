@@ -2,6 +2,8 @@
 title: Villa Anita
 subtitle: Rooms & Apartments
 generalInfo: |
+  Via Castel Roncolo 16, Bolzano Bozen
+  
   In the most **exclusive and quiet** area of Bolzano city center (Via Castel Roncolo 16), surrounded by a **private garden** and parking.
   
   It is just a few steps from:

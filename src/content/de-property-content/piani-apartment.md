@@ -2,6 +2,8 @@
 title: Piani Apartment
 subtitle: Küche, Wohnzimmer, 2 Schlafzimmer, Bad, Privater Garten
 generalInfo: |
+  Leetorweg 4, Bolzano Bozen
+
   **Piani Apartment** bietet ein komfortables Erlebnis mit **maximaler Freiheit** im Herzen von Bozen.
   
   Die **80 m²** große Wohnung befindet sich in der Nähe von:

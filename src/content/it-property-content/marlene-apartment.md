@@ -2,6 +2,8 @@
 title: Marlene Apartment
 subtitle: Appartamento con Cucina, Soggiorno, Camera Doppia, 2 Bagni e Giardino
 generalInfo: |
+  Via Leonardo Da Vinci 14, Bolzano Bozen
+  
   **Marlene Apartment** offre un'esperienza comoda e di **massima libertà** con accesso diretto al giardino.
   
   L'appartamento è situato al **piano -1** con **affaccio diretto sul giardino** in **Via Leonardo Da Vinci 14**, in ZTL, a pochi passi da:
@@ -10,9 +12,11 @@ generalInfo: |
   - Ristoranti
   - Stazione dei treni
   
-  **Appartamento arredato secondo criteri moderni** in un **palazzo d'epoca**, ideale per soggiorni indipendenti nelle **Dolomiti**.
+  **Appartamento arredato secondo criteri moderni** in un **palazzo d'epoca** nel centro di **Bolzano**.
   
-  **Self check-in** disponibile. Gli ospiti hanno a disposizione la **[Bolzano Card](https://www.bolzano-bozen.it/it/bolzano-bozen-card/)**.
+  **Check-in e parcheggio disponibile** presso **Villa Anita**.
+  
+  **Self check-in** h24. Gli ospiti hanno a disposizione la **[Bolzano Bozen Card Mobility](https://www.bolzano-bozen.it/it/bolzano-bozen-card/)**.
 
 ambient: |
   Vivi l'esperienza di sentirsi a casa in un **palazzo d'epoca** con **comfort moderno** e un **giardino privato** a disposizione.
@@ -28,5 +32,6 @@ highlights:
   - Soggiorno confortevole
   - Wi-Fi gratuito
   - Asciugamani e asciugacapelli
-  - Bolzano Card disponibile per gli ospiti
+  - Bolzano Bozen Card Mobility disponibile per gli ospiti
+  - Self Check-In h24
 ---

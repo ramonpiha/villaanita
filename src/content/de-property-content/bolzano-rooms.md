@@ -1,8 +1,10 @@
 ---
-title: BolzanoRooms
+title: Bolzano Rooms
 subtitle: 6 Zimmer in der Brennerstraße 4
 generalInfo: |
-  **BolzanoRooms** bietet **6 moderne Zimmer** im ersten Stock eines **historischen Gebäudes** in der Brennerstraße 4.
+  Brennerstraße 4, Bolzano Bozen
+
+  **Bolzano Rooms** bietet **6 moderne Zimmer** im ersten Stock eines **historischen Gebäudes**.
   
   Nur wenige Schritte von:
   - Fußgängerzone der Altstadt
