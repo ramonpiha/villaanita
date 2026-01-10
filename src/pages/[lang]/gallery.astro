@@ -15,54 +15,22 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Lang };
 
-// Localization for the new heading
-const content = {
-  en: { 
-    label: "Gallery", 
-    heading: "The Appearance Counts", 
-    sub: "Explore the unique atmosphere and refined details of Villa Anita." 
-  },
-  it: { 
-    label: "Galleria", 
-    heading: "L'apparenza Conta", 
-    sub: "Esplora l'atmosfera unica e i dettagli raffinati di Villa Anita." 
-  },
-  de: { 
-    label: "Galerie", 
-    heading: "Der Anschein Zählt", 
-    sub: "Entdecken Sie die einzigartige Atmosphäre und die raffinierten Details der Villa Anita." 
-  }
-};
-
-const t = content[lang];
+// Fetching images based on the language parameter
 const gallery = await getEntry(`${lang}-properties`, "gallery"); 
-const images = gallery.data; 
+const images = gallery.data;
 ---
 
-<Layout lang={lang} title={t.heading} description={"Gallery"}>
+<Layout lang={lang} title="Photo Gallery" description="Gallery">
   <section class="pt-20 pb-16 px-4 max-w-6xl mx-auto">
+    
     {/* Decorative Label */}
     <div class="flex items-center gap-4 mb-4">
       <div class="h-px w-12 bg-amber-600"></div>
       <span class="text-sm font-bold uppercase tracking-[0.2em] text-amber-700">
-        {t.label}
+        Photo Gallery
       </span>
     </div>
-
-    {/* Main Heading Styled with a Serif font for a "Villa" feel */}
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-      <div class="max-w-2xl">
-        <h1 class="text-5xl md:text-7xl font-serif text-slate-900 leading-[1.1] mb-6">
-          {t.heading}
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
-          {t.sub}
-        </p>
-      </div>
-      
-      {/* Visual Accent */}
-      <div class="hidden md:block w-32 h-32 border-l border-t border-amber-200 opacity-50"></div>
-    </div>
+ 
     <div class="mt-12">
       <GalleryClient images={images} />
     </div>

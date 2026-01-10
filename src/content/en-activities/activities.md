@@ -3,7 +3,9 @@ title: "Activities & Exploration"
 subtitle: "Discover Bolzano and the Dolomites"
 guestnet:
   text: |
-    **Info & services**, weather, public transport timetables, and cultural attractions can be found on the dedicated **GUESTNET** page of the Bolzano accommodation agency. Explore wine cellars, shopping, and cable car schedules.
+    **Info & services**, weather, public transport timetables, and cultural attractions can be found on the dedicated **GUESTNET** page of the Bolzano accommodation agency. 
+    
+    Explore wine cellars, shopping, and cable car schedules.
   link: "https://bolzano-bozen.guest.net/"
 neighborhoodIntro: |
   Advice and tips on places in **South Tyrol**. Explore museums, walks, castles, and restaurants. Visit the old market in **Piazza delle Erbe**, local pastry shops, and get the latest updates from the Bolzano Tourist Board.
