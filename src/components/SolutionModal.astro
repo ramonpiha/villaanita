@@ -1,0 +1,118 @@
+<div id="solution-modal" class="fixed inset-0 z-[100] hidden">
+  <div id="modal-overlay" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+  
+  <div class="absolute inset-4 md:inset-10 bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl">
+    <button id="modal-close" class="absolute top-4 right-4 z-50 bg-white/20 hover:bg-white/40 p-2 rounded-full text-white md:text-black transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <div id="modal-images" class="w-full md:w-2/3 h-64 md:h-full overflow-y-auto bg-gray-100">
+      </div>
+
+    <div class="w-full md:w-1/3 p-6 md:p-10 overflow-y-auto flex flex-col">
+      <h2 id="modal-title" class="text-3xl font-bold text-gray-900 mb-2"></h2>
+      
+      <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6 font-medium">
+        <span id="modal-size"></span>
+        <span id="modal-guests"></span>
+        <span id="modal-location"></span>
+      </div>
+      
+      <div class="prose prose-sm mb-8">
+        <div id="modal-description"></div>
+      </div>
+
+      <div class="space-y-6">
+        <div>
+          <h4 class="font-bold text-gray-900 uppercase tracking-wider text-xs mb-3">Amenities</h4>
+          <ul id="modal-amenities" class="grid grid-cols-2 gap-2 text-sm text-gray-600 list-none p-0"></ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 uppercase tracking-wider text-xs mb-3">Highlights</h4>
+          <ul id="modal-highlights" class="space-y-1 text-sm text-gray-600 list-none p-0"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { marked } from "marked";
+
+  function initSolutionModal() {
+    const modal = document.getElementById("solution-modal");
+    const cards = document.querySelectorAll(".solution-card") as NodeListOf<HTMLElement>;
+    const closeBtn = document.getElementById("modal-close");
+    const overlay = document.getElementById("modal-overlay");
+
+    if (!modal) return;
+
+    // Open function that handles UI + URL
+    async function openSolution(solutionDataStr: string, solutionId: string) {
+      try {
+        const solution = JSON.parse(solutionDataStr);
+        
+        // Populate DOM elements
+        document.getElementById("modal-title")!.textContent = solution.data.title;
+        document.getElementById("modal-size")!.textContent = solution.data.size;
+        document.getElementById("modal-guests")!.textContent = `${solution.data.guests}`;
+        document.getElementById("modal-location")!.textContent = solution.data.location;
+        document.getElementById("modal-description")!.innerHTML = await marked.parse(solution.body || "");
+
+        const imgContainer = document.getElementById("modal-images");
+        if (imgContainer) {
+          imgContainer.innerHTML = solution.data.images
+            .map((img: string, idx: number) => `<img src="${img}" alt="${solution.data.title}-${idx}" class="w-full h-auto object-cover mb-1" />`)
+            .join("");
+        }
+
+        document.getElementById("modal-amenities")!.innerHTML = (solution.data.amenities || [])
+          .map((a: string) => `<li>• ${a}</li>`).join("");
+        document.getElementById("modal-highlights")!.innerHTML = (solution.data.highlights || [])
+          .map((h: string) => `<li>✓ ${h}</li>`).join("");
+
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        
+        // Set Hash in URL
+        history.replaceState(null, "", `#${solutionId}`);
+      } catch (e) {
+        console.error("Modal Error:", e);
+      }
+    }
+
+    const closeModal = () => {
+      modal.classList.add("hidden");
+      document.body.style.overflow = "";
+      // Remove hash
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    };
+
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        if (card.dataset.solution) openSolution(card.dataset.solution, card.id);
+      });
+    });
+
+    closeBtn?.addEventListener("click", closeModal);
+    overlay?.addEventListener("click", closeModal);
+
+    // Deep Link Check
+    const handleHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash) {
+        const target = document.getElementById(hash);
+        if (target && target.dataset.solution) openSolution(target.dataset.solution, hash);
+      }
+    };
+
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+  }
+
+  // Support Astro View Transitions and initial load
+  initSolutionModal();
+  document.addEventListener("astro:page-load", initSolutionModal);
+</script>

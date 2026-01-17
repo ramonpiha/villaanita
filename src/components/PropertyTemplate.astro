@@ -1,9 +1,12 @@
 ---
 import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import { marked } from "marked";
 import Navigation from "./Navigation.astro";
 import Footer from "./Footer.astro";
 import FloatingBookButton from "./FloatingBookButton.astro";
+import SolutionList from "./SolutionList.astro";
+import SolutionModal from "./SolutionModal.astro";
 import "../styles/global.css";
 
 // Define the available languages
@@ -83,6 +86,11 @@ if (!heroItems.length || contentImages.length < 3) {
     `Required images not found. Found ${heroItems.length} hero images and ${contentImages.length} content images.`
   );
 }
+
+const allRooms = await getCollection(`${lang}-solutions`);
+const propertyRooms = allRooms.filter(
+  (room) => room.data.propertyId === propertyId
+);
 ---
 
 <!doctype html>
@@ -267,11 +275,28 @@ if (!heroItems.length || contentImages.length < 3) {
           </div>
         </div>
       </section>
+
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            {
+              lang === "en"
+                ? "Available Rooms"
+                : lang === "it"
+                  ? "Camere Disponibili"
+                  : "Verfügbare Zimmer"
+            }
+          </h2>
+          <SolutionList solutions={propertyRooms} />
+        </div>
+      </section>
     </div>
 
     <Footer lang={lang} />
 
     <FloatingBookButton lang={lang} />
+
+    <SolutionModal />
 
     <script>
       // Parallax scrolling effect and fade animations
