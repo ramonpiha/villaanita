@@ -8,8 +8,31 @@
       </svg>
     </button>
 
-    <div id="modal-images" class="w-full md:w-2/3 h-64 md:h-full overflow-y-auto bg-gray-100">
+    <!-- Image Slider Container -->
+    <div id="modal-images" class="relative w-full md:w-2/3 h-64 md:h-full bg-gray-900 flex items-center justify-center overflow-hidden">
+      <!-- Slides will be inserted here -->
+      
+      <!-- Navigation Buttons -->
+      <button
+        id="slider-prev"
+        class="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/40 text-white rounded-full hover:bg-black/60 z-10 transition-colors"
+        aria-label="Previous image"
+      >
+        &lt;
+      </button>
+      <button
+        id="slider-next"
+        class="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/40 text-white rounded-full hover:bg-black/60 z-10 transition-colors"
+        aria-label="Next image"
+      >
+        &gt;
+      </button>
+
+      <!-- Indicator Dots -->
+      <div id="slider-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+        <!-- Dots will be inserted here -->
       </div>
+    </div>
 
     <div class="w-full md:w-1/3 p-6 md:p-10 overflow-y-auto flex flex-col">
       <h2 id="modal-title" class="text-3xl font-bold text-gray-900 mb-2"></h2>
@@ -46,26 +69,90 @@
     const cards = document.querySelectorAll(".solution-card") as NodeListOf<HTMLElement>;
     const closeBtn = document.getElementById("modal-close");
     const overlay = document.getElementById("modal-overlay");
+    const imgContainer = document.getElementById("modal-images");
 
     if (!modal) return;
 
-    // Open function that handles UI + URL
+    let currentSlide = 0;
+    let totalSlides = 0;
+
+    function updateSlider() {
+      // We query these inside the function because they are injected dynamically
+      const slides = imgContainer?.querySelectorAll('.slider-image');
+      const dots = imgContainer?.querySelectorAll('.slider-dot');
+
+      slides?.forEach((slide, index) => {
+        (slide as HTMLElement).style.opacity = index === currentSlide ? '1' : '0';
+      });
+
+      dots?.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.remove('bg-white/50', 'w-2');
+          dot.classList.add('bg-white', 'w-4');
+        } else {
+          dot.classList.remove('bg-white', 'w-4');
+          dot.classList.add('bg-white/50', 'w-2');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    }
+
     async function openSolution(solutionDataStr: string, solutionId: string) {
       try {
         const solution = JSON.parse(solutionDataStr);
         
-        // Populate DOM elements
         document.getElementById("modal-title")!.textContent = solution.data.title;
         document.getElementById("modal-size")!.textContent = solution.data.size;
         document.getElementById("modal-guests")!.textContent = `${solution.data.guests}`;
         document.getElementById("modal-location")!.textContent = solution.data.location;
         document.getElementById("modal-description")!.innerHTML = await marked.parse(solution.body || "");
 
-        const imgContainer = document.getElementById("modal-images");
         if (imgContainer) {
+          currentSlide = 0;
+          totalSlides = solution.data.images.length;
+
+          // Injected Images
           imgContainer.innerHTML = solution.data.images
-            .map((img: string, idx: number) => `<img src="${img}" alt="${solution.data.title}-${idx}" class="w-full h-auto object-cover mb-1" />`)
-            .join("");
+            .map((img: string, idx: number) => `
+              <div class="slider-image absolute inset-0 transition-opacity duration-700 ease-in-out flex items-center justify-center ${idx === 0 ? 'opacity-100' : 'opacity-0'}">
+                <img src="${img}" alt="${solution.data.title}-${idx}" class="max-w-full max-h-full object-contain" />
+              </div>
+            `).join("");
+
+          // Re-add navigation buttons and dots container
+          imgContainer.innerHTML += `
+            <button id="slider-prev" class="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/40 text-white rounded-full hover:bg-black/60 z-10 transition-colors" aria-label="Previous image">&lt;</button>
+            <button id="slider-next" class="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/40 text-white rounded-full hover:bg-black/60 z-10 transition-colors" aria-label="Next image">&gt;</button>
+            <div id="slider-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10"></div>
+          `;
+
+          const dots = imgContainer.querySelector('#slider-dots');
+          if (dots) {
+            dots.innerHTML = solution.data.images
+              .map((_: string, idx: number) => `
+                <button class="slider-dot h-2 rounded-full transition-all ${idx === 0 ? 'bg-white w-4' : 'bg-white/50 w-2'}" aria-label="Go to image ${idx + 1}" data-index="${idx}"></button>
+              `).join("");
+          }
+
+          // Attach event listeners to the new UI elements
+          imgContainer.querySelector('#slider-prev')?.addEventListener('click', prevSlide);
+          imgContainer.querySelector('#slider-next')?.addEventListener('click', nextSlide);
+
+          imgContainer.querySelectorAll('.slider-dot').forEach((dot) => {
+            dot.addEventListener('click', () => {
+              currentSlide = parseInt((dot as HTMLElement).dataset.index || '0');
+              updateSlider();
+            });
+          });
         }
 
         document.getElementById("modal-amenities")!.innerHTML = (solution.data.amenities || [])
@@ -75,8 +162,6 @@
 
         modal.classList.remove("hidden");
         document.body.style.overflow = "hidden";
-        
-        // Set Hash in URL
         history.replaceState(null, "", `#${solutionId}`);
       } catch (e) {
         console.error("Modal Error:", e);
@@ -86,7 +171,6 @@
     const closeModal = () => {
       modal.classList.add("hidden");
       document.body.style.overflow = "";
-      // Remove hash
       history.replaceState(null, "", window.location.pathname + window.location.search);
     };
 
@@ -99,7 +183,6 @@
     closeBtn?.addEventListener("click", closeModal);
     overlay?.addEventListener("click", closeModal);
 
-    // Deep Link Check
     const handleHash = () => {
       const hash = window.location.hash.replace("#", "");
       if (hash) {
@@ -112,7 +195,6 @@
     window.addEventListener("hashchange", handleHash);
   }
 
-  // Support Astro View Transitions and initial load
   initSolutionModal();
   document.addEventListener("astro:page-load", initSolutionModal);
 </script>

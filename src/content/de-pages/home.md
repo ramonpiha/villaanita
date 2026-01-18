@@ -6,7 +6,10 @@ subheading: Smart stay in the City Center
 
 <div align="center">
 
-## WOHNEN IM ZENTRUM VON BOZEN, an den charakteristischen Orten der Stadt 
+## WOHNEN IM ZENTRUM VON BOZEN
+
+## an den charakteristischen Orten der Stadt 
+
 ### ideale Lösungen für Urlaubsreisen und berufliche Aufenthalte
 
 </div>
@@ -16,7 +19,9 @@ subheading: Smart stay in the City Center
 
 <div align="center">
 
-## ROOMS & APARTMENTS in the city center
+## ROOMS & APARTMENTS
+
+## in the city center
 
 </div>
 

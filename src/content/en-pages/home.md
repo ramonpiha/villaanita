@@ -6,7 +6,9 @@ subheading: Smart stay in the City Center
 
 <div align="center">
 
-## LIVE IN THE CENTER OF BOLZANO, in the characteristic places of the city 
+## LIVE IN THE CENTER OF BOLZANO
+
+## in the characteristic places of the city 
 ### ideal solutions for leisure trips and professional residences
 
 </div>
@@ -16,7 +18,9 @@ subheading: Smart stay in the City Center
 
 <div align="center">
 
-## ROOMS & APARTMENTS in the city center
+## ROOMS & APARTMENTS
+
+## in the city center
 
 </div>
 
