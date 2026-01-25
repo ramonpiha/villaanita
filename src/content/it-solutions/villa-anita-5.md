@@ -1,7 +1,7 @@
 ---
 id: "villa-anita-5"
 propertyId: "villa-anita"
-title: "VA N5 — Camera con Balcone e Bagni Condivisi"
+title: "VA 5 — Camera con Balcone e Bagni Condivisi"
 size: "24 Mq"
 guests: "3 + 1"
 images:

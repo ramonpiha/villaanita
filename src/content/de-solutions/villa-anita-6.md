@@ -1,7 +1,7 @@
 ---
 id: "villa-anita-6"
 propertyId: "villa-anita"
-title: "VA N6 — Doppelzimmer mit Gemeinschaftsbad"
+title: "VA 6 — Doppelzimmer mit Gemeinschaftsbad"
 size: "14 qm"
 guests: "2 + 1"
 images:

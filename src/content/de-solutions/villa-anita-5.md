@@ -1,7 +1,7 @@
 ---
 id: "villa-anita-5"
 propertyId: "villa-anita"
-title: "VA N5 — Doppelzimmer mit Balkon und Gemeinschaftsbad"
+title: "VA 5 — Doppelzimmer mit Balkon und Gemeinschaftsbad"
 size: "24 qm"
 guests: "3 + 1"
 images:

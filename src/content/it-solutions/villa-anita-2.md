@@ -1,7 +1,7 @@
 ---
 id: "villa-anita-2"
 propertyId: "villa-anita"
-title: "VA N2 — Camera Standard con Bagni Condivisi"
+title: "VA 2 — Camera Standard con Bagni Condivisi"
 size: "22 Mq"
 guests: "3 + 1"
 images:

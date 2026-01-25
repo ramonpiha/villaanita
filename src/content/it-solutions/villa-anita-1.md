@@ -47,4 +47,4 @@ highlights:
 
 Camera situata al primo piano di Villa Anita. Questa camera superior matrimoniale vanta una **terrazza privata** e una configurazione spaziosa che include un letto matrimoniale e un letto singolo. Gli ospiti hanno accesso a **due bagni condivisi** situati comodamente sul piano.
 
-L'alloggio offre una splendida vista sul giardino e l'accesso a una sala comune con angolo ristoro, ideale per momenti di relax. La camera è rifinita con pavimento in parquet e dotata di ventilatore per i mesi più caldi.
+🌿 L'alloggio offre una splendida vista sul giardino e l'accesso a una sala comune con angolo ristoro, ideale per momenti di relax. La camera è rifinita con pavimento in parquet e dotata di ventilatore per i mesi più caldi.

@@ -1,7 +1,7 @@
 ---
 id: "villa-anita-4"
 propertyId: "villa-anita"
-title: "VA N4 — Camera Familiare con Bagni Condivisi"
+title: "VA 4 — Camera Familiare con Bagni Condivisi"
 size: "32 Mq"
 guests: "4 + 1"
 images:

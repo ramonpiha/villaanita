@@ -44,4 +44,4 @@ highlights:
 
 Dieses großzügige Superior-Doppelzimmer befindet sich in der ersten Etage der Villa Anita. Es besticht durch eine **private Terrasse** und eine flexible Raumaufteilung mit einem Doppelbett sowie einem Einzelbett. Den Gästen stehen **zwei gemeinschaftlich genutzte Badezimmer** auf derselben Etage zur Verfügung.
 
-Das Zimmer bietet einen herrlichen Blick in den Garten und Zugang zum gemütlichen Gemeinschaftsraum mit Erfrischungsecke. Mit edlem Parkettboden, einem Ventilator für warme Tage und einer voll ausgestatteten Tee-/Kaffee-Ecke bietet es den idealen Rückzugsort in Bozen.
+🌿 Das Zimmer bietet einen herrlichen Blick in den Garten und Zugang zum gemütlichen Gemeinschaftsraum mit Erfrischungsecke. Mit edlem Parkettboden, einem Ventilator für warme Tage und einer voll ausgestatteten Tee-/Kaffee-Ecke bietet es den idealen Rückzugsort in Bozen.

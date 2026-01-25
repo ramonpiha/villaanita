@@ -1,7 +1,7 @@
 ---
 id: "villa-anita-6"
 propertyId: "villa-anita"
-title: "VA N6 — Camera Budget con Bagni Condivisi"
+title: "VA 6 — Camera Budget con Bagni Condivisi"
 size: "14 Mq"
 guests: "2 + 1"
 images:

@@ -43,4 +43,4 @@ highlights:
 
 Apartment-style room located on the first floor of Villa Anita. This superior double room features a **private terrace** and a comfortable layout including a double bed and a single bed. Guests have access to a **shared bathroom** located on the same floor. 
 
-Perfect for families or small groups, the room offers access to the beautiful shared garden and a common lounge area with a refreshment corner.
+🌿 Perfect for families or small groups, the room offers access to the beautiful shared garden and a common lounge area with a refreshment corner.

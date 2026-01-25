@@ -1,7 +1,7 @@
 ---
 id: "villa-anita-5"
 propertyId: "villa-anita"
-title: "VA N5 — Double Room with Balcony and Shared Bathrooms"
+title: "VA 5 — Double Room with Balcony and Shared Bathrooms"
 size: "24 Sqm"
 guests: "3 + 1"
 images:
