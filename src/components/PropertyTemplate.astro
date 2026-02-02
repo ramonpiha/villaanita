@@ -1,9 +1,12 @@
 ---
 import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import { marked } from "marked";
 import Navigation from "./Navigation.astro";
 import Footer from "./Footer.astro";
 import FloatingBookButton from "./FloatingBookButton.astro";
+import SolutionList from "./SolutionList.astro";
+import SolutionModal from "./SolutionModal.astro";
 import "../styles/global.css";
 
 // Define the available languages
@@ -83,6 +86,16 @@ if (!heroItems.length || contentImages.length < 3) {
     `Required images not found. Found ${heroItems.length} hero images and ${contentImages.length} content images.`
   );
 }
+
+const allRooms = await getCollection(`${lang}-solutions`);
+const propertyRooms = allRooms
+  .filter((room) => room.data.propertyId === propertyId)
+  .sort((a, b) => {
+    return a.id.localeCompare(b.id, undefined, {
+      numeric: true,
+      sensitivity: "base",
+    });
+  });
 ---
 
 <!doctype html>
@@ -246,7 +259,7 @@ if (!heroItems.length || contentImages.length < 3) {
                     highlights.map((highlight: string) => (
                       <li class="flex items-start gap-3">
                         <svg
-                          class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                          class="w-6 h-6 text-[rgb(27,36,48)] flex-shrink-0 mt-0.5"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -267,7 +280,24 @@ if (!heroItems.length || contentImages.length < 3) {
           </div>
         </div>
       </section>
+
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            {
+              lang === "en"
+                ? "Available accommodations"
+                : lang === "it"
+                  ? "Soluzioni disponibili"
+                  : "Verfügbare Unterkünfte"
+            }
+          </h2>
+          <SolutionList solutions={propertyRooms} />
+        </div>
+      </section>
     </div>
+
+    <SolutionModal />
 
     <Footer lang={lang} />
 

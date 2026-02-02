@@ -50,6 +50,18 @@ const checkInVideos = z.array(z.object({
   city: z.string(),
 }))
 
+const solutionaSchema = z.object({
+  id: z.string(),
+  propertyId: z.string(),
+  title: z.string(),
+  size: z.string(),
+  guests: z.string(),
+  images: z.array(z.string()),
+  location: z.string(),
+  amenities: z.array(z.string()),
+  highlights: z.array(z.string()),
+});
+
 const createCollections = (langs: string[]) => {
   const collections: Record<string, ReturnType<typeof defineCollection>> = {};
 
@@ -77,6 +89,11 @@ const createCollections = (langs: string[]) => {
     collections[`${lang}-check-in-videos`] = defineCollection({
       type: 'data',
       schema: checkInVideos,
+    });
+
+    collections[`${lang}-solutions`] = defineCollection({
+      type: 'content',
+      schema: solutionaSchema,
     });
   });
 

@@ -1,0 +1,53 @@
+---
+import PropertyTemplate from "../../../components/PropertyTemplate.astro";
+
+type Lang = "en" | "it" | "de";
+
+export async function getStaticPaths() {
+  const languages: Lang[] = ["en", "it", "de"];
+  const properties = [
+    "bolzano-apartments",
+    "bolzano-rooms",
+    "lisa-apartments",
+    "marlene-apartment",
+    "piani-apartment",
+    "r11-apartment",
+    "villa-anita"
+  ];
+
+  return languages.flatMap((lang) => {
+    return properties.map((propertyId) => ({
+      params: { lang, propertyId },
+    }));
+  });
+}
+
+const { lang, propertyId } = Astro.params as { lang: Lang; propertyId: string };
+
+// Logic to format the Title: "villa-anita" -> "Villa Anita"
+const formattedTitle = propertyId
+  .split('-') 
+  .map(word =>
+    word.charAt(0).toUpperCase() + word.slice(1) 
+  )
+  .join(' ');
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{formattedTitle}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-bg text-brand font-sans antialiased">
+    <PropertyTemplate propertyId={propertyId} lang={lang} />
+  </body>
+</html>

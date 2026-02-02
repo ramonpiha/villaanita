@@ -1,0 +1,51 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  solutions: CollectionEntry<
+    "en-solutions" | "it-solutions" | "de-solutions"
+  >[];
+}
+
+const { solutions } = Astro.props;
+
+const getGuestLabel = (collection: string, count: string) => {
+  const isSingular = count === "1";
+  
+  if (collection.startsWith("it-")) {
+    return isSingular ? "Ospite" : "Ospiti";
+  }
+  if (collection.startsWith("de-")) {
+    return isSingular ? "Gast" : "Gäste";
+  }
+  return isSingular ? "Guest" : "Guests";
+};
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-10">
+  {
+    solutions.map((solution) => (
+      <button
+        id={solution.id}
+        class="solution-card block group relative h-72 rounded-xl overflow-hidden shadow-lg text-left"
+        data-solution={JSON.stringify(solution)}
+      >
+        <img
+          src={solution.data.images[0]}
+          alt={solution.data.title}
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div class="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-4">
+          <h3 class="text-xl font-bold text-white">{solution.data.title}</h3>
+          <div class="flex gap-4 text-sm text-gray-300 mt-1">
+            <span>{solution.data.size}</span>
+            <span>
+              {solution.data.guests}{" "}
+              {getGuestLabel(solution.collection, solution.data.guests)}
+            </span>
+          </div>
+        </div>
+      </button>
+    ))
+  }
+</div>
