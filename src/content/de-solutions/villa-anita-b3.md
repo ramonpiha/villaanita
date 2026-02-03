@@ -11,7 +11,6 @@ images:
   - "/images/solutions/villa-anita/VAB3/villa-anita-b3-3.avif"
   - "/images/solutions/villa-anita/VAB3/villa-anita-b3-4.avif"
   - "/images/solutions/villa-anita/VAB3/villa-anita-b3-5.avif"
-  - "/images/solutions/villa-anita/VAB3/villa-anita-b3-6.avif"
 location: "Zweite Etage (kein Aufzug) – Villa Anita, Bozen"
 amenities:
   - "🛏️ Doppelbett"
