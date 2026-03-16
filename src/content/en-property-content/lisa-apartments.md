@@ -2,7 +2,7 @@
 title: Lisa Apartments
 subtitle: 2 Apartments with Kitchen, Living Room and Bedroom
 generalInfo: |
-  Via Brennero 4, Bolzano Bozen
+  Via dei Portici 71, Bolzano Bozen
   
   **Lisa Apartments** offers **2 apartments** for a comfortable experience with **maximum freedom** in the heart of Bolzano.
   

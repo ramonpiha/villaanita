@@ -2,7 +2,7 @@
 title: Lisa Apartments
 subtitle: 2 Appartamenti con Cucina, Soggiorno e Stanza Matrimoniale
 generalInfo: |
-  Via Brennero 4, Bolzano Bozen
+  Via dei Portici 71, Bolzano Bozen
 
   **Lisa Apartments** offre **2 appartamenti** per un'esperienza comoda e di **massima libertà** nel cuore di Bolzano.
   
