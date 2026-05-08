@@ -34,7 +34,7 @@ const { images } = Astro.props;
 
 <div
   id="lightbox"
-  class="fixed inset-0 bg-black/95 flex justify-center items-center z-50 hidden opacity-0 transition-opacity duration-300 cursor-zoom-out"
+  class="fixed inset-0 bg-white/70 backdrop-blur-sm flex justify-center items-center z-50 hidden opacity-0 transition-opacity duration-300 cursor-zoom-out"
 >
   <div class="relative max-w-[95vw] max-h-[95vh]">
     <img
@@ -43,6 +43,25 @@ const { images } = Astro.props;
       class="max-h-[90vh] max-w-full rounded-sm shadow-2xl object-contain"
     />
   </div>
+  <button
+    id="close-button"
+    class="fixed top-6 right-6 text-gray-800 hover:text-gray-600 transition-colors duration-200 z-51"
+    aria-label="Close image"
+  >
+    <svg
+      class="w-8 h-8"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M6 18L18 6M6 6l12 12"
+      ></path>
+    </svg>
+  </button>
 </div>
 
 <script>
@@ -51,6 +70,17 @@ const { images } = Astro.props;
   const lightboxImg = document.getElementById(
     "lightbox-img"
   ) as HTMLImageElement;
+  const closeButton = document.getElementById("close-button");
+
+  function closeLightbox() {
+    if (lightbox) {
+      lightbox.classList.remove("opacity-100");
+      setTimeout(() => {
+        if (lightbox) lightbox.classList.add("hidden");
+        if (lightboxImg) lightboxImg.src = "";
+      }, 300);
+    }
+  }
 
   items.forEach((item) => {
     item.addEventListener("click", () => {
@@ -64,11 +94,14 @@ const { images } = Astro.props;
     });
   });
 
-  lightbox?.addEventListener("click", () => {
-    lightbox.classList.remove("opacity-100");
-    setTimeout(() => {
-      if (lightbox) lightbox.classList.add("hidden");
-      if (lightboxImg) lightboxImg.src = "";
-    }, 300);
+  lightbox?.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  closeButton?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeLightbox();
   });
 </script>
