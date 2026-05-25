@@ -116,7 +116,7 @@ const propertyRooms = allRooms
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={subtitle} />
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link class="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
 
   <body class="bg-bg text-brand font-sans antialiased">
@@ -189,7 +189,7 @@ const propertyRooms = allRooms
       <section class="py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
           <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div class="rounded-2xl overflow-hidden shadow-2xl min-h-[420px] md:min-h-[520px]">
+            <div class="rounded-2xl overflow-hidden shadow-2xl h-[420px] md:h-[520px]">
               <img
                 src={contentImages[1]}
                 alt={contentSummaries[1]}
@@ -230,7 +230,7 @@ const propertyRooms = allRooms
               }
             </div>
             <div
-              class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-xl min-h-[420px] md:min-h-[520px]"
+              class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-xl h-[420px] md:h-[520px]"
             >
               <img
                 src={contentImages[0]}
@@ -245,7 +245,7 @@ const propertyRooms = allRooms
       <section class="py-16 md:py-20">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
           <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div class="rounded-2xl overflow-hidden shadow-xl min-h-[420px] md:min-h-[520px]">
+            <div class="rounded-2xl overflow-hidden shadow-xl h-[420px] md:h-[520px]">
               <img
                 src={contentImages[2]}
                 alt={contentSummaries[2]}
@@ -320,12 +320,14 @@ const propertyRooms = allRooms
         const textSlides = heroTextContainer?.querySelectorAll<HTMLElement>(
           "div[data-text-slide]"
         );
-
         let currentSlide = 0;
 
         if (!parallaxElement || !slides || slides.length === 0) return;
-
+        
         function changeSlide() {
+          // Double-check to ensure slides array is defined contextually for TypeScript
+          if (!slides || slides.length === 0) return;
+
           // Hide current image slide
           if (slides[currentSlide]) {
             slides[currentSlide].style.opacity = "0";
@@ -337,7 +339,6 @@ const propertyRooms = allRooms
 
           // Move to next slide
           currentSlide = (currentSlide + 1) % slides.length;
-
           // Show next image slide
           if (slides[currentSlide]) {
             slides[currentSlide].style.opacity = "1";
@@ -350,10 +351,13 @@ const propertyRooms = allRooms
 
         // Auto-advance slides every 5 seconds
         const slideInterval = setInterval(changeSlide, 5000);
-
+        
         function updateParallax() {
           const scrolled = window.scrollY;
           const heroHeight = window.innerHeight;
+          
+          // Double-check that parallaxElement isn't null inside the scroll callback scope
+          if (!parallaxElement) return;
 
           // Only apply parallax while hero is visible
           if (scrolled < heroHeight) {
@@ -391,7 +395,6 @@ const propertyRooms = allRooms
 
         // Initial call
         updateParallax();
-
         // Cleanup interval on page navigation
         document.addEventListener("astro:before-preparation", () => {
           clearInterval(slideInterval);
