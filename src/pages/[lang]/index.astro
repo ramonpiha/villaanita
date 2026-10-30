@@ -43,7 +43,7 @@ const mapLocations = properties.filter(
  * Transform the gallery YAML data into the format expected by Slider.tsx.
  * We map 'image' to 'src' and 'summary' to 'alt'.
  */
-const sliderImages = galleryEntry.data.map((item: any) => ({
+const sliderImages = galleryEntry.data.map((item) => ({
   src: item.image,
   alt: item.summary,
 }));

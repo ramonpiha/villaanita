@@ -123,7 +123,7 @@ export default function MapClient({ locations, lang }: MapClientProps) {
                   title={loc.title}
                   address={loc.summary}
                   thumbnailUrl={loc.image || ""}
-                  bookingUrl={`properties/${loc.id}`}
+                  bookingUrl={`/${lang}/properties/${loc.id}`}
                   lang={lang}
                 />
               </div>
