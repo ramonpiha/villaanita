@@ -1,5 +1,9 @@
 ---
-const { lang } = Astro.props;
+interface Props {
+  lang: "en" | "de" | "it";
+}
+
+const { lang } = Astro.props as Props;
 
 const translations = {
   en: {

@@ -28,7 +28,6 @@ const pixelBounds: LatLngBoundsExpression = [
 // --- 2. TYPES ---
 interface Location {
   id: string | number;
-  type: string;
   title: string;
   summary: string;
   coordinates: LatLngExpression;
