@@ -9,7 +9,4 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   trailingSlash: "ignore",
-  redirects: {
-    '/': '/it',
-  },
 });
