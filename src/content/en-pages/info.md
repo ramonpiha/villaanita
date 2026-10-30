@@ -45,6 +45,6 @@ Villa Anita is located at **Via Castel Roncolo 16**, near the pedestrian zone. I
 ### 🚂 By Train
 The train station is in the center, a few steps from the pedestrian area. **Villa Anita is 950 m away.** We recommend reaching our office on foot or by taxi (Phone: +39 0471 981111).
 
-### 🚌 By Bud
+### 🚌 By Bus
 * **Central Bus Station:** Located on Rittner Strasse next to the main train station.
 * **Tourist Bus:** If you reach Bolzano by tourist bus, the stop is near the **Bolzano Sud** railway station. The center can be reached from there by regional train, local bus, or taxi.
