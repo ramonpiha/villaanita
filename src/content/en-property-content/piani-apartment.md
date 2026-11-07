@@ -32,4 +32,5 @@ highlights:
   - Free Wi-Fi
   - Towels and hairdryer included
   - Close to Renon Cable Car and Walther Square
+  - Bolzano Bozen Card Mobility available for guests
 ---

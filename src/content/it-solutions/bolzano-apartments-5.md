@@ -11,7 +11,7 @@ images:
   - "/images/solutions/bolzano-apartments/BA5/bolzano-apartments-5-3.avif"
 location: "Secondo piano con ascensore – Via Vintola 5, Bolzano"
 amenities:
-  - "🛏️ Camera moderna"
+  - "🛏️ Letto da una piazza e mezza (140 × 200 cm)"
   - "🍳 Angolo cucina con utensili"
   - "🚿 Bagno privato con doccia"
   - "📺 TV"

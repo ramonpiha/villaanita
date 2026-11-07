@@ -52,6 +52,7 @@ highlights:
   - "A 5 min a piedi dalla zona pedonale"
   - "Ideale per soggiorni di lavoro o studio"
   - "Animali ammessi"
+  - "Bolzano Bozen Card Mobility disponibile per gli ospiti"
 ---
 
 ### APPARTAMENTO PIANI CON GIARDINO PRIVATO 🏡🌿

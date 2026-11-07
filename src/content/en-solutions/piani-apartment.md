@@ -52,6 +52,7 @@ highlights:
   - "5 min walk from the pedestrian area"
   - "Perfect for temporary stays (work/study)"
   - "Pets allowed"
+  - "Bolzano Bozen Card Mobility available for guests"
 ---
 
 ### PIANI APARTMENT WITH PRIVATE GARDEN 🏡🌿

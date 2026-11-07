@@ -32,4 +32,5 @@ highlights:
   - Wi-Fi gratuito
   - Asciugamani e asciugacapelli inclusi
   - Vicino alla Funivia del Renon e Piazza Walther
+  - Bolzano Bozen Card Mobility disponibile per gli ospiti
 ---
