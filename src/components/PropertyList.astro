@@ -5,7 +5,7 @@ interface Property {
   type: string[];
   title: string;
   summary: string;
-  coordinates: [number, number];
+  cin: string;
   image: string;
 }
 
@@ -56,6 +56,9 @@ const getPropertyLink = (id: string) => {
           <p class="text-gray-200 text-lg md:text-xl max-w-2xl">
             {featuredProperty.summary}
           </p>
+          <p class="text-[10px] leading-tight text-gray-300 mt-1">
+            CIN: {featuredProperty.cin}
+          </p>
         </div>
       </a>
     </div>
@@ -80,6 +83,9 @@ const getPropertyLink = (id: string) => {
           </h3>
           <p class="text-sm text-gray-300 truncate">
             {property.summary}
+          </p>
+          <p class="text-[10px] leading-tight text-gray-300 mt-1">
+            CIN: {property.cin}
           </p>
         </div>
       </a>

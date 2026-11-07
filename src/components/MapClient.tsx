@@ -28,7 +28,6 @@ const pixelBounds: LatLngBoundsExpression = [
 // --- 2. TYPES ---
 interface Location {
   id: string | number;
-  type: string;
   title: string;
   summary: string;
   coordinates: LatLngExpression;
@@ -124,7 +123,7 @@ export default function MapClient({ locations, lang }: MapClientProps) {
                   title={loc.title}
                   address={loc.summary}
                   thumbnailUrl={loc.image || ""}
-                  bookingUrl={`properties/${loc.id}`}
+                  bookingUrl={`/${lang}/properties/${loc.id}`}
                   lang={lang}
                 />
               </div>

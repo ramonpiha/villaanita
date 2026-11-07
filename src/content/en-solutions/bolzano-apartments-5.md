@@ -11,7 +11,7 @@ images:
   - "/images/solutions/bolzano-apartments/BA5/bolzano-apartments-5-3.avif"
 location: "Second floor with elevator – Via Vintola 5, Bolzano"
 amenities:
-  - "🛏️ Modern room"
+  - "🛏️ Small double bed (140 × 200 cm)"
   - "🍳 Kitchenette with cooking utensils"
   - "🚿 Private bathroom with shower"
   - "📺 TV"

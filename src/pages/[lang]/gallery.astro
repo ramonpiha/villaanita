@@ -16,7 +16,10 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: Lang };
 
 // Fetching images based on the language parameter
-const gallery = await getEntry(`${lang}-properties`, "gallery"); 
+const gallery = await getEntry(`${lang}-properties`, "gallery");
+if (!gallery) {
+  throw new Error(`Gallery content not found for ${lang}`);
+}
 const images = gallery.data;
 ---
 

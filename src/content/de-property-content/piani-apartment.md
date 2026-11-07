@@ -32,4 +32,5 @@ highlights:
   - Kostenloses Wi-Fi
   - Handtücher und Haartrockner inklusive
   - Nahe der Rittner Seilbahn und Waltherplatz
+  - Bolzano Bozen Card Mobility für Gäste verfügbar
 ---

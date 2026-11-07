@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import VideoList from "../../components/VideoList.astro";
 import Layout from "../../components/Layout.astro";
 
@@ -15,9 +15,15 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Lang };
 const homeEntry = await getEntry(`${lang}-pages`, "info");
+if (!homeEntry) {
+  throw new Error(`Info page content not found for ${lang}`);
+}
 const { title, heading, subheading } = homeEntry.data;
-const { Content } = await homeEntry.render();
+const { Content } = await render(homeEntry);
 const videosEntry = await getEntry(`${lang}-check-in-videos`, "check-in-videos");
+if (!videosEntry) {
+  throw new Error(`Check-in video content not found for ${lang}`);
+}
 const videos = videosEntry.data;
 ---
 

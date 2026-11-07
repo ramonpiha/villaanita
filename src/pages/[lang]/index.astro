@@ -1,5 +1,5 @@
 ---
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import Layout from "../../components/Layout.astro";
 import MapClient from "../../components/MapClient.js";
 import AutoDetect from "../../components/AutoDetectLang.astro";
@@ -22,20 +22,28 @@ const { lang } = Astro.params as { lang: Lang };
 const homeEntry = await getEntry(`${lang}-pages`, "home");
 
 // Get properties data
-const propertiesEntry = await getEntry(`${lang}-properties`, "properties");
+const propertiesEntry = await getEntry(`${lang}-property-list`, "properties");
 // Fetch gallery data to populate the slider
-const galleryEntry = await getEntry(`${lang}-properties`, "gallery"); //
+const galleryEntry = await getEntry(`${lang}-properties`, "gallery");
+
+if (!homeEntry || !propertiesEntry || !galleryEntry) {
+  throw new Error(`Required homepage content not found for ${lang}`);
+}
 
 // Destructure title, heading, and subheading from the markdown frontmatter
 const { title, heading, subheading } = homeEntry.data;
-const { Content } = await homeEntry.render();
+const { Content } = await render(homeEntry);
 const properties = propertiesEntry.data;
+const mapLocations = properties.filter(
+  (property): property is typeof property & { coordinates: [number, number] } =>
+    property.type.includes("map") && property.coordinates !== undefined
+);
 
 /**
  * Transform the gallery YAML data into the format expected by Slider.tsx.
  * We map 'image' to 'src' and 'summary' to 'alt'.
  */
-const sliderImages = galleryEntry.data.map((item: any) => ({
+const sliderImages = galleryEntry.data.map((item) => ({
   src: item.image,
   alt: item.summary,
 }));
@@ -68,7 +76,7 @@ const sliderImages = galleryEntry.data.map((item: any) => ({
   </div>
 
   <div class="rounded-lg overflow-hidden shadow-lg my-8">
-    <MapClient client:only="react" locations={properties} lang={lang} />
+    <MapClient client:only="react" locations={mapLocations} lang={lang} />
   </div>
 
   <PropertyList properties={properties} lang={lang} />

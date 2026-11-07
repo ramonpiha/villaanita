@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import Layout from "../../components/Layout.astro";
 
 type Lang = "en" | "it" | "de";
@@ -14,8 +14,11 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Lang };
 const homeEntry = await getEntry(`${lang}-pages`, "services");
+if (!homeEntry) {
+  throw new Error(`Services page content not found for ${lang}`);
+}
 const { title, heading, subheading } = homeEntry.data;
-const { Content } = await homeEntry.render();
+const { Content } = await render(homeEntry);
 ---
 
 <Layout lang={lang} title={title} description={subheading}>

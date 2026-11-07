@@ -12,7 +12,7 @@ images:
   - "/images/solutions/bolzano-apartments/BA3/bolzano-apartments-3-4.avif"
 location: "Zweite Etage mit Aufzug – Via Vintola 5, Bozen"
 amenities:
-  - "🛏️ Modernes Zimmer"
+  - "🛏️ 2 Einzelbetten (je 80 × 200 cm), verbindbar zu einem Doppelbett (160 × 200 cm)"
   - "🍳 Kochnische mit Kochutensilien"
   - "🚿 Privates Badezimmer mit Dusche"
   - "📺 TV"

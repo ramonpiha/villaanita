@@ -52,6 +52,7 @@ highlights:
   - "5 Gehminuten von der Fußgängerzone"
   - "Ideal für temporäre Aufenthalte (Arbeit/Studium)"
   - "Haustiere erlaubt"
+  - "Bolzano Bozen Card Mobility für Gäste verfügbar"
 ---
 
 ### PIANI APARTMENT MIT PRIVATEM GARTEN 🏡🌿

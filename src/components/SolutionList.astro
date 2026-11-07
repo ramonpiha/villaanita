@@ -27,7 +27,7 @@ const getGuestLabel = (collection: string, count: string) => {
     solutions.map((solution) => (
       <button
         id={solution.id}
-        class="solution-card block group relative h-72 rounded-xl overflow-hidden shadow-lg text-left"
+        class="solution-card block group relative h-72 rounded-xl overflow-hidden shadow-lg text-left cursor-pointer"
         data-solution={JSON.stringify(solution)}
       >
         <img
