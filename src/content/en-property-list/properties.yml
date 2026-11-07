@@ -4,6 +4,7 @@
     - map
   title: "VILLA ANITA ROOMS & APARTMENTS"
   summary: "Via Castel Roncolo 16"
+  cin: "IT021008B4734WYVEK"
   coordinates: [2650, 4450]
   image: /images/map/villa-anita-front.avif
 
@@ -13,6 +14,7 @@
     - map
   title: "BOLZANO apartments"
   summary: "Via Vintola 5"
+  cin: "021008B46697O921"
   coordinates: [2000, 4550]
   image: /images/map/bolzano-apartments.avif
 
@@ -22,6 +24,7 @@
     - map
   title: "BOLZANO ROOMS"
   summary: "Via Brennero 4"
+  cin: "021008B46697O921"
   coordinates: [1770, 5820]
   image: /images/map/bolzanorooms.avif
 
@@ -30,7 +33,8 @@
     - apartment
     - map
   title: "PIANI apartment"
-  summary: "Via Piani d'Isarco 4 (Ingresso Via Piani di Bolzano)"
+  summary: "Via Piani d'Isarco 4 (Entrance at Via Piani di Bolzano)"
+  cin: "021008B4AILRNRAO5"
   coordinates: [1770, 6650]
   image: /images/map/piani-apartment.avif
 
@@ -40,6 +44,7 @@
     - map
   title: "LISA apartments"
   summary: "Via dei Portici 71"
+  cin: "021008B46697O921"
   coordinates: [1530, 3920]
   image: /images/map/lisa-apartment.avif
 
@@ -49,6 +54,7 @@
     - map
   title: "R-11 apartment"
   summary: "Via Renon 11"
+  cin: "IT021008B4734WYVEK"
   coordinates: [810, 5180]
   image: /images/map/claudine-apartment.avif
 
@@ -58,5 +64,6 @@
     - map
   title: "MARLENE apartment"
   summary: "Via Leonardo da Vinci 14"
+  cin: "021008B4A65P8YZ7"
   coordinates: [950, 3270]
   image: /images/map/marlene-apartment.avif

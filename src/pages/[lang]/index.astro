@@ -22,7 +22,7 @@ const { lang } = Astro.params as { lang: Lang };
 const homeEntry = await getEntry(`${lang}-pages`, "home");
 
 // Get properties data
-const propertiesEntry = await getEntry(`${lang}-properties`, "properties");
+const propertiesEntry = await getEntry(`${lang}-property-list`, "properties");
 // Fetch gallery data to populate the slider
 const galleryEntry = await getEntry(`${lang}-properties`, "gallery");
 

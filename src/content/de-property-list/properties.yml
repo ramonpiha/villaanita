@@ -4,6 +4,7 @@
     - map
   title: "VILLA ANITA ROOMS & APARTMENTS"
   summary: "Runkelsteiner Straße 16"
+  cin: "IT021008B4734WYVEK"
   coordinates: [2650, 4450]
   image: /images/map/villa-anita-front.avif
 
@@ -13,6 +14,7 @@
     - map
   title: "BOLZANO apartments"
   summary: "Vintlerstraße 5"
+  cin: "021008B46697O921"
   coordinates: [2000, 4550]
   image: /images/map/bolzano-apartments.avif
 
@@ -22,6 +24,7 @@
     - map
   title: "BOLZANO ROOMS"
   summary: "Brennerstraße 4"
+  cin: "021008B46697O921"
   coordinates: [1770, 5820]
   image: /images/map/bolzanorooms.avif
 
@@ -31,6 +34,7 @@
     - map
   title: "PIANI apartment"
   summary: "Leegtorweg 4 (Eintritt bei Bozner-Boden-Weg)"
+  cin: "021008B4AILRNRAO5"
   coordinates: [1770, 6650]
   image: /images/map/piani-apartment.avif
 
@@ -40,6 +44,7 @@
     - map
   title: "LISA apartments"
   summary: "Laubengasse 71"
+  cin: "021008B46697O921"
   coordinates: [1530, 3920]
   image: /images/map/lisa-apartment.avif
 
@@ -49,6 +54,7 @@
     - map
   title: "R-11 apartment"
   summary: "Rittner Straße 11"
+  cin: "IT021008B4734WYVEK"
   coordinates: [810, 5180]
   image: /images/map/claudine-apartment.avif
 
@@ -58,5 +64,6 @@
     - map
   title: "MARLENE apartment"
   summary: "Leonardo da Vinci Straße 14"
+  cin: "021008B4A65P8YZ7"
   coordinates: [950, 3270]
   image: /images/map/marlene-apartment.avif

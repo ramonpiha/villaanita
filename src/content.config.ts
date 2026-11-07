@@ -11,6 +11,16 @@ const propertiesSchema = z.array(z.object({
   image: z.string(),
 }));
 
+const propertyListSchema = z.array(z.object({
+  id: z.string(),
+  type: z.array(z.string()),
+  title: z.string(),
+  summary: z.string(),
+  cin: z.string(),
+  coordinates: z.tuple([z.number(), z.number()]).optional(),
+  image: z.string(),
+}));
+
 const pagesSchema = z.object({
   title: z.string(),
   description: z.string().optional(),
@@ -73,6 +83,10 @@ export const collections = {
     loader: glob({ base: './src/content/de-properties', pattern: '**/*.{yaml,yml}' }),
     schema: propertiesSchema,
   }),
+  'de-property-list': defineCollection({
+    loader: glob({ base: './src/content/de-property-list', pattern: '**/*.yml' }),
+    schema: propertyListSchema,
+  }),
   'de-property-content': defineCollection({
     loader: glob({ base: './src/content/de-property-content', pattern: '**/*.md' }),
     schema: propertyContentSchema,
@@ -97,6 +111,10 @@ export const collections = {
     loader: glob({ base: './src/content/en-properties', pattern: '**/*.{yaml,yml}' }),
     schema: propertiesSchema,
   }),
+  'en-property-list': defineCollection({
+    loader: glob({ base: './src/content/en-property-list', pattern: '**/*.yml' }),
+    schema: propertyListSchema,
+  }),
   'en-property-content': defineCollection({
     loader: glob({ base: './src/content/en-property-content', pattern: '**/*.md' }),
     schema: propertyContentSchema,
@@ -120,6 +138,10 @@ export const collections = {
   'it-properties': defineCollection({
     loader: glob({ base: './src/content/it-properties', pattern: '**/*.{yaml,yml}' }),
     schema: propertiesSchema,
+  }),
+  'it-property-list': defineCollection({
+    loader: glob({ base: './src/content/it-property-list', pattern: '**/*.yml' }),
+    schema: propertyListSchema,
   }),
   'it-property-content': defineCollection({
     loader: glob({ base: './src/content/it-property-content', pattern: '**/*.md' }),
